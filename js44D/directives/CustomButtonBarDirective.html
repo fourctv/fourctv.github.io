@@ -1,0 +1,914 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>js44d documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">js44d documentation</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../index.html">js44d documentation</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                        <a href="../license.html"
+                                    >
+                                        <span class="fa fa-file-text-o"></span>LICENSE
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../modules.html" >
+                            <div class="menu-toggler linked" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
+                        </a>
+                        <ul class="links collapse "
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/JS44DModule.html" >JS44DModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/ModalModule.html" >ModalModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/fourDModule.html" >fourDModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/AdvancedQueryComponent.html" >AdvancedQueryComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/DataGrid.html" >DataGrid</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/FourDDropDown.html" >FourDDropDown</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ListSelectorDialog.html" >ListSelectorDialog</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/LoginCmp.html" >LoginCmp</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/OKOnlyModal.html" >OKOnlyModal</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/QueryBand.html" >QueryBand</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/QuickFindInput.html" >QuickFindInput</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/RecordEditWindow.html" >RecordEditWindow</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/RecordList.html" >RecordList</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/Tab.html" >Tab</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/Tabs.html" >Tabs</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/WebAppContainer.html" >WebAppContainer</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/YesNoModal.html" >YesNoModal</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-directives-links"
+                            >
+                            <span class="fa fa-code"></span>
+                            <span>Directives</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-directives-links"
+                            >
+                                <li class="link">
+                                    <a href="../directives/CustomButtonBarDirective.html"  data-type="entity-link" class="active" >CustomButtonBarDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/QueryBandDirective.html" >QueryBandDirective</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/Base64.html" >Base64</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Deferred.html" >Deferred</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/FourDQuery.html" >FourDQuery</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/ICustomModal.html" >ICustomModal</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/ICustomModalComponent.html" >ICustomModalComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/MD5.html" >MD5</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/OKOnlyContent.html" >OKOnlyContent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Utf8.html" >Utf8</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/YesNoModalContent.html" >YesNoModalContent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-injectables-links"
+                            >
+                            <span class="fa fa-long-arrow-down"></span>
+                            <span>Injectables</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-injectables-links"
+                            >
+                                <li class="link">
+                                    <a href="../injectables/FourDCollection.html" >FourDCollection</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/FourDInterface.html" >FourDInterface</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/FourDModel.html" >FourDModel</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/Modal.html" >Modal</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/ModalConfig.html" >ModalConfig</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/ModalDialogInstance.html" >ModalDialogInstance</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-interfaces-links"
+                            >
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/IFieldDescription.html" >IFieldDescription</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-miscellaneous-links"
+                            >
+                            <span class="fa fa-cubes"></span>
+                            <span>Miscellaneous</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-miscellaneous-links"
+                            >
+                                <li class="link">
+                                  <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
+                                </li>
+                                <li class="link">
+                                  <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../index.html">js44d documentation</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                               <a href="../license.html"
+                                           >
+                                               <span class="fa fa-file-text-o"></span>LICENSE
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../modules.html" >
+                                   <div class="menu-toggler linked" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
+                               </a>
+                               <ul class="links collapse "
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/JS44DModule.html" >JS44DModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/ModalModule.html" >ModalModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/fourDModule.html" >fourDModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/AdvancedQueryComponent.html" >AdvancedQueryComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/DataGrid.html" >DataGrid</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/FourDDropDown.html" >FourDDropDown</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ListSelectorDialog.html" >ListSelectorDialog</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/LoginCmp.html" >LoginCmp</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/OKOnlyModal.html" >OKOnlyModal</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/QueryBand.html" >QueryBand</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/QuickFindInput.html" >QuickFindInput</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/RecordEditWindow.html" >RecordEditWindow</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/RecordList.html" >RecordList</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/Tab.html" >Tab</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/Tabs.html" >Tabs</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/WebAppContainer.html" >WebAppContainer</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/YesNoModal.html" >YesNoModal</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#directives-links"
+                   >
+                                   <span class="fa fa-code"></span>
+                                   <span>Directives</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="directives-links"
+                   >
+                                       <li class="link">
+                                           <a href="../directives/CustomButtonBarDirective.html"  data-type="entity-link" class="active" >CustomButtonBarDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/QueryBandDirective.html" >QueryBandDirective</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/Base64.html" >Base64</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Deferred.html" >Deferred</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/FourDQuery.html" >FourDQuery</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/ICustomModal.html" >ICustomModal</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/ICustomModalComponent.html" >ICustomModalComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/MD5.html" >MD5</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/OKOnlyContent.html" >OKOnlyContent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Utf8.html" >Utf8</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/YesNoModalContent.html" >YesNoModalContent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#injectables-links"
+                   >
+                                   <span class="fa fa-long-arrow-down"></span>
+                                   <span>Injectables</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="injectables-links"
+                   >
+                                       <li class="link">
+                                           <a href="../injectables/FourDCollection.html" >FourDCollection</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/FourDInterface.html" >FourDInterface</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/FourDModel.html" >FourDModel</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/Modal.html" >Modal</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/ModalConfig.html" >ModalConfig</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/ModalDialogInstance.html" >ModalDialogInstance</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#interfaces-links"
+                   >
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/IFieldDescription.html" >IFieldDescription</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#miscellaneous-links"
+                   >
+                                   <span class="fa fa-cubes"></span>
+                                   <span>Miscellaneous</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="miscellaneous-links"
+                   >
+                                       <li class="link">
+                                         <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content directive">
+                   <div class="content-data">
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Directives</li>
+  <li>CustomButtonBarDirective</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/containers/queryBand.ts</code>
+        </p>
+
+
+
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+
+                    <tr>
+                        <td class="col-md-3">selector</td>
+                        <td class="col-md-9"><code>custombuttonbar</code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade tab-source-code" id="c-source">
+        <pre class="line-numbers"><code class="language-typescript">import { Directive, Component, EventEmitter, ElementRef, ContentChild, Input } from &#x27;@angular/core&#x27;;
+
+@Directive({
+    selector: &#x27;queryband&#x27;
+})
+export class QueryBandDirective {
+    /**
+     * Get access to the embedded custom query band
+     */
+    @ContentChild(&#x27;customQueryBand&#x27;) theCustomQuery: any;
+
+}
+@Directive({
+    selector: &#x27;custombuttonbar&#x27;
+})
+export class CustomButtonBarDirective { }
+
+
+@Component({
+    selector: &#x27;query-band&#x27;,
+    template: &#x60;
+    &lt;div dropdown class&#x3D;&quot;btn-group btn-group-md&quot; style&#x3D;&quot;width:100%;padding-top:5px;height:40px;&quot;&gt;
+    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;switchState()&quot;&gt;&lt;span class&#x3D;&quot;glyphicon&quot; [ngClass]&#x3D;&quot;openStateIcon&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;QBE&#x27;)&quot; (click)&#x3D;&quot;doQBE()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-query-icon&quot; title&#x3D;&quot;advanced query&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;QFF&#x27;)&quot; (click)&#x3D;&quot;doQFF()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-qff-icon&quot; title&#x3D;&quot;query using a text file&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Sets&#x27;)&quot; (click)&#x3D;&quot;false&quot; dropdownToggle&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-manageSets-icon&quot; title&#x3D;&quot;search sets management&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;ul *dropdownMenu class&#x3D;&quot;dropdown-menu&quot;&gt;
+            &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;selectHighlited&#x27;)&quot;&gt;Select Highlighted&lt;/a&gt;&lt;/li&gt;
+            &lt;li class&#x3D;&quot;divider dropdown-divider&quot;&gt;&lt;/li&gt;
+            &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;reuseSearch&#x27;)&quot;&gt;Reuse a Saved Search&lt;/a&gt;&lt;/li&gt;
+            &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;restoreSet&#x27;)&quot;&gt;Restore a Saved Record Set&lt;/a&gt;&lt;/li&gt;
+            &lt;!-- &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;combineSearches&#x27;)&quot;&gt;Combine Searches&lt;/a&gt;&lt;/li&gt; --&gt;
+            &lt;li class&#x3D;&quot;divider dropdown-divider&quot;&gt;&lt;/li&gt;
+            &lt;li *ngIf&#x3D;&quot;doWehaveAQuery()&quot; role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;saveSearch&#x27;)&quot;&gt;Save Current Search&lt;/a&gt;&lt;/li&gt;
+            &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;saveSet&#x27;)&quot;&gt;Save Record Set&lt;/a&gt;&lt;/li&gt;
+            &lt;li class&#x3D;&quot;divider dropdown-divider&quot;&gt;&lt;/li&gt;
+            &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;manageSearches&#x27;)&quot;&gt;Manage Saved Searches&lt;/a&gt;&lt;/li&gt;
+            &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;manageSets&#x27;)&quot;&gt;Manage Saved Sets&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;doRefresh()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-refresh-icon&quot; title&#x3D;&quot;refresh query&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;!-- &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Sort&#x27;)&quot; (click)&#x3D;&quot;doSort()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-sort-icon&quot; title&#x3D;&quot;multi-column sort&quot;&gt;&lt;/span&gt;&lt;/a&gt; --&gt;
+    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;doClear()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-clear-icon&quot; title&#x3D;&quot;clear query form&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Export&#x27;)&quot; (click)&#x3D;&quot;doExportGrid()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-export-icon&quot; title&#x3D;&quot;export grid data&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+
+    &lt;div class&#x3D;&quot;btn-group btn-group-md&quot; style&#x3D;&quot;position:absolute;right:20px&quot;&gt;
+        &lt;ng-content select&#x3D;&quot;custombuttonbar&quot;&gt;&lt;/ng-content&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;regularButton&quot; style&#x3D;&quot;width:70px;margin-left: 5px;&quot; (click)&#x3D;&quot;doAddRecord()&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;ADD&#x27;)&quot;&gt;Add&lt;/button&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;regularButton&quot; style&#x3D;&quot;width:70px;margin-left: 5px;&quot; (click)&#x3D;&quot;doEditRecord()&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;EDIT&#x27;)&quot;&gt;Edit&lt;/button&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;regularButton&quot; style&#x3D;&quot;width:70px;margin-left: 5px;&quot; (click)&#x3D;&quot;doDeleteRecord()&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;DEL&#x27;)&quot;&gt;Delete&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div [hidden]&#x3D;&quot;!queryBandIsOpen&quot; style&#x3D;&quot;margin-bottom:10px;margin-left:5px;margin-top:5px;border: 1px;border-style: ridge;padding: 5px; background-color:lightgrey;&quot;&gt;
+    &lt;ng-content select&#x3D;&quot;queryband&quot;&gt;&lt;/ng-content&gt;
+&lt;/div&gt;
+
+    &#x60;,
+    styles: [&#x60;
+    .quickFinder-icon {
+        border-color: transparent;
+        width: 24px;
+        height: 24px;
+        display:inline-block;
+    }
+    
+    .hidden {
+        display:none;
+    }
+       
+    &#x60;]
+})
+
+export class QueryBand {
+
+    /**
+     * enable QBE button, default is true
+     **/
+    @Input() public enableQBE &#x3D; true;
+
+    /**
+     * enable QFF (query from file) button, default is false
+     **/
+    @Input() public enableQFF &#x3D; false;
+
+    /**
+     * enable Save/Load Searches/Set buttons, default is true
+     **/
+    @Input() public enableSETS &#x3D; true;
+
+    /**
+     * enable Combine Searches buttons, default is true
+     **/
+    @Input() public enableCombiSearch &#x3D; true;
+
+    /**
+     * enable Multicolumn Sort button, default is false
+     **/
+    @Input() public enableSort &#x3D; false;
+
+    /**
+     * enable Export To Excel button, default is true
+     **/
+    @Input() public enableExportGrid &#x3D; true;
+
+    /**
+     * Enable Record Edit Button bar, default is false
+     */
+    @Input() public enableButtonBar &#x3D; false;
+
+    /**
+     * Enable Add record button, default is false
+     */
+    @Input() public enableAddRecord &#x3D; false;
+
+    /**
+     * Enable Edit record button, default is true
+     */
+    @Input() public enableEditRecord &#x3D; true;
+
+    /**
+     * Enable Delete record button, default is false
+     */
+    @Input() public enableDeleteRecord &#x3D; false;
+
+    /**
+     * Cascade Delete record if Delete is enabled, default is false
+     */
+    @Input() public cascadeDeleteRecord &#x3D; false;
+
+    //
+    // Events emitted by the QueryBand
+    //
+    queryFromQBE: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    queryFromFile: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    queryRefresh: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    querySortGrid: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    queryExportGrid: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+
+    queryManageSets: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+
+    //
+    // Events emitted by the QueryBand&#x27;s Button Bar
+    //
+    queryAddRecord: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    queryEditRecord: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    queryDeleteRecord: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+
+    //
+    // Internal variables
+    //
+    public openStateIcon &#x3D; &#x27;glyphicon-triangle-right&#x27;;
+
+    public queryBandIsOpen &#x3D; false;
+
+    /**
+     * Get access to the embedded custom query band
+     */
+    @ContentChild(QueryBandDirective) theQueryBand: any;
+
+    constructor(private elementRef: ElementRef) {
+    }
+
+
+    public switchState() {
+        this.queryBandIsOpen &#x3D; !this.queryBandIsOpen;
+        this.openStateIcon &#x3D; (this.queryBandIsOpen) ? &#x27;glyphicon-triangle-bottom&#x27; : &#x27;glyphicon-triangle-right&#x27;;
+    }
+
+    public enableButton(btn: string): string {
+        switch (btn) {
+            case &#x27;QBE&#x27;:
+                return (this.enableQBE) ? &#x27;&#x27; : &#x27;hidden&#x27;;
+
+            case &#x27;QFF&#x27;:
+                return (this.enableQFF) ? &#x27;&#x27; : &#x27;hidden&#x27;;
+
+            case &#x27;Sets&#x27;:
+                return (this.enableSETS) ? &#x27;&#x27; : &#x27;hidden&#x27;;
+
+            case &#x27;Sort&#x27;:
+                return (this.enableSort) ? &#x27;&#x27; : &#x27;hidden&#x27;;
+
+            case &#x27;Export&#x27;:
+                return (this.enableExportGrid) ? &#x27;&#x27; : &#x27;hidden&#x27;;
+
+            case &#x27;ADD&#x27;:
+                return (this.enableButtonBar &amp;&amp; this.enableAddRecord) ? &#x27;&#x27; : &#x27;hidden&#x27;;
+
+            case &#x27;EDIT&#x27;:
+                return (this.enableButtonBar &amp;&amp; this.enableEditRecord) ? &#x27;&#x27; : &#x27;hidden&#x27;;
+
+            case &#x27;DEL&#x27;:
+                return (this.enableButtonBar &amp;&amp; this.enableDeleteRecord) ? &#x27;&#x27; : &#x27;hidden&#x27;;
+        }
+
+        return &#x27;&#x27;;
+    }
+
+    public doQBE() {
+        this.queryFromQBE.emit();
+    }
+
+    public doQFF() {
+        this.queryFromFile.emit(null);
+    }
+
+    public doManageSets(action) {
+        this.queryManageSets.emit(action);
+    }
+
+    public doRefresh() {
+        if (this.theQueryBand.theCustomQuery) { this.queryRefresh.emit(this.theQueryBand.theCustomQuery.currentQuery); }
+    }
+
+    public doSort() {
+        this.querySortGrid.emit(null);
+    }
+
+    public doClear() {
+        const theForm: any &#x3D; $(this.elementRef.nativeElement.getElementsByTagName(&#x27;form&#x27;));
+        if (theForm &amp;&amp; theForm.length &gt; 0) { theForm[0].reset(); }
+    }
+
+    public doExportGrid() {
+        this.queryExportGrid.emit(null);
+    }
+
+    public doAddRecord() {
+        this.queryAddRecord.emit(null);
+    }
+
+    public doEditRecord() {
+        this.queryEditRecord.emit(null);
+    }
+
+    public doDeleteRecord() {
+        this.queryDeleteRecord.emit(null);
+    }
+
+    public doWehaveAQuery(): boolean {
+        return (this.theQueryBand.theCustomQuery.currentQuery &amp;&amp; this.theQueryBand.theCustomQuery.currentQuery !&#x3D;&#x3D; &#x27;&#x27;);
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/search/search_index.js"></script>
+
+    </body>
+</html>
