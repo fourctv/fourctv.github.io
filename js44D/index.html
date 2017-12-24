@@ -71,13 +71,13 @@
                                 id="xs-modules-links"
                             >
                                 <li class="link">
+                                    <a href="./modules/FourDModule.html" >FourDModule</a>
+                                </li>
+                                <li class="link">
                                     <a href="./modules/JS44DModule.html" >JS44DModule</a>
                                 </li>
                                 <li class="link">
                                     <a href="./modules/ModalModule.html" >ModalModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./modules/fourDModule.html" >fourDModule</a>
                                 </li>
                         </ul>
                     </li>
@@ -249,6 +249,22 @@
                         </ul>
                     </li>
             
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-pipes-links"
+                            >
+                            <span class="fa fa-plus"></span>
+                            <span>Pipes</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-pipes-links"
+                            >
+                                <li class="link">
+                                    <a href="./pipes/Base64ImageRef.html" >Base64ImageRef</a>
+                                </li>
+                        </ul>
+                    </li>
             
                     <li class="chapter">
                         <div class="simple menu-toggler" data-toggle="collapse"
@@ -343,13 +359,13 @@
                                        id="modules-links"
                    >
                                        <li class="link">
+                                           <a href="./modules/FourDModule.html" >FourDModule</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="./modules/JS44DModule.html" >JS44DModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="./modules/ModalModule.html" >ModalModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./modules/fourDModule.html" >fourDModule</a>
                                        </li>
                                </ul>
                            </li>
@@ -521,6 +537,22 @@
                                </ul>
                            </li>
                    
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#pipes-links"
+                   >
+                                   <span class="fa fa-plus"></span>
+                                   <span>Pipes</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="pipes-links"
+                   >
+                                       <li class="link">
+                                           <a href="./pipes/Base64ImageRef.html" >Base64ImageRef</a>
+                                       </li>
+                               </ul>
+                           </li>
                    
                            <li class="chapter">
                                <div class="simple menu-toggler" data-toggle="collapse"
@@ -571,25 +603,26 @@
 <a href="https://badge.fury.io/js/js44d"><img src="https://badge.fury.io/js/js44d.svg" alt="npm version" class="img-responsive"></a></p>
 <p>This library includes a series of Angular services, components and UI widgets, that interface to a 4D Database backend via <strong><a href="https://github.com/fourctv/FourDRESTApi">4D RESTApi</a></strong> component. The <strong>4D RESTApi</strong> Component must be installed in the 4D Database, and Web Serving must be enabled.</p>
 <p>Detailed documentation for each service/component in this library can be found on the <a href="https://github.com/fourctv/JS44D/wiki">wiki here</a>. Following is a quick run down of the library contents.</p>
+<p>There is a step by step procedure to get started with the <strong>4D RESTApi</strong> component and this library at this <a href="https://github.com/fourctv/JS44D/wiki/Let&#39;s-Get-Started">wiki page.</a> That page will instruct you on how to get going on the 4D and Angular sides.</p>
 <h2 id="installation">Installation</h2>
 <p>Install <code>js44d</code> library using <code>npm</code>, as:</p>
 <pre class="line-numbers"><code class="language-none">npm install js44d --save</code></pre><h2 id="usage">Usage</h2>
 <p>The library can be divided into three sets of components: 4D Service classes, UI widgets and a Modal Dialog Service class. The 4D Service Classes provide the interface to a 4D backend. The UI widgets are not essential, but do provide some useful UI Components that use the Services Classes. The Modal Dialog provides funcionality to open multiple floating Dialog windows, similar to Windows MDI funcionality.</p>
-<p>Each of the three sets are declared in a separate <strong>NgModule</strong>: <em>fourDModule</em>, <em>JS44DModule</em> and <em>ModalModule</em>.</p>
+<p>Each of the three sets are declared in a separate <strong>NgModule</strong>: <em>FourDModule</em>, <em>JS44DModule</em> and <em>ModalModule</em>.</p>
 <p>You reference the 4D Interface Service Classes as:</p>
-<pre class="line-numbers"><code class="language-none">import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;</code></pre><p>They need to be included in your main <strong>NgModule</strong> declaration, by importing the <em>fourDModule</em>.</p>
+<pre class="line-numbers"><code class="language-none">import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;</code></pre><p>They need to be included in your main <strong>NgModule</strong> declaration, by importing the <em>FourDModule</em>.</p>
 <p>As for UI components/widgets and the Modal dialog service, you reference/import them as:</p>
 <pre class="line-numbers"><code class="language-none">import { ..widget.. } from &#39;js44d&#39;;</code></pre><p>You need to import the modules in your <strong>NgModule</strong> declaration, where you use them, as in:</p>
 <pre class="line-numbers"><code class="language-none">...
-import { fourDModule, JS44DModule, ModalModule } from &#39;js44d&#39;;
+import { FourDModule, JS44DModule, ModalModule } from &#39;js44d&#39;;
 ...
 &#64;NgModule({
   imports: [
     ...,
-    fourDModule, JS44DModule, ModalModule
+    FourDModule, JS44DModule, ModalModule
   ]
   ],
-  exports: [fourDModule, JS44DModule, ModalModule],</code></pre><p>A quick note, the UI components/widgets are <strong>WEB ONLY</strong>, they do not work under Nativescript, so for {N} you can use only the 4D Service Classes. For NativeScript your module declaration should look something like this:</p>
+  exports: [FourDModule, JS44DModule, ModalModule],</code></pre><p>A quick note, the UI components/widgets are <strong>WEB ONLY</strong>, they do not work under Nativescript, so for {N} you can use only the 4D Service Classes. For NativeScript your module declaration should look something like this:</p>
 <pre class="line-numbers"><code class="language-none">...
 import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
 ...

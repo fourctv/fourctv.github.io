@@ -71,13 +71,13 @@
                                 id="xs-modules-links"
                             >
                                 <li class="link">
+                                    <a href="../modules/FourDModule.html" >FourDModule</a>
+                                </li>
+                                <li class="link">
                                     <a href="../modules/JS44DModule.html" >JS44DModule</a>
                                 </li>
                                 <li class="link">
                                     <a href="../modules/ModalModule.html" >ModalModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/fourDModule.html" >fourDModule</a>
                                 </li>
                         </ul>
                     </li>
@@ -249,6 +249,22 @@
                         </ul>
                     </li>
             
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-pipes-links"
+                            >
+                            <span class="fa fa-plus"></span>
+                            <span>Pipes</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-pipes-links"
+                            >
+                                <li class="link">
+                                    <a href="../pipes/Base64ImageRef.html" >Base64ImageRef</a>
+                                </li>
+                        </ul>
+                    </li>
             
                     <li class="chapter">
                         <div class="simple menu-toggler" data-toggle="collapse"
@@ -270,6 +286,9 @@
                         </ul>
                     </li>
             
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                    </li>
             
                     <li class="chapter">
                         <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
@@ -343,13 +362,13 @@
                                        id="modules-links"
                    >
                                        <li class="link">
+                                           <a href="../modules/FourDModule.html" >FourDModule</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../modules/JS44DModule.html" >JS44DModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="../modules/ModalModule.html" >ModalModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/fourDModule.html" >fourDModule</a>
                                        </li>
                                </ul>
                            </li>
@@ -521,6 +540,22 @@
                                </ul>
                            </li>
                    
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#pipes-links"
+                   >
+                                   <span class="fa fa-plus"></span>
+                                   <span>Pipes</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="pipes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../pipes/Base64ImageRef.html" >Base64ImageRef</a>
+                                       </li>
+                               </ul>
+                           </li>
                    
                            <li class="chapter">
                                <div class="simple menu-toggler" data-toggle="collapse"
@@ -542,6 +577,9 @@
                                </ul>
                            </li>
                    
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                           </li>
                    
                            <li class="chapter">
                                <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
@@ -591,6 +629,13 @@
             <code>src/js44D/JSFourDCollection.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>This class represents a Collection of FourDModels and provides functionality to populate the Collection, fetching records from a 4D Database</p>
+
+            </p>
 
 
             <section>
@@ -692,7 +737,7 @@
                             </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/js44D/JSFourDCollection.ts:26</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/js44D/JSFourDCollection.ts:37</a></div>
                                         </td>
                                     </tr>
             
@@ -729,13 +774,13 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/js44D/JSFourDCollection.ts:40</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/js44D/JSFourDCollection.ts:55</a></div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-description"><p>prepares the JSON field description to send to 4D, listing all columns to retrieve</p>
+                                        <div class="io-description"><p>prepares the JSON field description to send to 4D, listing the columns to retrieve</p>
             </div>
             
                                         <div class="io-description">
@@ -757,7 +802,8 @@
                                                               </td>
                                                               <td>
                                                               </td>
-                                                              <td></td>
+                                                              <td><p>a string Array with the list of field/column names to retrieve for each record; if null, the default list of columns defined in the Collection will be retrieved</p>
+            </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -769,7 +815,8 @@
             
                                         </div>
                                             <div class="io-description">
-                                                
+                                                <p>a JSON string listing the fields/columns to retrieve for each record</p>
+            
                                             </div>
                                 </td>
                             </tr>
@@ -799,7 +846,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/js44D/JSFourDCollection.ts:94</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/js44D/JSFourDCollection.ts:104</a></div>
                                         </td>
                                     </tr>
             
@@ -827,7 +874,8 @@
                                                               </td>
                                                               <td>
                                                               </td>
-                                                              <td></td>
+                                                              <td><p>the FourDQuery object that defines the query to be used for retrieving from 4D</p>
+            </td>
                                                             </tr>
                                                             <tr>
                                                               <td>columns</td>
@@ -836,7 +884,8 @@
                                                               </td>
                                                               <td>
                                                               </td>
-                                                              <td></td>
+                                                              <td><p>custom column list to retrieve, JSON array of the columns to retrieve. <p>if informed, only the columns listed will be retrieved instead of the whole record</p></p>
+            </td>
                                                             </tr>
                                                             <tr>
                                                               <td>startRec</td>
@@ -865,7 +914,8 @@
                                                               </td>
                                                               <td>
                                                               </td>
-                                                              <td></td>
+                                                              <td><p>optional, FourDQuery to further filter records to he retrieved</p>
+            </td>
                                                             </tr>
                                                             <tr>
                                                               <td>orderby</td>
@@ -874,7 +924,8 @@
                                                               </td>
                                                               <td>
                                                               </td>
-                                                              <td></td>
+                                                              <td><p>optional order By clause to retrieve records in a set order. <p> in the format:</p><p>    &gt;table.field : to sort records by table.field in ascending order</p><p>    &lt;table.field : to sort records by table.field in descending order</p></p>
+            </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -886,7 +937,8 @@
             
                                         </div>
                                             <div class="io-description">
-                                                
+                                                <p>returns a Promise for the database operation, whose result is an Array of FourDModel records returned by 4D</p>
+            
                                             </div>
                                 </td>
                             </tr>
@@ -932,10 +984,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/js44D/JSFourDCollection.ts:20</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/js44D/JSFourDCollection.ts:29</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>the default list of field/column names to be populated on each Collection record data </p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -967,10 +1025,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/js44D/JSFourDCollection.ts:22</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/js44D/JSFourDCollection.ts:32</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>holds current record from the current selection </p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1002,10 +1066,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/js44D/JSFourDCollection.ts:18</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/js44D/JSFourDCollection.ts:26</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>default filter to be applied on all queries </p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1037,10 +1107,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/js44D/JSFourDCollection.ts:26</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/js44D/JSFourDCollection.ts:37</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>injected FourDInterface service </p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1072,10 +1148,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/js44D/JSFourDCollection.ts:14</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/js44D/JSFourDCollection.ts:18</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>the model this collection is based on </p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1112,10 +1194,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/js44D/JSFourDCollection.ts:15</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/js44D/JSFourDCollection.ts:20</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>array of models in the collection </p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1147,10 +1235,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/js44D/JSFourDCollection.ts:16</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/js44D/JSFourDCollection.ts:22</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>default order by string </p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1187,10 +1281,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/js44D/JSFourDCollection.ts:17</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/js44D/JSFourDCollection.ts:24</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>default query string </p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1221,10 +1321,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/js44D/JSFourDCollection.ts:23</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/js44D/JSFourDCollection.ts:34</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>holds the total # of records found on the latest query </p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1250,7 +1356,7 @@
                             </tr>
                                         <tr>
                                             <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="150" class="link-to-prism">src/js44D/JSFourDCollection.ts:150</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">src/js44D/JSFourDCollection.ts:160</a></div>
                                             </td>
                                         </tr>
                                 <tr>
@@ -1279,24 +1385,35 @@ import { Utf8 } from &#x27;./utf8&#x27;;
 import { FourDInterface, FourDQuery } from &#x27;./JSFourDInterface&#x27;;
 import { FourDModel } from &#x27;./JSFourDModel&#x27;;
 
+/**
+ * This class represents a Collection of FourDModels and provides functionality to populate the Collection, fetching records from a 4D Database
+ */
 @Injectable()
 export class FourDCollection {
 
     //
     // FourDCollection properties
     //
-    public model: any; // the model this collection is based on
-    public models: Array&lt;any&gt; &#x3D; []; // array of models in the collection
-    public orderBy: string;    // default order by string
-    public queryString: FourDQuery &#x3D; null; // default query string 
-    public filterOptions: string; // default filter to be applied on all queries
+    /** the model this collection is based on */
+    public model: any;
+    /** array of models in the collection */
+    public models: Array&lt;any&gt; &#x3D; [];
+    /** default order by string */
+    public orderBy: string;
+    /** default query string */
+    public queryString: FourDQuery &#x3D; null;
+    /** default filter to be applied on all queries */
+    public filterOptions: string;
 
-    public columns: Array&lt;any&gt; &#x3D; []; // columns to be populated on the Collection
+    /** the default list of field/column names to be populated on each Collection record data */
+    public columns: Array&lt;any&gt; &#x3D; [];
 
-    public currentRecord: FourDModel; // holds current record from the current selection
-    public totalRecordCount &#x3D; 0; // holds the total # of records found on the latst query
+    /** holds current record from the current selection */
+    public currentRecord: FourDModel;
+    /** holds the total # of records found on the latest query */
+    public totalRecordCount &#x3D; 0;
 
-    // injected FourDInterface service
+    /** injected FourDInterface service */
     private fourD: FourDInterface;
 
     //
@@ -1309,7 +1426,11 @@ export class FourDCollection {
     }
 
     /**
-     * prepares the JSON field description to send to 4D, listing all columns to retrieve
+     * prepares the JSON field description to send to 4D, listing the columns to retrieve
+     * 
+     *  @param columns a string Array with the list of field/column names to retrieve for each record; if null, the default list of columns defined in the Collection will be retrieved
+     * 
+     *  @returns a JSON string listing the fields/columns to retrieve for each record
      */
     public getColumnListJSON(columns: Array&lt;any&gt;): string {
         if (!columns) { columns &#x3D; this.columns; }
@@ -1350,20 +1471,15 @@ export class FourDCollection {
 
     /**
      * Retrieves a list of records using a query string 
-     *  @param query
-     * 	@param columnList custom column list to retrieve, JSON array of the columns to retrieve.
-     * &lt;p&gt;if informed, only the columns listed will be retrieved instead of the whole record&lt;/p&gt;
      * 
+     *  @param query the FourDQuery object that defines the query to be used for retrieving from 4D
+     * 	@param columns custom column list to retrieve, JSON array of the columns to retrieve. &lt;p&gt;if informed, only the columns listed will be retrieved instead of the whole record&lt;/p&gt;
      * 	@param startRec the starting record number to retrieve, used for paging.
      * 	@param numOfRecords the number of records to retrieve, the default -1 will retrieve all records in the resulting query.
-     *  @param filterOptions
-     *  @param orderBy optional order By clause to retrieve records in a set order.
-     * &lt;p&gt; in the format:&lt;/p&gt;
-     *    &amp;gt;table.field : to sort records by table.field in ascending order
-     *    &amp;lt;table.field : to sort records by table.field in descending order
-     * 
-     * 
-     * @return returns a Promise for the database operation
+     *  @param filter optional, FourDQuery to further filter records to he retrieved
+     *  @param orderby optional order By clause to retrieve records in a set order. &lt;p&gt; in the format:&lt;/p&gt;&lt;p&gt;    &amp;gt;table.field : to sort records by table.field in ascending order&lt;/p&gt;&lt;p&gt;    &amp;lt;table.field : to sort records by table.field in descending order&lt;/p&gt;
+     *  
+     * @returns returns a Promise for the database operation, whose result is an Array of FourDModel records returned by 4D
      */
     public getRecords(query: FourDQuery &#x3D; null, columns: Array&lt;string&gt; &#x3D; null, startRec: number &#x3D; 0, numOfRecords: number &#x3D; -1, filter: string &#x3D; null, orderby: string &#x3D; null): Promise&lt;Array&lt;FourDModel&gt;&gt; {
         if (!query) {
