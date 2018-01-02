@@ -278,9 +278,6 @@
                                 id="xs-miscellaneous-links"
                             >
                                 <li class="link">
-                                  <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
-                                </li>
-                                <li class="link">
                                   <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
                                 </li>
                         </ul>
@@ -565,9 +562,6 @@
                                <ul class="links collapse "
                                        id="miscellaneous-links"
                    >
-                                       <li class="link">
-                                         <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
-                                       </li>
                                        <li class="link">
                                          <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
                                        </li>
@@ -1424,8 +1418,9 @@ export class FourDModel {
     */
     constructor() {
         // inject FourDInterface
-        const injector &#x3D; ReflectiveInjector.resolveAndCreate([FourDInterface]);
-        this.fourD &#x3D; injector.get(FourDInterface);
+        //const injector &#x3D; ReflectiveInjector.resolveAndCreate([FourDInterface]);
+        //this.fourD &#x3D; injector.get(FourDInterface);
+        this.fourD &#x3D; FourDInterface.interfaceInstance;
     }
 
 
@@ -1488,6 +1483,7 @@ export class FourDModel {
                     break;
 
                 case &#x27;time&#x27;:
+                case &#x27;Time&#x27;:
                     this[field.name] &#x3D; &#x27;&#x27;;
                     break;
 
@@ -1568,10 +1564,12 @@ export class FourDModel {
                             break;
 
                         case &#x27;time&#x27;:
+                        case &#x27;Time&#x27;:
                             recordData[&#x27;fields&#x27;][field.longname] &#x3D; this[fieldName];
                             break;
 
                         case &#x27;number&#x27;:
+                        case &#x27;Number&#x27;:
                             recordData[&#x27;fields&#x27;][field.longname] &#x3D; Number(this[fieldName]);
                             break;
 

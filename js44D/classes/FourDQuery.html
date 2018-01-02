@@ -278,9 +278,6 @@
                                 id="xs-miscellaneous-links"
                             >
                                 <li class="link">
-                                  <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
-                                </li>
-                                <li class="link">
                                   <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
                                 </li>
                         </ul>
@@ -566,9 +563,6 @@
                                        id="miscellaneous-links"
                    >
                                        <li class="link">
-                                         <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
-                                       </li>
-                                       <li class="link">
                                          <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
                                        </li>
                                </ul>
@@ -718,7 +712,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="631" class="link-to-prism">src/js44D/JSFourDInterface.ts:631</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="586" class="link-to-prism">src/js44D/JSFourDInterface.ts:586</a></div>
                                         </td>
                                     </tr>
             
@@ -758,7 +752,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="629" class="link-to-prism">src/js44D/JSFourDInterface.ts:629</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="584" class="link-to-prism">src/js44D/JSFourDInterface.ts:584</a></div>
                                         </td>
                                     </tr>
             
@@ -798,7 +792,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="633" class="link-to-prism">src/js44D/JSFourDInterface.ts:633</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="588" class="link-to-prism">src/js44D/JSFourDInterface.ts:588</a></div>
                                         </td>
                                     </tr>
             
@@ -838,7 +832,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="639" class="link-to-prism">src/js44D/JSFourDInterface.ts:639</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="594" class="link-to-prism">src/js44D/JSFourDInterface.ts:594</a></div>
                                         </td>
                                     </tr>
             
@@ -878,7 +872,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="637" class="link-to-prism">src/js44D/JSFourDInterface.ts:637</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="592" class="link-to-prism">src/js44D/JSFourDInterface.ts:592</a></div>
                                         </td>
                                     </tr>
             
@@ -918,7 +912,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="635" class="link-to-prism">src/js44D/JSFourDInterface.ts:635</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="590" class="link-to-prism">src/js44D/JSFourDInterface.ts:590</a></div>
                                         </td>
                                     </tr>
             
@@ -958,7 +952,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="623" class="link-to-prism">src/js44D/JSFourDInterface.ts:623</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="578" class="link-to-prism">src/js44D/JSFourDInterface.ts:578</a></div>
                                         </td>
                                     </tr>
             
@@ -998,7 +992,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="625" class="link-to-prism">src/js44D/JSFourDInterface.ts:625</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="580" class="link-to-prism">src/js44D/JSFourDInterface.ts:580</a></div>
                                         </td>
                                     </tr>
             
@@ -1038,7 +1032,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="627" class="link-to-prism">src/js44D/JSFourDInterface.ts:627</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="582" class="link-to-prism">src/js44D/JSFourDInterface.ts:582</a></div>
                                         </td>
                                     </tr>
             
@@ -1098,51 +1092,6 @@ export let calculateHash &#x3D; function (formData: Object) {
 };
 /* tslint */
 
-/**
- *  SOme weird stuff to dynamically inject HTTPCLient manually
- *   need to do this because for some reason I cannot inject it directly via constructor
- *  datagrid instantiation code keeps generating a runtime error saying HttpClient is not declared as provider
- *   although it is indeed declared all over the place...
- * 
- * ******** TBD: find out and fix that, or improve the code below because I&#x27;m afraid it may fail in the future
- */
-declare let Reflect: any;
-function getAnnotations(typeOrFunc): any[]|null {
-  // Prefer the direct API.
-  if ((&lt;any&gt;typeOrFunc).annotations) {
-    let annotations &#x3D; (&lt;any&gt;typeOrFunc).annotations;
-    if (typeof annotations &#x3D;&#x3D;&#x3D; &#x27;function&#x27; &amp;&amp; annotations.annotations) {
-      annotations &#x3D; annotations.annotations;
-    }
-    return annotations;
-  }
-
-  // API of tsickle for lowering decorators to properties on the class.
-  if ((&lt;any&gt;typeOrFunc).decorators) {
-    return convertTsickleDecoratorIntoMetadata((&lt;any&gt;typeOrFunc).decorators);
-  }
-
-  // API for metadata created by invoking the decorators.
-  if (Reflect &amp;&amp; Reflect.getOwnMetadata) {
-    return Reflect.getOwnMetadata(&#x27;annotations&#x27;, typeOrFunc);
-  }
-  return null;
-}
-
-function convertTsickleDecoratorIntoMetadata(decoratorInvocations: any[]): any[] {
-  if (!decoratorInvocations) {
-    return [];
-  }
-  return decoratorInvocations.map(decoratorInvocation &#x3D;&gt; {
-    const decoratorType &#x3D; decoratorInvocation.type;
-    const annotationCls &#x3D; decoratorType.annotationCls;
-    const annotationArgs &#x3D; decoratorInvocation.args ? decoratorInvocation.args : [];
-    return new annotationCls(...annotationArgs);
-  });
-}
-//
-// end of the weird code, that needs to be reviewed... it does work in ng5.0.3
-//
 
 
 /**
@@ -1153,6 +1102,8 @@ export class FourDInterface {
     //
     // Global Properties
     //
+    public static interfaceInstance:FourDInterface;
+
     /**
      * The Authentication object received from 4D after user sign&#x27;s in.
      * 
@@ -1195,14 +1146,12 @@ export class FourDInterface {
     /** Registry entries are cached to optimize traffic to/from 4D&lt;/b&gt;&lt;/p&gt; */
     private static _registryCache: Array&lt;any&gt; &#x3D; [];
 
-    
-
-    private injector &#x3D; ReflectiveInjector.resolveAndCreate(getAnnotations(HttpClientModule)[0].providers);  
-    /**
-      * point to the HTTPClient service we&#x27;ll use
+     /**
+      * Inject HTTPClient service we&#x27;ll use
       */
-    private httpClient &#x3D; this.injector.get(HttpClient);    
-
+    constructor(@Inject(HttpClient) private httpClient:HttpClient) {
+        FourDInterface.interfaceInstance &#x3D; this;
+    }
 
 
     /**

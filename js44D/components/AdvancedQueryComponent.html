@@ -278,9 +278,6 @@
                                 id="xs-miscellaneous-links"
                             >
                                 <li class="link">
-                                  <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
-                                </li>
-                                <li class="link">
                                   <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
                                 </li>
                         </ul>
@@ -566,9 +563,6 @@
                                        id="miscellaneous-links"
                    >
                                        <li class="link">
-                                         <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
-                                       </li>
-                                       <li class="link">
                                          <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
                                        </li>
                                </ul>
@@ -769,12 +763,18 @@
         &lt;div [ngSwitch]&#x3D;&quot;queryField.field.type&quot; style&#x3D;&quot;margin-left: 5px; align-self: center;&quot;&gt;
             &lt;input *ngSwitchCase&#x3D;&quot;&#x27;string&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:180px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
             &lt;input *ngSwitchCase&#x3D;&quot;&#x27;Date&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;date&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:125px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
+            &lt;input *ngSwitchCase&#x3D;&quot;&#x27;time&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;time&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:100px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
             &lt;input *ngSwitchCase&#x3D;&quot;&#x27;Time&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;time&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:100px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
             &lt;input *ngSwitchCase&#x3D;&quot;&#x27;number&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;number&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:80px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
+            &lt;input *ngSwitchCase&#x3D;&quot;&#x27;Number&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;number&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:80px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
             &lt;input *ngSwitchCase&#x3D;&quot;&#x27;float&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;number&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:80px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
             &lt;input *ngSwitchCase&#x3D;&quot;&#x27;boolean&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:80px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
-
-        &lt;/div&gt;
+            &lt;label *ngSwitchCase&#x3D;&quot;&#x27;any&#x27;&quot; class&#x3D;&quot;fieldEntry&quot; &gt;Can&#x27;t query on Object fields&lt;/label&gt;
+            &lt;label *ngSwitchCase&#x3D;&quot;&#x27;json&#x27;&quot; class&#x3D;&quot;fieldEntry&quot; &gt;Can&#x27;t query on Object fields&lt;/label&gt;
+            &lt;label *ngSwitchCase&#x3D;&quot;&#x27;blob&#x27;&quot; class&#x3D;&quot;fieldEntry&quot; &gt;Can&#x27;t query on Blob fields&lt;/label&gt;
+            &lt;label *ngSwitchCase&#x3D;&quot;&#x27;Blob&#x27;&quot; class&#x3D;&quot;fieldEntry&quot; &gt;Can&#x27;t query on Blob fields&lt;/label&gt;
+            &lt;label *ngSwitchCase&#x3D;&quot;&#x27;picture&#x27;&quot; class&#x3D;&quot;fieldEntry&quot; &gt;Can&#x27;t query on Picture fields&lt;/label&gt;
+            &lt;/div&gt;
         &lt;div style&#x3D;&quot;margin-left: 5px; align-self: center;&quot; [hidden]&#x3D;&quot;queryFieldList.length &lt; 2 || queryField.id &#x3D;&#x3D;&#x3D; &#x27;query0&#x27;&quot;&gt;
             &lt;select   (change)&#x3D;&#x27;queryField.connector &#x3D; $event.target.value&#x27; [(value)]&#x3D;&#x27;queryField.connector&#x27; style&#x3D;&quot;height:20px;&quot;&gt;
                 &lt;option value&#x3D;&#x27;And&#x27; &gt;And&lt;/option&gt;
@@ -920,7 +920,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="184" class="link-to-prism">src/containers/advancedQuery.ts:184</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">src/containers/advancedQuery.ts:190</a></div>
                                 </td>
                             </tr>
     
@@ -982,7 +982,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="157" class="link-to-prism">src/containers/advancedQuery.ts:157</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">src/containers/advancedQuery.ts:163</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -1006,7 +1006,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="156" class="link-to-prism">src/containers/advancedQuery.ts:156</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="162" class="link-to-prism">src/containers/advancedQuery.ts:162</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -1026,7 +1026,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="158" class="link-to-prism">src/containers/advancedQuery.ts:158</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="164" class="link-to-prism">src/containers/advancedQuery.ts:164</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -1046,7 +1046,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="159" class="link-to-prism">src/containers/advancedQuery.ts:159</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="165" class="link-to-prism">src/containers/advancedQuery.ts:165</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -1083,7 +1083,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="208" class="link-to-prism">src/containers/advancedQuery.ts:208</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="214" class="link-to-prism">src/containers/advancedQuery.ts:214</a></div>
                                 </td>
                             </tr>
     
@@ -1120,7 +1120,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="204" class="link-to-prism">src/containers/advancedQuery.ts:204</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="210" class="link-to-prism">src/containers/advancedQuery.ts:210</a></div>
                                 </td>
                             </tr>
     
@@ -1195,7 +1195,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="228" class="link-to-prism">src/containers/advancedQuery.ts:228</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="234" class="link-to-prism">src/containers/advancedQuery.ts:234</a></div>
                                 </td>
                             </tr>
     
@@ -1232,7 +1232,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="220" class="link-to-prism">src/containers/advancedQuery.ts:220</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="226" class="link-to-prism">src/containers/advancedQuery.ts:226</a></div>
                                 </td>
                             </tr>
     
@@ -1269,7 +1269,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="189" class="link-to-prism">src/containers/advancedQuery.ts:189</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">src/containers/advancedQuery.ts:195</a></div>
                                 </td>
                             </tr>
     
@@ -1306,7 +1306,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="196" class="link-to-prism">src/containers/advancedQuery.ts:196</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="202" class="link-to-prism">src/containers/advancedQuery.ts:202</a></div>
                                 </td>
                             </tr>
     
@@ -1379,7 +1379,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="235" class="link-to-prism">src/containers/advancedQuery.ts:235</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="241" class="link-to-prism">src/containers/advancedQuery.ts:241</a></div>
                                 </td>
                             </tr>
     
@@ -1465,7 +1465,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="161" class="link-to-prism">src/containers/advancedQuery.ts:161</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">src/containers/advancedQuery.ts:167</a></div>
                                 </td>
                             </tr>
     
@@ -1500,7 +1500,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="186" class="link-to-prism">src/containers/advancedQuery.ts:186</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="192" class="link-to-prism">src/containers/advancedQuery.ts:192</a></div>
                                 </td>
                             </tr>
     
@@ -1548,7 +1548,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">src/containers/advancedQuery.ts:146</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="152" class="link-to-prism">src/containers/advancedQuery.ts:152</a></div>
                                 </td>
                             </tr>
     
@@ -1582,7 +1582,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="162" class="link-to-prism">src/containers/advancedQuery.ts:162</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="168" class="link-to-prism">src/containers/advancedQuery.ts:168</a></div>
                                 </td>
                             </tr>
     
@@ -1616,7 +1616,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">src/containers/advancedQuery.ts:163</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="169" class="link-to-prism">src/containers/advancedQuery.ts:169</a></div>
                                 </td>
                             </tr>
     
@@ -1646,7 +1646,7 @@
                     </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="165" class="link-to-prism">src/containers/advancedQuery.ts:165</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="171" class="link-to-prism">src/containers/advancedQuery.ts:171</a></div>
                                     </td>
                                 </tr>
                 </tbody>
@@ -1694,12 +1694,18 @@ import { FourDInterface } from &#x27;../js44D/JSFourDInterface&#x27;;
         &lt;div [ngSwitch]&#x3D;&quot;queryField.field.type&quot; style&#x3D;&quot;margin-left: 5px; align-self: center;&quot;&gt;
             &lt;input *ngSwitchCase&#x3D;&quot;&#x27;string&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:180px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
             &lt;input *ngSwitchCase&#x3D;&quot;&#x27;Date&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;date&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:125px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
+            &lt;input *ngSwitchCase&#x3D;&quot;&#x27;time&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;time&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:100px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
             &lt;input *ngSwitchCase&#x3D;&quot;&#x27;Time&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;time&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:100px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
             &lt;input *ngSwitchCase&#x3D;&quot;&#x27;number&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;number&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:80px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
+            &lt;input *ngSwitchCase&#x3D;&quot;&#x27;Number&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;number&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:80px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
             &lt;input *ngSwitchCase&#x3D;&quot;&#x27;float&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;number&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:80px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
             &lt;input *ngSwitchCase&#x3D;&quot;&#x27;boolean&#x27;&quot;  [name]&#x3D;&quot;queryField.id&quot; type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;fieldEntry&quot;  style&#x3D;&quot;width:80px;height:20px;&quot; [(ngModel)]&#x3D;&quot;queryField.value&quot;/&gt;
-        
-        &lt;/div&gt;
+            &lt;label *ngSwitchCase&#x3D;&quot;&#x27;any&#x27;&quot; class&#x3D;&quot;fieldEntry&quot; &gt;Can&#x27;t query on Object fields&lt;/label&gt;
+            &lt;label *ngSwitchCase&#x3D;&quot;&#x27;json&#x27;&quot; class&#x3D;&quot;fieldEntry&quot; &gt;Can&#x27;t query on Object fields&lt;/label&gt;
+            &lt;label *ngSwitchCase&#x3D;&quot;&#x27;blob&#x27;&quot; class&#x3D;&quot;fieldEntry&quot; &gt;Can&#x27;t query on Blob fields&lt;/label&gt;
+            &lt;label *ngSwitchCase&#x3D;&quot;&#x27;Blob&#x27;&quot; class&#x3D;&quot;fieldEntry&quot; &gt;Can&#x27;t query on Blob fields&lt;/label&gt;
+            &lt;label *ngSwitchCase&#x3D;&quot;&#x27;picture&#x27;&quot; class&#x3D;&quot;fieldEntry&quot; &gt;Can&#x27;t query on Picture fields&lt;/label&gt;
+            &lt;/div&gt;
         &lt;div style&#x3D;&quot;margin-left: 5px; align-self: center;&quot; [hidden]&#x3D;&quot;queryFieldList.length &lt; 2 || queryField.id &#x3D;&#x3D;&#x3D; &#x27;query0&#x27;&quot;&gt;
             &lt;select   (change)&#x3D;&#x27;queryField.connector &#x3D; $event.target.value&#x27; [(value)]&#x3D;&#x27;queryField.connector&#x27; style&#x3D;&quot;height:20px;&quot;&gt;
                 &lt;option value&#x3D;&#x27;And&#x27; &gt;And&lt;/option&gt;
@@ -1925,7 +1931,7 @@ export class AdvancedQueryComponent implements ICustomModalComponent, AfterViewI
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div>    <form>    <div *ngFor=\'let queryField of queryFieldList\' style="display: inline-flex; margin: 5px; height: 30px;">        <div style="align-self: center;">            <nav id="nav">                <ul id="navigation">                    <li style="margin-left: -40px;"><h4 href="#" [hidden]="relatedOneTables.length < 2">&raquo;</h4>                        <ul>                            <li *ngFor=\'let relatedTable of relatedOneTables\' (click)="showRelatedTable($event,queryField)"><h5>{{relatedTable}}</h5></li>                        </ul>                    </li>                </ul>            </nav>        </div>        <div style="margin-left: -25px; align-self: center;">            <select  class=\'fourDDropdown\' (change)=\'selectField($event,queryField)\' [(value)]=\'queryField.field.name\' style="width:250px;height:20px;">                <option value=\'\'></option>                <option *ngFor=\'let field of queryField.listOfFields\' value=\'{{field.name}}\' [selected]=\'isItemSelected(field,queryField)\'>{{field.longname}}</option>            </select>        </div>        <div style="margin-left: 5px; align-self: center;">            <select   (change)=\'queryField.comparator = $event.target.value\' [(value)]=\'queryField.comparator\' style="height:20px;">                <option *ngFor=\'let item of comparatorList\' value=\'{{item}}\' >{{item}}</option>            </select>        </div>        <div [ngSwitch]="queryField.field.type" style="margin-left: 5px; align-self: center;">            <input *ngSwitchCase="\'string\'"  [name]="queryField.id" type="text" class="fieldEntry"  style="width:180px;height:20px;" [(ngModel)]="queryField.value"/>            <input *ngSwitchCase="\'Date\'"  [name]="queryField.id" type="date" class="fieldEntry"  style="width:125px;height:20px;" [(ngModel)]="queryField.value"/>            <input *ngSwitchCase="\'Time\'"  [name]="queryField.id" type="time" class="fieldEntry"  style="width:100px;height:20px;" [(ngModel)]="queryField.value"/>            <input *ngSwitchCase="\'number\'"  [name]="queryField.id" type="number" class="fieldEntry"  style="width:80px;height:20px;" [(ngModel)]="queryField.value"/>            <input *ngSwitchCase="\'float\'"  [name]="queryField.id" type="number" class="fieldEntry"  style="width:80px;height:20px;" [(ngModel)]="queryField.value"/>            <input *ngSwitchCase="\'boolean\'"  [name]="queryField.id" type="checkbox" class="fieldEntry"  style="width:80px;height:20px;" [(ngModel)]="queryField.value"/>        </div>        <div style="margin-left: 5px; align-self: center;" [hidden]="queryFieldList.length < 2 || queryField.id === \'query0\'">            <select   (change)=\'queryField.connector = $event.target.value\' [(value)]=\'queryField.connector\' style="height:20px;">                <option value=\'And\' >And</option>                <option value=\'Or\' >Or</option>            </select>        </div>     </div>    <div style="margin: 10px; width:550px; display: inline-flex;">        <div style="flex-grow: 1;">            <button class="regularButton" style="width:100px;" (click)="moreLines()">More...</button>            <button class="regularButton" style="width:100px;" (click)="lessLines()" [hidden]="queryFieldList.length < 2">Less...</button>        </div>        <button class="regularButton" style="width:100px;" (click)="doQuery()">Query</button>    </div></form></div>'
+        var COMPONENT_TEMPLATE = '<div>    <form>    <div *ngFor=\'let queryField of queryFieldList\' style="display: inline-flex; margin: 5px; height: 30px;">        <div style="align-self: center;">            <nav id="nav">                <ul id="navigation">                    <li style="margin-left: -40px;"><h4 href="#" [hidden]="relatedOneTables.length < 2">&raquo;</h4>                        <ul>                            <li *ngFor=\'let relatedTable of relatedOneTables\' (click)="showRelatedTable($event,queryField)"><h5>{{relatedTable}}</h5></li>                        </ul>                    </li>                </ul>            </nav>        </div>        <div style="margin-left: -25px; align-self: center;">            <select  class=\'fourDDropdown\' (change)=\'selectField($event,queryField)\' [(value)]=\'queryField.field.name\' style="width:250px;height:20px;">                <option value=\'\'></option>                <option *ngFor=\'let field of queryField.listOfFields\' value=\'{{field.name}}\' [selected]=\'isItemSelected(field,queryField)\'>{{field.longname}}</option>            </select>        </div>        <div style="margin-left: 5px; align-self: center;">            <select   (change)=\'queryField.comparator = $event.target.value\' [(value)]=\'queryField.comparator\' style="height:20px;">                <option *ngFor=\'let item of comparatorList\' value=\'{{item}}\' >{{item}}</option>            </select>        </div>        <div [ngSwitch]="queryField.field.type" style="margin-left: 5px; align-self: center;">            <input *ngSwitchCase="\'string\'"  [name]="queryField.id" type="text" class="fieldEntry"  style="width:180px;height:20px;" [(ngModel)]="queryField.value"/>            <input *ngSwitchCase="\'Date\'"  [name]="queryField.id" type="date" class="fieldEntry"  style="width:125px;height:20px;" [(ngModel)]="queryField.value"/>            <input *ngSwitchCase="\'time\'"  [name]="queryField.id" type="time" class="fieldEntry"  style="width:100px;height:20px;" [(ngModel)]="queryField.value"/>            <input *ngSwitchCase="\'Time\'"  [name]="queryField.id" type="time" class="fieldEntry"  style="width:100px;height:20px;" [(ngModel)]="queryField.value"/>            <input *ngSwitchCase="\'number\'"  [name]="queryField.id" type="number" class="fieldEntry"  style="width:80px;height:20px;" [(ngModel)]="queryField.value"/>            <input *ngSwitchCase="\'Number\'"  [name]="queryField.id" type="number" class="fieldEntry"  style="width:80px;height:20px;" [(ngModel)]="queryField.value"/>            <input *ngSwitchCase="\'float\'"  [name]="queryField.id" type="number" class="fieldEntry"  style="width:80px;height:20px;" [(ngModel)]="queryField.value"/>            <input *ngSwitchCase="\'boolean\'"  [name]="queryField.id" type="checkbox" class="fieldEntry"  style="width:80px;height:20px;" [(ngModel)]="queryField.value"/>            <label *ngSwitchCase="\'any\'" class="fieldEntry" >Can\'t query on Object fields</label>            <label *ngSwitchCase="\'json\'" class="fieldEntry" >Can\'t query on Object fields</label>            <label *ngSwitchCase="\'blob\'" class="fieldEntry" >Can\'t query on Blob fields</label>            <label *ngSwitchCase="\'Blob\'" class="fieldEntry" >Can\'t query on Blob fields</label>            <label *ngSwitchCase="\'picture\'" class="fieldEntry" >Can\'t query on Picture fields</label>            </div>        <div style="margin-left: 5px; align-self: center;" [hidden]="queryFieldList.length < 2 || queryField.id === \'query0\'">            <select   (change)=\'queryField.connector = $event.target.value\' [(value)]=\'queryField.connector\' style="height:20px;">                <option value=\'And\' >And</option>                <option value=\'Or\' >Or</option>            </select>        </div>     </div>    <div style="margin: 10px; width:550px; display: inline-flex;">        <div style="flex-grow: 1;">            <button class="regularButton" style="width:100px;" (click)="moreLines()">More...</button>            <button class="regularButton" style="width:100px;" (click)="lessLines()" [hidden]="queryFieldList.length < 2">Less...</button>        </div>        <button class="regularButton" style="width:100px;" (click)="doQuery()">Query</button>    </div></form></div>'
     var COMPONENTS = [{'name': 'AdvancedQueryComponent', 'selector': 'advanced-query'},{'name': 'DataGrid', 'selector': 'datagrid'},{'name': 'FourDDropDown', 'selector': 'fourd-dropdown'},{'name': 'ListSelectorDialog', 'selector': 'list-selector'},{'name': 'LoginCmp', 'selector': 'log-in'},{'name': 'OKOnlyModal', 'selector': 'modal-content'},{'name': 'QueryBand', 'selector': 'query-band'},{'name': 'QuickFindInput', 'selector': 'quickfind-input'},{'name': 'RecordEditWindow', 'selector': 'record-edit-window'},{'name': 'RecordList', 'selector': 'record-list'},{'name': 'Tab', 'selector': 'tab'},{'name': 'Tabs', 'selector': 'tabs'},{'name': 'WebAppContainer', 'selector': 'web-application'},{'name': 'YesNoModal', 'selector': 'modal-content'}];
     var DIRECTIVES = [{'name': 'CustomButtonBarDirective', 'selector': 'custombuttonbar'},{'name': 'QueryBandDirective', 'selector': 'queryband'}];
     var ACTUAL_COMPONENT = {'name': 'AdvancedQueryComponent'};

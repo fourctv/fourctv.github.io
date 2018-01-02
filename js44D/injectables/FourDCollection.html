@@ -278,9 +278,6 @@
                                 id="xs-miscellaneous-links"
                             >
                                 <li class="link">
-                                  <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
-                                </li>
-                                <li class="link">
                                   <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
                                 </li>
                         </ul>
@@ -566,9 +563,6 @@
                                        id="miscellaneous-links"
                    >
                                        <li class="link">
-                                         <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
-                                       </li>
-                                       <li class="link">
                                          <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
                                        </li>
                                </ul>
@@ -768,7 +762,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/js44D/JSFourDCollection.ts:55</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/js44D/JSFourDCollection.ts:56</a></div>
                                         </td>
                                     </tr>
             
@@ -840,7 +834,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/js44D/JSFourDCollection.ts:104</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">src/js44D/JSFourDCollection.ts:105</a></div>
                                         </td>
                                     </tr>
             
@@ -1350,7 +1344,7 @@
                             </tr>
                                         <tr>
                                             <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">src/js44D/JSFourDCollection.ts:160</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="161" class="link-to-prism">src/js44D/JSFourDCollection.ts:161</a></div>
                                             </td>
                                         </tr>
                                 <tr>
@@ -1415,8 +1409,9 @@ export class FourDCollection {
     //
     constructor() {
         // inject FourDInterface
-        const injector &#x3D; ReflectiveInjector.resolveAndCreate([FourDInterface]);
-        this.fourD &#x3D; injector.get(FourDInterface);
+        //const injector &#x3D; ReflectiveInjector.resolveAndCreate([FourDInterface]);
+        //this.fourD &#x3D; injector.get(FourDInterface);
+        this.fourD &#x3D; FourDInterface.interfaceInstance;
     }
 
     /**
