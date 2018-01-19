@@ -616,7 +616,9 @@ import { FourDModule, JS44DModule, ModalModule } from &#39;js44d&#39;;
     FourDModule, JS44DModule, ModalModule
   ]
   ],
-  exports: [FourDModule, JS44DModule, ModalModule],</code></pre><p>A quick note, the UI components/widgets are <strong>WEB ONLY</strong>, they do not work under Nativescript, so for {N} you can use only the 4D Service Classes. For NativeScript your module declaration should look something like this:</p>
+  exports: [FourDModule, JS44DModule, ModalModule],</code></pre><p>If you plan on using any of the UI widgets, then you need to grab a copy of the <a href="https://github.com/fourctv/JS44D/tree/master/assets">assets folder</a> contents and drop all that in your own <strong>assets</strong> directory. You need to also add the following line to your <code>styles.scss</code> file:</p>
+<pre class="line-numbers"><code class="language-none">&#64;import &#39;./assets/main&#39;;</code></pre><p>And you can edit <code>src/assets/main.scss</code> at will, to add you own styles or modify the existing styles that are used by JS44D UI Widgets.</p>
+<p>A quick note, the UI components/widgets are <strong>WEB ONLY</strong>, they do not work under Nativescript, so for {N} you can only use the 4D Service Classes. For NativeScript your module declaration should look something like this:</p>
 <pre class="line-numbers"><code class="language-none">...
 import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
 ...

@@ -666,7 +666,7 @@
     &lt;/select&gt;
     &lt;div &gt;
         &lt;label [hidden]&#x3D;&quot;message &#x3D;&#x3D; &#x27;&#x27;&quot;&gt;{{message}}&lt;/label&gt;
-        &lt;button class&#x3D;&quot;regularButton&quot; style&#x3D;&quot;width:70px;float:right;margin-right:5px;&quot; (click)&#x3D;&quot;ok($event)&quot;&gt;{{buttonText}}&lt;/button&gt;
+        &lt;button class&#x3D;&quot;regularButton mat-raised-button mat-primary&quot; style&#x3D;&quot;width:70px;float:right;margin-right:5px;&quot; (click)&#x3D;&quot;ok($event)&quot;&gt;{{buttonText}}&lt;/button&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre></td>
@@ -1440,7 +1440,7 @@ import { ModalConfig } from &#x27;../angular2-modal/models/ModalConfig&#x27;;
             &lt;/select&gt;
             &lt;div &gt;
                 &lt;label [hidden]&#x3D;&quot;message &#x3D;&#x3D; &#x27;&#x27;&quot;&gt;{{message}}&lt;/label&gt;
-                &lt;button class&#x3D;&quot;regularButton&quot; style&#x3D;&quot;width:70px;float:right;margin-right:5px;&quot; (click)&#x3D;&quot;ok($event)&quot;&gt;{{buttonText}}&lt;/button&gt;
+                &lt;button class&#x3D;&quot;regularButton mat-raised-button mat-primary&quot; style&#x3D;&quot;width:70px;float:right;margin-right:5px;&quot; (click)&#x3D;&quot;ok($event)&quot;&gt;{{buttonText}}&lt;/button&gt;
             &lt;/div&gt;
         &lt;/div&gt;
    &#x60;,
@@ -1531,7 +1531,7 @@ export class ListSelectorDialog implements ICustomModalComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div style="display:flex;flex-direction:column;margin:10px;height:calc(100% - 30px);">    <select size="20" class="largeFieldEntry" style="height:90%;padding:5px;margin-bottom:10px;" (change)="changeSelection($event)" (dblclick)="ok($event)">        <option *ngFor=\'let item of itemsList; let i=index\' value="{{item}}" title="{{tipsList[i]}}" class="selectorItem">{{item}}</option>    </select>    <div >        <label [hidden]="message == \'\'">{{message}}</label>        <button class="regularButton" style="width:70px;float:right;margin-right:5px;" (click)="ok($event)">{{buttonText}}</button>    </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div style="display:flex;flex-direction:column;margin:10px;height:calc(100% - 30px);">    <select size="20" class="largeFieldEntry" style="height:90%;padding:5px;margin-bottom:10px;" (change)="changeSelection($event)" (dblclick)="ok($event)">        <option *ngFor=\'let item of itemsList; let i=index\' value="{{item}}" title="{{tipsList[i]}}" class="selectorItem">{{item}}</option>    </select>    <div >        <label [hidden]="message == \'\'">{{message}}</label>        <button class="regularButton mat-raised-button mat-primary" style="width:70px;float:right;margin-right:5px;" (click)="ok($event)">{{buttonText}}</button>    </div></div></div>'
     var COMPONENTS = [{'name': 'AdvancedQueryComponent', 'selector': 'advanced-query'},{'name': 'DataGrid', 'selector': 'datagrid'},{'name': 'FourDDropDown', 'selector': 'fourd-dropdown'},{'name': 'ListSelectorDialog', 'selector': 'list-selector'},{'name': 'LoginCmp', 'selector': 'log-in'},{'name': 'OKOnlyModal', 'selector': 'modal-content'},{'name': 'QueryBand', 'selector': 'query-band'},{'name': 'QuickFindInput', 'selector': 'quickfind-input'},{'name': 'RecordEditWindow', 'selector': 'record-edit-window'},{'name': 'RecordList', 'selector': 'record-list'},{'name': 'Tab', 'selector': 'tab'},{'name': 'Tabs', 'selector': 'tabs'},{'name': 'WebAppContainer', 'selector': 'web-application'},{'name': 'YesNoModal', 'selector': 'modal-content'}];
     var DIRECTIVES = [{'name': 'CustomButtonBarDirective', 'selector': 'custombuttonbar'},{'name': 'QueryBandDirective', 'selector': 'queryband'}];
     var ACTUAL_COMPONENT = {'name': 'ListSelectorDialog'};

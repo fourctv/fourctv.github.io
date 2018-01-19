@@ -740,39 +740,39 @@ export class CustomButtonBarDirective { }
 @Component({
     selector: &#x27;query-band&#x27;,
     template: &#x60;
-    &lt;div dropdown class&#x3D;&quot;btn-group btn-group-md&quot; style&#x3D;&quot;width:100%;padding-top:5px;height:40px;&quot;&gt;
-    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;switchState()&quot;&gt;&lt;span class&#x3D;&quot;glyphicon&quot; [ngClass]&#x3D;&quot;openStateIcon&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;QBE&#x27;)&quot; (click)&#x3D;&quot;doQBE()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-query-icon&quot; title&#x3D;&quot;advanced query&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;QFF&#x27;)&quot; (click)&#x3D;&quot;doQFF()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-qff-icon&quot; title&#x3D;&quot;query using a text file&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Sets&#x27;)&quot; (click)&#x3D;&quot;false&quot; dropdownToggle&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-manageSets-icon&quot; title&#x3D;&quot;search sets management&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-        &lt;ul *dropdownMenu class&#x3D;&quot;dropdown-menu&quot;&gt;
-            &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;selectHighlited&#x27;)&quot;&gt;Select Highlighted&lt;/a&gt;&lt;/li&gt;
-            &lt;li class&#x3D;&quot;divider dropdown-divider&quot;&gt;&lt;/li&gt;
-            &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;reuseSearch&#x27;)&quot;&gt;Reuse a Saved Search&lt;/a&gt;&lt;/li&gt;
-            &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;restoreSet&#x27;)&quot;&gt;Restore a Saved Record Set&lt;/a&gt;&lt;/li&gt;
-            &lt;!-- &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;combineSearches&#x27;)&quot;&gt;Combine Searches&lt;/a&gt;&lt;/li&gt; --&gt;
-            &lt;li class&#x3D;&quot;divider dropdown-divider&quot;&gt;&lt;/li&gt;
-            &lt;li *ngIf&#x3D;&quot;doWehaveAQuery()&quot; role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;saveSearch&#x27;)&quot;&gt;Save Current Search&lt;/a&gt;&lt;/li&gt;
-            &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;saveSet&#x27;)&quot;&gt;Save Record Set&lt;/a&gt;&lt;/li&gt;
-            &lt;li class&#x3D;&quot;divider dropdown-divider&quot;&gt;&lt;/li&gt;
-            &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;manageSearches&#x27;)&quot;&gt;Manage Saved Searches&lt;/a&gt;&lt;/li&gt;
-            &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;manageSets&#x27;)&quot;&gt;Manage Saved Sets&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;doRefresh()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-refresh-icon&quot; title&#x3D;&quot;refresh query&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-    &lt;!-- &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Sort&#x27;)&quot; (click)&#x3D;&quot;doSort()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-sort-icon&quot; title&#x3D;&quot;multi-column sort&quot;&gt;&lt;/span&gt;&lt;/a&gt; --&gt;
-    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;doClear()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-clear-icon&quot; title&#x3D;&quot;clear query form&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Export&#x27;)&quot; (click)&#x3D;&quot;doExportGrid()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-export-icon&quot; title&#x3D;&quot;export grid data&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;div dropdown class&#x3D;&quot;btn-group btn-group-md query-band&quot;&gt;
+        &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;switchState()&quot;&gt;&lt;span class&#x3D;&quot;glyphicon&quot; [ngClass]&#x3D;&quot;openStateIcon&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;QBE&#x27;)&quot; (click)&#x3D;&quot;doQBE()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-query-icon&quot; title&#x3D;&quot;advanced query&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;QFF&#x27;)&quot; (click)&#x3D;&quot;doQFF()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-qff-icon&quot; title&#x3D;&quot;query using a text file&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Sets&#x27;)&quot; (click)&#x3D;&quot;false&quot; dropdownToggle&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-manageSets-icon&quot; title&#x3D;&quot;search sets management&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;ul *dropdownMenu class&#x3D;&quot;dropdown-menu&quot;&gt;
+                &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;selectHighlited&#x27;)&quot;&gt;Select Highlighted&lt;/a&gt;&lt;/li&gt;
+                &lt;li class&#x3D;&quot;divider dropdown-divider&quot;&gt;&lt;/li&gt;
+                &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;reuseSearch&#x27;)&quot;&gt;Reuse a Saved Search&lt;/a&gt;&lt;/li&gt;
+                &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;restoreSet&#x27;)&quot;&gt;Restore a Saved Record Set&lt;/a&gt;&lt;/li&gt;
+                &lt;!-- &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;combineSearches&#x27;)&quot;&gt;Combine Searches&lt;/a&gt;&lt;/li&gt; --&gt;
+                &lt;li class&#x3D;&quot;divider dropdown-divider&quot;&gt;&lt;/li&gt;
+                &lt;li *ngIf&#x3D;&quot;doWehaveAQuery()&quot; role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;saveSearch&#x27;)&quot;&gt;Save Current Search&lt;/a&gt;&lt;/li&gt;
+                &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;saveSet&#x27;)&quot;&gt;Save Record Set&lt;/a&gt;&lt;/li&gt;
+                &lt;li class&#x3D;&quot;divider dropdown-divider&quot;&gt;&lt;/li&gt;
+                &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;manageSearches&#x27;)&quot;&gt;Manage Saved Searches&lt;/a&gt;&lt;/li&gt;
+                &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;manageSets&#x27;)&quot;&gt;Manage Saved Sets&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;doRefresh()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-refresh-icon&quot; title&#x3D;&quot;refresh query&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;!-- &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Sort&#x27;)&quot; (click)&#x3D;&quot;doSort()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-sort-icon&quot; title&#x3D;&quot;multi-column sort&quot;&gt;&lt;/span&gt;&lt;/a&gt; --&gt;
+        &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;doClear()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-clear-icon&quot; title&#x3D;&quot;clear query form&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Export&#x27;)&quot; (click)&#x3D;&quot;doExportGrid()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-export-icon&quot; title&#x3D;&quot;export grid data&quot;&gt;&lt;/span&gt;&lt;/a&gt;
 
-    &lt;div class&#x3D;&quot;btn-group btn-group-md&quot; style&#x3D;&quot;position:absolute;right:20px&quot;&gt;
-        &lt;ng-content select&#x3D;&quot;custombuttonbar&quot;&gt;&lt;/ng-content&gt;
-        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;regularButton&quot; style&#x3D;&quot;width:70px;margin-left: 5px;&quot; (click)&#x3D;&quot;doAddRecord()&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;ADD&#x27;)&quot;&gt;Add&lt;/button&gt;
-        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;regularButton&quot; style&#x3D;&quot;width:70px;margin-left: 5px;&quot; (click)&#x3D;&quot;doEditRecord()&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;EDIT&#x27;)&quot;&gt;Edit&lt;/button&gt;
-        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;regularButton&quot; style&#x3D;&quot;width:70px;margin-left: 5px;&quot; (click)&#x3D;&quot;doDeleteRecord()&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;DEL&#x27;)&quot;&gt;Delete&lt;/button&gt;
+        &lt;div class&#x3D;&quot;custom-button-bar&quot;&gt;
+            &lt;ng-content select&#x3D;&quot;custombuttonbar&quot;&gt;&lt;/ng-content&gt;
+            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;regularButton mat-raised-button mat-primary&quot; color&#x3D;&quot;primary&quot; style&#x3D;&quot;width:70px;margin-left: 5px;&quot; (click)&#x3D;&quot;doAddRecord()&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;ADD&#x27;)&quot;&gt;Add&lt;/button&gt;
+            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;regularButton mat-raised-button mat-primary&quot; color&#x3D;&quot;primary&quot; style&#x3D;&quot;width:70px;margin-left: 5px;&quot; (click)&#x3D;&quot;doEditRecord()&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;EDIT&#x27;)&quot;&gt;Edit&lt;/button&gt;
+            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;regularButton mat-raised-button mat-warn&quot; color&#x3D;&quot;warn&quot; style&#x3D;&quot;width:70px;margin-left: 5px;&quot; (click)&#x3D;&quot;doDeleteRecord()&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;DEL&#x27;)&quot;&gt;Delete&lt;/button&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-&lt;div [hidden]&#x3D;&quot;!queryBandIsOpen&quot; style&#x3D;&quot;margin-bottom:10px;margin-left:5px;margin-top:5px;border: 1px;border-style: ridge;padding: 5px; background-color:lightgrey;&quot;&gt;
-    &lt;ng-content select&#x3D;&quot;queryband&quot;&gt;&lt;/ng-content&gt;
-&lt;/div&gt;
+    &lt;div [hidden]&#x3D;&quot;!queryBandIsOpen&quot; class&#x3D;&quot;custom-query-band&quot;&gt;
+        &lt;ng-content select&#x3D;&quot;queryband&quot;&gt;&lt;/ng-content&gt;
+    &lt;/div&gt;
 
     &#x60;,
     styles: [&#x60;
@@ -787,6 +787,26 @@ export class CustomButtonBarDirective { }
         display:none;
     }
        
+    .query-band {
+        width:100%;
+        padding-top:5px;
+        height:40px;
+    }
+
+    .custom-query-band {
+        margin-bottom:10px;
+        margin-left:5px;
+        margin-top:5px;
+        padding: 5px;
+        border: 2px;
+        border-style: groove;
+        border-radius: 5px;
+    }
+
+    .custom-button-bar {
+        position:absolute;
+        right:20px;
+    }
     &#x60;]
 })
 

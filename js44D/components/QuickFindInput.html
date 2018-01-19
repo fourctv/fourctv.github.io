@@ -669,10 +669,6 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#quickFind">quickFind</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
                                 <a href="#runQuickFinder">runQuickFinder</a>
                             </li>
                         </ul>
@@ -686,6 +682,9 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                <a href="#quickFind">quickFind</a>
+                            </li>
                             <li>
                                 <a href="#value">value</a>
                             </li>
@@ -707,7 +706,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/controls/quickFindInput.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/controls/quickFindInput.ts:16</a></div>
                                 </td>
                             </tr>
     
@@ -717,6 +716,30 @@
 
     <section>
         <h3 id="inputs">Inputs</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="quickFind"></a>
+                            <code>quickFind</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://angular.io/api/forms/FormControl" target="_blank" >FormControl</a></code>
+
+                              </p>
+                            <p>
+                              <em>Default value: </em><code>new FormControl()</code>
+                            </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/controls/quickFindInput.ts:14</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
@@ -732,7 +755,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/controls/quickFindInput.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/controls/quickFindInput.ts:15</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -748,40 +771,6 @@
             <h3 id="inputs">
                 Properties
             </h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="quickFind"></a>
-                            <span class="name">
-                                <b>
-                                    <span class="modifier">Public</span>
-                                quickFind
-                                </b>
-                                <a href="#quickFind"><span class="fa fa-link"></span></a>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <span class="modifier-icon fa fa-reset"></span><code>quickFind:     <code></code>
-    </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Default value : </i><code>new FormControl()</code>
-                            </td>
-                        </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/controls/quickFindInput.ts:12</a></div>
-                                </td>
-                            </tr>
-    
-    
-                </tbody>
-            </table>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
@@ -815,7 +804,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/controls/quickFindInput.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/controls/quickFindInput.ts:16</a></div>
                                 </td>
                             </tr>
     
@@ -830,7 +819,9 @@
     <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import { Component, EventEmitter, Input } from &#x27;@angular/core&#x27;;
 import { FormControl } from &#x27;@angular/forms&#x27;;
-import &#x27;rxjs/Rx&#x27;;
+
+import &#x27;rxjs/add/operator/debounceTime&#x27;;
+import &#x27;rxjs/add/operator/distinctUntilChanged&#x27;;
 
 @Component({
     selector: &#x27;quickfind-input&#x27;,
@@ -839,12 +830,12 @@ import &#x27;rxjs/Rx&#x27;;
 
 export class QuickFindInput {
 
-    public quickFind &#x3D; new FormControl();
+    @Input() public quickFind &#x3D; new FormControl();
     @Input() public value &#x3D; &#x27;&#x27;;
     public runQuickFinder: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
 
     constructor() {
-        this.quickFind.valueChanges.debounceTime(1500).distinctUntilChanged().subscribe(query &#x3D;&gt; {
+        this.quickFind.valueChanges.distinctUntilChanged().debounceTime(1500).subscribe(query &#x3D;&gt; {
             this.runQuickFinder.emit(query);
         });
     }
