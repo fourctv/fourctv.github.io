@@ -719,7 +719,7 @@
 
 
     <div class="tab-pane fade tab-source-code" id="c-source">
-        <pre class="line-numbers"><code class="language-typescript">import { Directive, Component, EventEmitter, ElementRef, ContentChild, Input } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers"><code class="language-typescript">import { Directive, Component, EventEmitter, ElementRef, ContentChild, Input, Output } from &#x27;@angular/core&#x27;;
 
 @Directive({
     selector: &#x27;queryband&#x27;
@@ -870,20 +870,20 @@ export class QueryBand {
     //
     // Events emitted by the QueryBand
     //
-    queryFromQBE: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
-    queryFromFile: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
-    queryRefresh: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
-    querySortGrid: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
-    queryExportGrid: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    @Output() queryFromQBE: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    @Output() queryFromFile: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    @Output() queryRefresh: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    @Output() querySortGrid: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    @Output() queryExportGrid: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
 
-    queryManageSets: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    @Output() queryManageSets: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
 
     //
     // Events emitted by the QueryBand&#x27;s Button Bar
     //
-    queryAddRecord: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
-    queryEditRecord: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
-    queryDeleteRecord: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    @Output() queryAddRecord: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    @Output() queryEditRecord: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+    @Output() queryDeleteRecord: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
 
     //
     // Internal variables
