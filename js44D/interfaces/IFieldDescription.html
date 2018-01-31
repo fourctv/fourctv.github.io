@@ -263,6 +263,9 @@
                                 <li class="link">
                                     <a href="../pipes/Base64ImageRef.html" >Base64ImageRef</a>
                                 </li>
+                                <li class="link">
+                                    <a href="../pipes/FourDDateToString.html" >FourDDateToString</a>
+                                </li>
                         </ul>
                     </li>
             
@@ -547,6 +550,9 @@
                    >
                                        <li class="link">
                                            <a href="../pipes/Base64ImageRef.html" >Base64ImageRef</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../pipes/FourDDateToString.html" >FourDDateToString</a>
                                        </li>
                                </ul>
                            </li>
@@ -1399,6 +1405,9 @@ export class FourDModel {
     /** callback method to be executed on 4D side before a Delete operation */
     public fourdDeleteCallbackMethod_: string;
 
+    // injected FourDInterface service
+    public fourD: FourDInterface;
+
     // -----------------------
     // Private variables
     // -----------------------
@@ -1408,9 +1417,6 @@ export class FourDModel {
     private _attributes: Object &#x3D; {};
     // keep a list of modified fields, to optimize Updates, only modified data is set to 4D
     private _modified: Object &#x3D; {};
-
-    // injected FourDInterface service
-    private fourD: FourDInterface;
 
 
     /** 
@@ -1870,6 +1876,32 @@ export class FourDModel {
 
     }
 
+    /**
+     * Retrieves a set of variables or 4D execute formula values
+     * 
+     * @param values an Array of objects with the following format: {formula: &#x27;a 4d formula&#x27;, value:&#x27;the resulting value returned by 4D&#x27;}
+     * @param method the name of a 4D method to be called before processing the formulas
+     *
+     * @returns returns a Promise for the database operation, whose result is the values Array populated by 4D
+     */
+    public getValuesFrom4D(values:Array&lt;any&gt;, method:string &#x3D; &#x27;&#x27;): Promise&lt;Array&lt;any&gt;&gt; {
+        const body: any &#x3D; { VariablesList: Base64.encode(Utf8.utf8encode(JSON.stringify(values))) };
+        if (method &amp;&amp; method !&#x3D; &#x27;&#x27;) {
+            body.CallbackMethod &#x3D; method;
+        }
+        return new Promise((resolve, reject) &#x3D;&gt; {
+            // const me &#x3D; this;
+            this.fourD.call4DRESTMethod(&#x27;REST_GetValues&#x27;, body)
+                .subscribe(result &#x3D;&gt; {
+                    resolve(result);
+                },
+                error &#x3D;&gt; {
+                    console.log(&#x27;error:&#x27; + JSON.stringify(error));
+                    reject(error);
+                });
+        });
+
+    }
     /**
      * Get the current record&#x27;s record number
      * 

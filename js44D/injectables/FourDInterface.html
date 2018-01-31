@@ -263,6 +263,9 @@
                                 <li class="link">
                                     <a href="../pipes/Base64ImageRef.html" >Base64ImageRef</a>
                                 </li>
+                                <li class="link">
+                                    <a href="../pipes/FourDDateToString.html" >FourDDateToString</a>
+                                </li>
                         </ul>
                     </li>
             
@@ -548,6 +551,9 @@
                                        <li class="link">
                                            <a href="../pipes/Base64ImageRef.html" >Base64ImageRef</a>
                                        </li>
+                                       <li class="link">
+                                           <a href="../pipes/FourDDateToString.html" >FourDDateToString</a>
+                                       </li>
                                </ul>
                            </li>
                    
@@ -702,6 +708,10 @@
                                     <li>
                                             <span class="modifier">Public</span>
                                         <a href="#dateTo4DFormat">dateTo4DFormat</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Public</span>
+                                        <a href="#dateToDOMFormat">dateToDOMFormat</a>
                                     </li>
                                     <li>
                                             <span class="modifier">Public</span>
@@ -951,6 +961,78 @@
                                         </div>
                                             <div class="io-description">
                                                 <p>a 4D formatted date string (YYYYMMDD)</p>
+            
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="dateToDOMFormat"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Public</span>
+                                        dateToDOMFormat
+                                        </b>
+                                        <a href="#dateToDOMFormat"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>dateToDOMFormat(theDate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="356" class="link-to-prism">src/js44D/JSFourDInterface.ts:356</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Converts a 4D YMD date to DOM format .</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>theDate</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>a 4D date value, formatted as string (YYYYMMDD)</p>
+            </td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                <p>a DOM date </p>
             
                                             </div>
                                 </td>
@@ -2363,6 +2445,18 @@ export class FourDInterface {
     public dateTo4DFormat(theDate: Date): string {
 
         return theDate.toJSON().substr(0, 10).replace(/-/g, &#x27;&#x27;);
+    }
+
+    /**
+     * Converts a 4D YMD date to DOM format .
+     *  
+     * @param theDate a 4D date value, formatted as string (YYYYMMDD)
+     * @returns a DOM date 
+     * 
+     */
+    public dateToDOMFormat(theDate: string): Date {
+        const dateValue &#x3D; theDate.substr(0,4)+&#x27;/&#x27;+theDate.substr(4,2)+&#x27;/&#x27;+theDate.substr(6,2);
+        return new Date(dateValue);
     }
 
 }

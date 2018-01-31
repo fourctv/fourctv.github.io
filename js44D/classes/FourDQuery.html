@@ -263,6 +263,9 @@
                                 <li class="link">
                                     <a href="../pipes/Base64ImageRef.html" >Base64ImageRef</a>
                                 </li>
+                                <li class="link">
+                                    <a href="../pipes/FourDDateToString.html" >FourDDateToString</a>
+                                </li>
                         </ul>
                     </li>
             
@@ -548,6 +551,9 @@
                                        <li class="link">
                                            <a href="../pipes/Base64ImageRef.html" >Base64ImageRef</a>
                                        </li>
+                                       <li class="link">
+                                           <a href="../pipes/FourDDateToString.html" >FourDDateToString</a>
+                                       </li>
                                </ul>
                            </li>
                    
@@ -712,7 +718,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="586" class="link-to-prism">src/js44D/JSFourDInterface.ts:586</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="598" class="link-to-prism">src/js44D/JSFourDInterface.ts:598</a></div>
                                         </td>
                                     </tr>
             
@@ -752,7 +758,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="584" class="link-to-prism">src/js44D/JSFourDInterface.ts:584</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="596" class="link-to-prism">src/js44D/JSFourDInterface.ts:596</a></div>
                                         </td>
                                     </tr>
             
@@ -792,7 +798,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="588" class="link-to-prism">src/js44D/JSFourDInterface.ts:588</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="600" class="link-to-prism">src/js44D/JSFourDInterface.ts:600</a></div>
                                         </td>
                                     </tr>
             
@@ -832,7 +838,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="594" class="link-to-prism">src/js44D/JSFourDInterface.ts:594</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="606" class="link-to-prism">src/js44D/JSFourDInterface.ts:606</a></div>
                                         </td>
                                     </tr>
             
@@ -872,7 +878,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="592" class="link-to-prism">src/js44D/JSFourDInterface.ts:592</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="604" class="link-to-prism">src/js44D/JSFourDInterface.ts:604</a></div>
                                         </td>
                                     </tr>
             
@@ -912,7 +918,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="590" class="link-to-prism">src/js44D/JSFourDInterface.ts:590</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="602" class="link-to-prism">src/js44D/JSFourDInterface.ts:602</a></div>
                                         </td>
                                     </tr>
             
@@ -952,7 +958,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="578" class="link-to-prism">src/js44D/JSFourDInterface.ts:578</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="590" class="link-to-prism">src/js44D/JSFourDInterface.ts:590</a></div>
                                         </td>
                                     </tr>
             
@@ -992,7 +998,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="580" class="link-to-prism">src/js44D/JSFourDInterface.ts:580</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="592" class="link-to-prism">src/js44D/JSFourDInterface.ts:592</a></div>
                                         </td>
                                     </tr>
             
@@ -1032,7 +1038,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="582" class="link-to-prism">src/js44D/JSFourDInterface.ts:582</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="594" class="link-to-prism">src/js44D/JSFourDInterface.ts:594</a></div>
                                         </td>
                                     </tr>
             
@@ -1397,6 +1403,18 @@ export class FourDInterface {
     public dateTo4DFormat(theDate: Date): string {
 
         return theDate.toJSON().substr(0, 10).replace(/-/g, &#x27;&#x27;);
+    }
+
+    /**
+     * Converts a 4D YMD date to DOM format .
+     *  
+     * @param theDate a 4D date value, formatted as string (YYYYMMDD)
+     * @returns a DOM date 
+     * 
+     */
+    public dateToDOMFormat(theDate: string): Date {
+        const dateValue &#x3D; theDate.substr(0,4)+&#x27;/&#x27;+theDate.substr(4,2)+&#x27;/&#x27;+theDate.substr(6,2);
+        return new Date(dateValue);
     }
 
 }
