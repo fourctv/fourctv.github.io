@@ -1554,7 +1554,7 @@ export class FourDModel {
                 (!this.isReadOnly(field) || (mode &#x3D;&#x3D;&#x3D; &#x27;insert&#x27;)) &amp;&amp;			// May/15/09 send all non-read only fields, empty or not
                 (this.isModifiedField(fieldName) || (mode &#x3D;&#x3D;&#x3D; &#x27;insert&#x27;))) { 	// Nov 18/09 send ONLY fields that have indeed been modified
                 let value &#x3D; &#x27;&#x27;;
-                if ((this[fieldName] !&#x3D;&#x3D; null) || (field.type !&#x3D;&#x3D; &#x27;boolean&#x27;)) {
+                if (((this[fieldName] !&#x3D;&#x3D; null) &amp;&amp; (this[fieldName] !&#x3D;&#x3D; undefined)) || (field.type &#x3D;&#x3D;&#x3D; &#x27;boolean&#x27;)) {
                     // send back only fields that do have some value and that belong to the table
                     // ignore calculated or related fields
                     switch (field.type) {
@@ -1576,17 +1576,21 @@ export class FourDModel {
 
                         case &#x27;number&#x27;:
                         case &#x27;Number&#x27;:
-                            recordData[&#x27;fields&#x27;][field.longname] &#x3D; Number(this[fieldName]);
+                            recordData[&#x27;fields&#x27;][field.longname] &#x3D; +this[fieldName];
                             break;
 
                         case &#x27;boolean&#x27;:
-                            recordData[&#x27;fields&#x27;][field.longname] &#x3D; this[fieldName];
+                            recordData[&#x27;fields&#x27;][field.longname] &#x3D; (this[fieldName])?true:false;
                             break;
 
                         case &#x27;string&#x27;:
                         case &#x27;text&#x27;:
-                            // if text, wrap data inside a cdata, triming extra whitespace
-                            recordData[&#x27;fields&#x27;][field.longname] &#x3D; this[fieldName].trim();
+                        if (typeof(this[fieldName]) &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
+                            // if text, trim extra whitespace
+                                recordData[&#x27;fields&#x27;][field.longname] &#x3D; this[fieldName].trim();
+                            } else {
+                                recordData[&#x27;fields&#x27;][field.longname] &#x3D; this[fieldName].toString();
+                            }
                             break;
 
                         case &#x27;json&#x27;:
@@ -1845,6 +1849,15 @@ export class FourDModel {
             }
         }
 
+    }
+
+    public extractModelData():Object {
+        let data &#x3D; {_recnum: this._recnum};
+        for (const field of this.fields) {
+            data[field.name] &#x3D; this.get(field.name);
+        }
+
+        return data;
     }
 
     /**

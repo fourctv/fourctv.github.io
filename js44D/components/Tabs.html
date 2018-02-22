@@ -699,6 +699,9 @@
                             <li>
                                 <a href="#selectTab">selectTab</a>
                             </li>
+                            <li>
+                                <a href="#selectThisTab">selectThisTab</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -738,7 +741,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/containers/tabs.ts:29</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/containers/tabs.ts:33</a></div>
                                 </td>
                             </tr>
     
@@ -855,6 +858,71 @@
                     </tr>
                 </tbody>
             </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="selectThisTab"></a>
+                            <span class="name">
+                                <b>
+                                selectThisTab
+                                </b>
+                                <a href="#selectThisTab"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>selectThisTab(tab: )</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/containers/tabs.ts:27</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>tab</td>
+                                                      <td>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
     </section>
 
     <section>
@@ -929,9 +997,13 @@ export class Tabs {
   selectTab(event, tab) {
     event.preventDefault();
 
+    this.selectThisTab(tab);
+
+  }
+
+  selectThisTab(tab) {
     this.tabs.forEach((tabItem) &#x3D;&gt; tabItem.active &#x3D; false);
     tab.active &#x3D; true;
-
   }
 
 

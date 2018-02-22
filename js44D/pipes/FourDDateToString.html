@@ -729,10 +729,12 @@
 @Pipe({name: &#x27;fourDDateToString&#x27;})
 export class FourDDateToString implements PipeTransform {
     transform(value): string {
-        if (typeof (value) &#x3D;&#x3D;&#x3D; &#x27;string&#x27; &amp;&amp; value !&#x3D;&#x3D; &#x27;&#x27;) {
-            const date &#x3D; new Date(value.replace(/-/g, &#x27;\/&#x27;));
-            return date.toLocaleDateString();
-        } else return value.toLocaleDateString();
+        if (value) {
+            if (typeof (value) &#x3D;&#x3D;&#x3D; &#x27;string&#x27; &amp;&amp; value !&#x3D;&#x3D; &#x27;&#x27;) {
+                const date &#x3D; new Date(value.replace(/-/g, &#x27;\/&#x27;));
+                return date.toLocaleDateString();
+            } else return value.toLocaleDateString();
+        } else return &#x27;&#x27;; // handle case where date field is null/undefined
       }
 }
 </code></pre>

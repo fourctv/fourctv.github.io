@@ -700,7 +700,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/containers/tabs.ts:48</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/containers/tabs.ts:52</a></div>
                                 </td>
                             </tr>
     
@@ -757,7 +757,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/containers/tabs.ts:48</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/containers/tabs.ts:52</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -778,7 +778,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/containers/tabs.ts:47</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/containers/tabs.ts:51</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -816,9 +816,13 @@ export class Tabs {
   selectTab(event, tab) {
     event.preventDefault();
 
+    this.selectThisTab(tab);
+
+  }
+
+  selectThisTab(tab) {
     this.tabs.forEach((tabItem) &#x3D;&gt; tabItem.active &#x3D; false);
     tab.active &#x3D; true;
-
   }
 
 
