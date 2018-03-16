@@ -1350,7 +1350,7 @@
                             </tr>
                                         <tr>
                                             <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="161" class="link-to-prism">src/js44D/JSFourDCollection.ts:161</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="162" class="link-to-prism">src/js44D/JSFourDCollection.ts:162</a></div>
                                             </td>
                                         </tr>
                                 <tr>
@@ -1442,7 +1442,7 @@ export class FourDCollection {
                     if (fld) { // field in our datamodel, use its properties
                         if (fld.formula) {
                             colList.push({ name: fld.name, formula: fld.formula });
-                        } else { colList.push({ name: fld.name, field: fld.longname }); }
+                        } else if (fld.longname) { colList.push({ name: fld.name, field: fld.longname }); }
                     }
                 }
             } else if (col.field) {
@@ -1451,12 +1451,12 @@ export class FourDCollection {
                 if (fld) {
                     if (fld.formula) {
                         colList.push({ name: fld.name, formula: fld.formula });
-                    } else { colList.push({ name: fld.name, field: fld.longname }); }
+                    } else if (fld.longname) { colList.push({ name: fld.name, field: fld.longname }); }
                 }
             } else {
                 if (col.formula) {
                     colList.push({ name: col.name, formula: col.formula });
-                } else { colList.push({ name: col.name, field: col.longname }); }
+                } else if (fld.longname) { colList.push({ name: col.name, field: col.longname }); }
             }
         }
 
@@ -1515,6 +1515,7 @@ export class FourDCollection {
                         recList.forEach(record &#x3D;&gt; {
                             newModel &#x3D; &lt;any&gt;(new modelDef());
                             newModel.populateModelData(record);
+                            newModel.clearRecordDirtyFlag();
                             this.models.push(newModel);
                         });
                     }

@@ -1441,22 +1441,33 @@ export class FourDModel {
      * Set a field value, updates field modified flag
      */
     set(field: string, value: any) {
-        if (this.getFieldDescription(field).type &#x3D;&#x3D;&#x3D; &#x27;Date&#x27;) {
-            if (typeof (value) &#x3D;&#x3D;&#x3D; &#x27;string&#x27; &amp;&amp; value !&#x3D;&#x3D; &#x27;&#x27;) {
-                value &#x3D; new Date(value.replace(/-/g, &#x27;\/&#x27;));
+        if (this.getFieldProperties(field)) {
+            if (this.getFieldDescription(field).type &#x3D;&#x3D;&#x3D; &#x27;Date&#x27;) {
+                if (typeof (value) &#x3D;&#x3D;&#x3D; &#x27;string&#x27; &amp;&amp; value !&#x3D;&#x3D; &#x27;&#x27;) {
+                    value &#x3D; new Date(value.replace(/-/g, &#x27;\/&#x27;));
+                }
+            } else if (this.getFieldDescription(field).type &#x3D;&#x3D;&#x3D; &#x27;Time&#x27;) {
+                if (typeof (value) &#x3D;&#x3D;&#x3D; &#x27;string&#x27; &amp;&amp; value !&#x3D;&#x3D; &#x27;&#x27;) {
+                    const hh &#x3D; +value.substr(0,2);
+                    const mm &#x3D; +value.substr(3,2);
+                    const ss &#x3D; +value.substr(6,2);
+                    value &#x3D; new Date(0,0,0,hh,mm,ss);
+                }
             }
-        }
-        if (this._attributes.hasOwnProperty(field)) {
-            // we are updating an attribute
-            if (this._attributes[field] !&#x3D;&#x3D; value) {
-                // make sure value is indeed changing...
+            if (this._attributes.hasOwnProperty(field)) {
+                // we are updating an attribute
+                if (this._attributes[field] !&#x3D;&#x3D; value) {
+                    // make sure value is indeed changing...
+                    this._attributes[field] &#x3D; value;
+                    this._modified[field] &#x3D; true; // mark field as modified
+                }
+            } else {
+                // setting a new attribute
                 this._attributes[field] &#x3D; value;
                 this._modified[field] &#x3D; true; // mark field as modified
             }
         } else {
-            // setting a new attribute
             this._attributes[field] &#x3D; value;
-            this._modified[field] &#x3D; true; // mark field as modified
         }
     }
 
@@ -1485,12 +1496,12 @@ export class FourDModel {
             switch (field.type) {
                 case &#x27;date&#x27;:
                 case &#x27;Date&#x27;:
-                    this[field.name] &#x3D; &#x27;&#x27;;
+                    this[field.name] &#x3D; null;
                     break;
 
                 case &#x27;time&#x27;:
                 case &#x27;Time&#x27;:
-                    this[field.name] &#x3D; &#x27;&#x27;;
+                    this[field.name] &#x3D; null;
                     break;
 
                 case &#x27;boolean&#x27;:
@@ -1560,18 +1571,24 @@ export class FourDModel {
                     switch (field.type) {
                         case &#x27;Date&#x27;:
                         case &#x27;date&#x27;:
-                            const dateValue: Date &#x3D; this[fieldName];
-                            value &#x3D; dateValue.getFullYear().toString();
-                            if (dateValue.getMonth() &lt; 9) { value +&#x3D; &#x27;0&#x27;; }
-                            value +&#x3D; (dateValue.getMonth() + 1).toString();
-                            if (dateValue.getDate() &lt; 10) { value +&#x3D; &#x27;0&#x27;; }
-                            value +&#x3D; dateValue.getDate().toString();
-                            recordData[&#x27;fields&#x27;][field.longname] &#x3D; value;
+                            if (typeof(this[fieldName]) &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
+                                recordData[&#x27;fields&#x27;][field.longname] &#x3D; this[fieldName]; 
+                            } else {
+                                const dateValue: Date &#x3D; this[fieldName];
+                                value &#x3D; dateValue.getFullYear().toString();
+                                if (dateValue.getMonth() &lt; 9) { value +&#x3D; &#x27;0&#x27;; }
+                                value +&#x3D; (dateValue.getMonth() + 1).toString();
+                                if (dateValue.getDate() &lt; 10) { value +&#x3D; &#x27;0&#x27;; }
+                                value +&#x3D; dateValue.getDate().toString();
+                                recordData[&#x27;fields&#x27;][field.longname] &#x3D; value;
+                            }
                             break;
 
                         case &#x27;time&#x27;:
                         case &#x27;Time&#x27;:
-                            recordData[&#x27;fields&#x27;][field.longname] &#x3D; this[fieldName];
+                            const timeValue:Date &#x3D; this[fieldName];
+                            value &#x3D; timeValue.toTimeString();
+                            recordData[&#x27;fields&#x27;][field.longname] &#x3D; value;
                             break;
 
                         case &#x27;number&#x27;:
@@ -1580,13 +1597,13 @@ export class FourDModel {
                             break;
 
                         case &#x27;boolean&#x27;:
-                            recordData[&#x27;fields&#x27;][field.longname] &#x3D; (this[fieldName])?true:false;
+                            recordData[&#x27;fields&#x27;][field.longname] &#x3D; (this[fieldName]) ? true : false;
                             break;
 
                         case &#x27;string&#x27;:
                         case &#x27;text&#x27;:
-                        if (typeof(this[fieldName]) &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
-                            // if text, trim extra whitespace
+                            if (typeof (this[fieldName]) &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
+                                // if text, trim extra whitespace
                                 recordData[&#x27;fields&#x27;][field.longname] &#x3D; this[fieldName].trim();
                             } else {
                                 recordData[&#x27;fields&#x27;][field.longname] &#x3D; this[fieldName].toString();
@@ -1655,10 +1672,10 @@ export class FourDModel {
                         this.clearRecordDirtyFlag();
                         resolve(this);
                     },
-                    error &#x3D;&gt; {
-                        console.log(&#x27;error:&#x27; + JSON.stringify(error));
-                        reject(error);
-                    });
+                        error &#x3D;&gt; {
+                            console.log(&#x27;error:&#x27; + JSON.stringify(error));
+                            reject(error);
+                        });
             });
 
         } else if (recordID) { // get record using its record ID
@@ -1742,10 +1759,10 @@ export class FourDModel {
                         resolve(&lt;any&gt;me);
                     } else { reject(resultJSON.returnCode); }
                 },
-                error &#x3D;&gt; {
-                    console.log(&#x27;error:&#x27; + JSON.stringify(error));
-                    reject(error.text());
-                });
+                    error &#x3D;&gt; {
+                        console.log(&#x27;error:&#x27; + JSON.stringify(error));
+                        reject(error.text());
+                    });
         });
 
 
@@ -1776,10 +1793,10 @@ export class FourDModel {
                             resolve(&lt;any&gt;me);
                         } else { reject(resultJSON.returnCode); }
                     },
-                    error &#x3D;&gt; {
-                        console.log(&#x27;error:&#x27; + JSON.stringify(error));
-                        reject(error);
-                    });
+                        error &#x3D;&gt; {
+                            console.log(&#x27;error:&#x27; + JSON.stringify(error));
+                            reject(error);
+                        });
             });
 
 
@@ -1816,10 +1833,10 @@ export class FourDModel {
                             resolve(&lt;any&gt;me);
                         } else { reject(resultJSON.returnCode); }
                     },
-                    error &#x3D;&gt; {
-                        console.log(&#x27;error:&#x27; + JSON.stringify(error));
-                        reject(error);
-                    });
+                        error &#x3D;&gt; {
+                            console.log(&#x27;error:&#x27; + JSON.stringify(error));
+                            reject(error);
+                        });
             });
 
 
@@ -1840,21 +1857,25 @@ export class FourDModel {
     public populateModelData(recordData: Object) {
         if (recordData.hasOwnProperty(&#x27;_recnum&#x27;)) { this.recordNumber &#x3D; recordData[&#x27;_recnum&#x27;]; }
         for (const field in recordData) {
-            if (field !&#x3D;&#x3D; &#x27;_recnum&#x27; &amp;&amp; recordData.hasOwnProperty(field)) {
-                if (this.getFieldProperties(field) &amp;&amp; this.getFieldProperties(field).type &#x3D;&#x3D;&#x3D; &#x27;json&#x27;) {
-                    this[field] &#x3D; JSON.parse(recordData[field]);
-                } else {
-                    this[field] &#x3D; recordData[field];
+            if (field !&#x3D;&#x3D; &#x27;_recnum&#x27; &amp;&amp; this.getFieldProperties(field)) {
+                switch (this.getFieldProperties(field).type ) {
+                    case &#x27;json&#x27;:
+                        this[field] &#x3D; JSON.parse(recordData[field]); 
+                        break;
+                
+                    default:
+                        this[field] &#x3D; recordData[field];
+                        break;
                 }
             }
         }
 
     }
 
-    public extractModelData():Object {
-        let data &#x3D; {_recnum: this._recnum};
+    public extractModelData(): Object {
+        let data &#x3D; { _recnum: this._recnum };
         for (const field of this.fields) {
-            data[field.name] &#x3D; this.get(field.name);
+            data[field.name] &#x3D; this[field.name];
         }
 
         return data;
@@ -1897,7 +1918,7 @@ export class FourDModel {
      *
      * @returns returns a Promise for the database operation, whose result is the values Array populated by 4D
      */
-    public getValuesFrom4D(values:Array&lt;any&gt;, method:string &#x3D; &#x27;&#x27;): Promise&lt;Array&lt;any&gt;&gt; {
+    public getValuesFrom4D(values: Array&lt;any&gt;, method: string &#x3D; &#x27;&#x27;): Promise&lt;Array&lt;any&gt;&gt; {
         const body: any &#x3D; { VariablesList: Base64.encode(Utf8.utf8encode(JSON.stringify(values))) };
         if (method &amp;&amp; method !&#x3D; &#x27;&#x27;) {
             body.CallbackMethod &#x3D; method;
@@ -1908,10 +1929,10 @@ export class FourDModel {
                 .subscribe(result &#x3D;&gt; {
                     resolve(result);
                 },
-                error &#x3D;&gt; {
-                    console.log(&#x27;error:&#x27; + JSON.stringify(error));
-                    reject(error);
-                });
+                    error &#x3D;&gt; {
+                        console.log(&#x27;error:&#x27; + JSON.stringify(error));
+                        reject(error);
+                    });
         });
 
     }
@@ -1987,7 +2008,7 @@ export class FourDModel {
                     subFields: subFields
                 });
 
-            } else { colList.push({ name: col.name, field: col.longname }); }
+            } else if (col.longname) { colList.push({ name: col.name, field: col.longname }); }
         }
 
         return JSON.stringify(colList);
