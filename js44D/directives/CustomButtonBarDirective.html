@@ -674,12 +674,12 @@ export class CustomButtonBarDirective { }
 @Component({
     selector: &#x27;query-band&#x27;,
     template: &#x60;
-    &lt;div dropdown class&#x3D;&quot;btn-group btn-group-md query-band&quot;&gt;
+    &lt;div class&#x3D;&quot;btn-group btn-group-md query-band&quot;&gt;
         &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;switchState()&quot;&gt;&lt;span class&#x3D;&quot;glyphicon&quot; [ngClass]&#x3D;&quot;openStateIcon&quot;&gt;&lt;/span&gt;&lt;/a&gt;
         &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;QBE&#x27;)&quot; (click)&#x3D;&quot;doQBE()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-query-icon&quot; title&#x3D;&quot;advanced query&quot;&gt;&lt;/span&gt;&lt;/a&gt;
         &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;QFF&#x27;)&quot; (click)&#x3D;&quot;doQFF()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-qff-icon&quot; title&#x3D;&quot;query using a text file&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-        &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Sets&#x27;)&quot; (click)&#x3D;&quot;false&quot; dropdownToggle&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-manageSets-icon&quot; title&#x3D;&quot;search sets management&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-            &lt;ul *dropdownMenu class&#x3D;&quot;dropdown-menu&quot;&gt;
+        &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Sets&#x27;)&quot; (click)&#x3D;&quot;toggleDropDown()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-manageSets-icon&quot; title&#x3D;&quot;search sets management&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;ul #dropDownMenu class&#x3D;&quot;dropdown-menu&quot; [ngStyle]&#x3D;&quot;{&#x27;display&#x27;: dropDownIsOpen}&quot;&gt;
                 &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;selectHighlited&#x27;)&quot;&gt;Select Highlighted&lt;/a&gt;&lt;/li&gt;
                 &lt;li class&#x3D;&quot;divider dropdown-divider&quot;&gt;&lt;/li&gt;
                 &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;reuseSearch&#x27;)&quot;&gt;Reuse a Saved Search&lt;/a&gt;&lt;/li&gt;
@@ -826,6 +826,8 @@ export class QueryBand {
 
     public queryBandIsOpen &#x3D; false;
 
+    public dropDownIsOpen &#x3D; &#x27;none&#x27;;
+
     /**
      * Get access to the embedded custom query band
      */
@@ -878,7 +880,12 @@ export class QueryBand {
         this.queryFromFile.emit(null);
     }
 
+    public toggleDropDown() {
+        this.dropDownIsOpen &#x3D; (this.dropDownIsOpen &#x3D;&#x3D;&#x3D; &#x27;none&#x27;)?&#x27;block&#x27;:&#x27;none&#x27;;
+    }
+
     public doManageSets(action) {
+        this.dropDownIsOpen &#x3D; &#x27;none&#x27;;
         this.queryManageSets.emit(action);
     }
 

@@ -688,12 +688,12 @@
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;div dropdown class&#x3D;&quot;btn-group btn-group-md query-band&quot;&gt;
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;btn-group btn-group-md query-band&quot;&gt;
     &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;switchState()&quot;&gt;&lt;span class&#x3D;&quot;glyphicon&quot; [ngClass]&#x3D;&quot;openStateIcon&quot;&gt;&lt;/span&gt;&lt;/a&gt;
     &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;QBE&#x27;)&quot; (click)&#x3D;&quot;doQBE()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-query-icon&quot; title&#x3D;&quot;advanced query&quot;&gt;&lt;/span&gt;&lt;/a&gt;
     &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;QFF&#x27;)&quot; (click)&#x3D;&quot;doQFF()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-qff-icon&quot; title&#x3D;&quot;query using a text file&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Sets&#x27;)&quot; (click)&#x3D;&quot;false&quot; dropdownToggle&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-manageSets-icon&quot; title&#x3D;&quot;search sets management&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-        &lt;ul *dropdownMenu class&#x3D;&quot;dropdown-menu&quot;&gt;
+    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Sets&#x27;)&quot; (click)&#x3D;&quot;toggleDropDown()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-manageSets-icon&quot; title&#x3D;&quot;search sets management&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;ul #dropDownMenu class&#x3D;&quot;dropdown-menu&quot; [ngStyle]&#x3D;&quot;{&#x27;display&#x27;: dropDownIsOpen}&quot;&gt;
             &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;selectHighlited&#x27;)&quot;&gt;Select Highlighted&lt;/a&gt;&lt;/li&gt;
             &lt;li class&#x3D;&quot;divider dropdown-divider&quot;&gt;&lt;/li&gt;
             &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;reuseSearch&#x27;)&quot;&gt;Reuse a Saved Search&lt;/a&gt;&lt;/li&gt;
@@ -743,6 +743,10 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dropDownIsOpen">dropDownIsOpen</a>
+                            </li>
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#openStateIcon">openStateIcon</a>
@@ -816,6 +820,10 @@
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#switchState">switchState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toggleDropDown">toggleDropDown</a>
                             </li>
                         </ul>
                     </td>
@@ -917,7 +925,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="177" class="link-to-prism">src/containers/queryBand.ts:177</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="179" class="link-to-prism">src/containers/queryBand.ts:179</a></div>
                                 </td>
                             </tr>
     
@@ -1405,7 +1413,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="247" class="link-to-prism">src/containers/queryBand.ts:247</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="254" class="link-to-prism">src/containers/queryBand.ts:254</a></div>
                                 </td>
                             </tr>
     
@@ -1444,7 +1452,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="238" class="link-to-prism">src/containers/queryBand.ts:238</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="245" class="link-to-prism">src/containers/queryBand.ts:245</a></div>
                                 </td>
                             </tr>
     
@@ -1483,7 +1491,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="255" class="link-to-prism">src/containers/queryBand.ts:255</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="262" class="link-to-prism">src/containers/queryBand.ts:262</a></div>
                                 </td>
                             </tr>
     
@@ -1522,7 +1530,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="251" class="link-to-prism">src/containers/queryBand.ts:251</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="258" class="link-to-prism">src/containers/queryBand.ts:258</a></div>
                                 </td>
                             </tr>
     
@@ -1561,7 +1569,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="243" class="link-to-prism">src/containers/queryBand.ts:243</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="250" class="link-to-prism">src/containers/queryBand.ts:250</a></div>
                                 </td>
                             </tr>
     
@@ -1600,7 +1608,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="226" class="link-to-prism">src/containers/queryBand.ts:226</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="232" class="link-to-prism">src/containers/queryBand.ts:232</a></div>
                                 </td>
                             </tr>
     
@@ -1667,7 +1675,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="218" class="link-to-prism">src/containers/queryBand.ts:218</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="220" class="link-to-prism">src/containers/queryBand.ts:220</a></div>
                                 </td>
                             </tr>
     
@@ -1706,7 +1714,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="222" class="link-to-prism">src/containers/queryBand.ts:222</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="224" class="link-to-prism">src/containers/queryBand.ts:224</a></div>
                                 </td>
                             </tr>
     
@@ -1745,7 +1753,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="230" class="link-to-prism">src/containers/queryBand.ts:230</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="237" class="link-to-prism">src/containers/queryBand.ts:237</a></div>
                                 </td>
                             </tr>
     
@@ -1784,7 +1792,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="234" class="link-to-prism">src/containers/queryBand.ts:234</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="241" class="link-to-prism">src/containers/queryBand.ts:241</a></div>
                                 </td>
                             </tr>
     
@@ -1823,7 +1831,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="259" class="link-to-prism">src/containers/queryBand.ts:259</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="266" class="link-to-prism">src/containers/queryBand.ts:266</a></div>
                                 </td>
                             </tr>
     
@@ -1862,7 +1870,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="188" class="link-to-prism">src/containers/queryBand.ts:188</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">src/containers/queryBand.ts:190</a></div>
                                 </td>
                             </tr>
     
@@ -1930,7 +1938,46 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="183" class="link-to-prism">src/containers/queryBand.ts:183</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="185" class="link-to-prism">src/containers/queryBand.ts:185</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="toggleDropDown"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Public</span>
+                                toggleDropDown
+                                </b>
+                                <a href="#toggleDropDown"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>toggleDropDown()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="228" class="link-to-prism">src/containers/queryBand.ts:228</a></div>
                                 </td>
                             </tr>
     
@@ -1952,6 +1999,40 @@
             <h3 id="inputs">
                 Properties
             </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="dropDownIsOpen"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Public</span>
+                                dropDownIsOpen
+                                </b>
+                                <a href="#dropDownIsOpen"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <span class="modifier-icon fa fa-reset"></span><code>dropDownIsOpen:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>&#x27;none&#x27;</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="174" class="link-to-prism">src/containers/queryBand.ts:174</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
@@ -2052,7 +2133,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="177" class="link-to-prism">src/containers/queryBand.ts:177</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="179" class="link-to-prism">src/containers/queryBand.ts:179</a></div>
                                 </td>
                             </tr>
     
@@ -2092,12 +2173,12 @@ export class CustomButtonBarDirective { }
 @Component({
     selector: &#x27;query-band&#x27;,
     template: &#x60;
-    &lt;div dropdown class&#x3D;&quot;btn-group btn-group-md query-band&quot;&gt;
+    &lt;div class&#x3D;&quot;btn-group btn-group-md query-band&quot;&gt;
         &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;switchState()&quot;&gt;&lt;span class&#x3D;&quot;glyphicon&quot; [ngClass]&#x3D;&quot;openStateIcon&quot;&gt;&lt;/span&gt;&lt;/a&gt;
         &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;QBE&#x27;)&quot; (click)&#x3D;&quot;doQBE()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-query-icon&quot; title&#x3D;&quot;advanced query&quot;&gt;&lt;/span&gt;&lt;/a&gt;
         &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;QFF&#x27;)&quot; (click)&#x3D;&quot;doQFF()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-qff-icon&quot; title&#x3D;&quot;query using a text file&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-        &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Sets&#x27;)&quot; (click)&#x3D;&quot;false&quot; dropdownToggle&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-manageSets-icon&quot; title&#x3D;&quot;search sets management&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-            &lt;ul *dropdownMenu class&#x3D;&quot;dropdown-menu&quot;&gt;
+        &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;enableButton(&#x27;Sets&#x27;)&quot; (click)&#x3D;&quot;toggleDropDown()&quot;&gt;&lt;span class&#x3D;&quot;quickFinder-icon quickFinder-manageSets-icon&quot; title&#x3D;&quot;search sets management&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;ul #dropDownMenu class&#x3D;&quot;dropdown-menu&quot; [ngStyle]&#x3D;&quot;{&#x27;display&#x27;: dropDownIsOpen}&quot;&gt;
                 &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;selectHighlited&#x27;)&quot;&gt;Select Highlighted&lt;/a&gt;&lt;/li&gt;
                 &lt;li class&#x3D;&quot;divider dropdown-divider&quot;&gt;&lt;/li&gt;
                 &lt;li role&#x3D;&quot;menuitem&quot;&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;doManageSets(&#x27;reuseSearch&#x27;)&quot;&gt;Reuse a Saved Search&lt;/a&gt;&lt;/li&gt;
@@ -2244,6 +2325,8 @@ export class QueryBand {
 
     public queryBandIsOpen &#x3D; false;
 
+    public dropDownIsOpen &#x3D; &#x27;none&#x27;;
+
     /**
      * Get access to the embedded custom query band
      */
@@ -2296,7 +2379,12 @@ export class QueryBand {
         this.queryFromFile.emit(null);
     }
 
+    public toggleDropDown() {
+        this.dropDownIsOpen &#x3D; (this.dropDownIsOpen &#x3D;&#x3D;&#x3D; &#x27;none&#x27;)?&#x27;block&#x27;:&#x27;none&#x27;;
+    }
+
     public doManageSets(action) {
+        this.dropDownIsOpen &#x3D; &#x27;none&#x27;;
         this.queryManageSets.emit(action);
     }
 
@@ -2360,7 +2448,7 @@ export class QueryBand {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div dropdown class="btn-group btn-group-md query-band">    <a role="button" class="btn" (click)="switchState()"><span class="glyphicon" [ngClass]="openStateIcon"></span></a>    <a role="button" class="btn" [ngClass]="enableButton(\'QBE\')" (click)="doQBE()"><span class="quickFinder-icon quickFinder-query-icon" title="advanced query"></span></a>    <a role="button" class="btn" [ngClass]="enableButton(\'QFF\')" (click)="doQFF()"><span class="quickFinder-icon quickFinder-qff-icon" title="query using a text file"></span></a>    <a role="button" class="btn" [ngClass]="enableButton(\'Sets\')" (click)="false" dropdownToggle><span class="quickFinder-icon quickFinder-manageSets-icon" title="search sets management"></span></a>        <ul *dropdownMenu class="dropdown-menu">            <li role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'selectHighlited\')">Select Highlighted</a></li>            <li class="divider dropdown-divider"></li>            <li role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'reuseSearch\')">Reuse a Saved Search</a></li>            <li role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'restoreSet\')">Restore a Saved Record Set</a></li>            <!-- <li role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'combineSearches\')">Combine Searches</a></li> -->            <li class="divider dropdown-divider"></li>            <li *ngIf="doWehaveAQuery()" role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'saveSearch\')">Save Current Search</a></li>            <li role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'saveSet\')">Save Record Set</a></li>            <li class="divider dropdown-divider"></li>            <li role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'manageSearches\')">Manage Saved Searches</a></li>            <li role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'manageSets\')">Manage Saved Sets</a></li>        </ul>    <a role="button" class="btn" (click)="doRefresh()"><span class="quickFinder-icon quickFinder-refresh-icon" title="refresh query"></span></a>    <!-- <a role="button" class="btn" [ngClass]="enableButton(\'Sort\')" (click)="doSort()"><span class="quickFinder-icon quickFinder-sort-icon" title="multi-column sort"></span></a> -->    <a role="button" class="btn" (click)="doClear()"><span class="quickFinder-icon quickFinder-clear-icon" title="clear query form"></span></a>    <a role="button" class="btn" [ngClass]="enableButton(\'Export\')" (click)="doExportGrid()"><span class="quickFinder-icon quickFinder-export-icon" title="export grid data"></span></a>    <div class="custom-button-bar">        <ng-content select="custombuttonbar"></ng-content>        <button type="button" class="regularButton mat-raised-button mat-primary" color="primary" style="width:70px;margin-left: 5px;" (click)="doAddRecord()" [ngClass]="enableButton(\'ADD\')">Add</button>        <button type="button" class="regularButton mat-raised-button mat-primary" color="primary" style="width:70px;margin-left: 5px;" (click)="doEditRecord()" [ngClass]="enableButton(\'EDIT\')">Edit</button>        <button type="button" class="regularButton mat-raised-button mat-warn" color="warn" style="width:70px;margin-left: 5px;" (click)="doDeleteRecord()" [ngClass]="enableButton(\'DEL\')">Delete</button>    </div></div><div [hidden]="!queryBandIsOpen" class="custom-query-band">    <ng-content select="queryband"></ng-content></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="btn-group btn-group-md query-band">    <a role="button" class="btn" (click)="switchState()"><span class="glyphicon" [ngClass]="openStateIcon"></span></a>    <a role="button" class="btn" [ngClass]="enableButton(\'QBE\')" (click)="doQBE()"><span class="quickFinder-icon quickFinder-query-icon" title="advanced query"></span></a>    <a role="button" class="btn" [ngClass]="enableButton(\'QFF\')" (click)="doQFF()"><span class="quickFinder-icon quickFinder-qff-icon" title="query using a text file"></span></a>    <a role="button" class="btn" [ngClass]="enableButton(\'Sets\')" (click)="toggleDropDown()"><span class="quickFinder-icon quickFinder-manageSets-icon" title="search sets management"></span></a>        <ul #dropDownMenu class="dropdown-menu" [ngStyle]="{\'display\': dropDownIsOpen}">            <li role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'selectHighlited\')">Select Highlighted</a></li>            <li class="divider dropdown-divider"></li>            <li role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'reuseSearch\')">Reuse a Saved Search</a></li>            <li role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'restoreSet\')">Restore a Saved Record Set</a></li>            <!-- <li role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'combineSearches\')">Combine Searches</a></li> -->            <li class="divider dropdown-divider"></li>            <li *ngIf="doWehaveAQuery()" role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'saveSearch\')">Save Current Search</a></li>            <li role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'saveSet\')">Save Record Set</a></li>            <li class="divider dropdown-divider"></li>            <li role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'manageSearches\')">Manage Saved Searches</a></li>            <li role="menuitem"><a class="dropdown-item" (click)="doManageSets(\'manageSets\')">Manage Saved Sets</a></li>        </ul>    <a role="button" class="btn" (click)="doRefresh()"><span class="quickFinder-icon quickFinder-refresh-icon" title="refresh query"></span></a>    <!-- <a role="button" class="btn" [ngClass]="enableButton(\'Sort\')" (click)="doSort()"><span class="quickFinder-icon quickFinder-sort-icon" title="multi-column sort"></span></a> -->    <a role="button" class="btn" (click)="doClear()"><span class="quickFinder-icon quickFinder-clear-icon" title="clear query form"></span></a>    <a role="button" class="btn" [ngClass]="enableButton(\'Export\')" (click)="doExportGrid()"><span class="quickFinder-icon quickFinder-export-icon" title="export grid data"></span></a>    <div class="custom-button-bar">        <ng-content select="custombuttonbar"></ng-content>        <button type="button" class="regularButton mat-raised-button mat-primary" color="primary" style="width:70px;margin-left: 5px;" (click)="doAddRecord()" [ngClass]="enableButton(\'ADD\')">Add</button>        <button type="button" class="regularButton mat-raised-button mat-primary" color="primary" style="width:70px;margin-left: 5px;" (click)="doEditRecord()" [ngClass]="enableButton(\'EDIT\')">Edit</button>        <button type="button" class="regularButton mat-raised-button mat-warn" color="warn" style="width:70px;margin-left: 5px;" (click)="doDeleteRecord()" [ngClass]="enableButton(\'DEL\')">Delete</button>    </div></div><div [hidden]="!queryBandIsOpen" class="custom-query-band">    <ng-content select="queryband"></ng-content></div></div>'
     var COMPONENTS = [{'name': 'AdvancedQueryComponent', 'selector': 'advanced-query'},{'name': 'DataGrid', 'selector': 'datagrid'},{'name': 'FourDDropDown', 'selector': 'fourd-dropdown'},{'name': 'ListSelectorDialog', 'selector': 'list-selector'},{'name': 'LoginCmp', 'selector': 'log-in'},{'name': 'OKOnlyModal', 'selector': 'modal-content'},{'name': 'QueryBand', 'selector': 'query-band'},{'name': 'QuickFindInput', 'selector': 'quickfind-input'},{'name': 'RecordEditWindow', 'selector': 'record-edit-window'},{'name': 'RecordList', 'selector': 'record-list'},{'name': 'Tab', 'selector': 'tab'},{'name': 'Tabs', 'selector': 'tabs'},{'name': 'WebAppContainer', 'selector': 'web-application'},{'name': 'YesNoModal', 'selector': 'modal-content'}];
     var DIRECTIVES = [{'name': 'CustomButtonBarDirective', 'selector': 'custombuttonbar'},{'name': 'QueryBandDirective', 'selector': 'queryband'}];
     var ACTUAL_COMPONENT = {'name': 'QueryBand'};

@@ -1213,8 +1213,6 @@ import { FormsModule } from &#x27;@angular/forms&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import { HttpClient, HttpClientModule } from &#x27;@angular/common/http&#x27;;
 
-import { BsDropdownModule } from &#x27;ngx-bootstrap/dropdown&#x27;;
-
 import { FourDModule } from &#x27;./fourD.module&#x27;;
 import { FourDInterface } from &#x27;./js44D/JSFourDInterface&#x27;;
 
@@ -1235,7 +1233,7 @@ import { FourDDateToString } from &#x27;./pipes/FourDDateToString.pipe&#x27;;
 
 
 @NgModule({
-      imports: [FormsModule, CommonModule, HttpClientModule, BsDropdownModule, FourDModule],
+      imports: [FormsModule, CommonModule, HttpClientModule, FourDModule],
       declarations: [ 
             QueryBand, CustomButtonBarDirective, QueryBandDirective, AdvancedQueryComponent,
             RecordEditWindow, RecordList, Tabs, Tab, WebAppContainer,
