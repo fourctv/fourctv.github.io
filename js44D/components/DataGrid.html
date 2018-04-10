@@ -3102,7 +3102,7 @@ export class DataGrid implements AfterViewInit {
         pageSize: this.pageSize
     });
 
-    constructor(@Inject(HttpClient) private http:HttpClient, @Inject(FourDInterface) private fourD:FourDInterface ) {}
+    constructor(@Inject(HttpClient) private http: HttpClient, @Inject(FourDInterface) private fourD: FourDInterface) { }
 
     @ViewChild(&#x27;theGrid&#x27;) public theGrid: any;
 
@@ -3151,9 +3151,9 @@ export class DataGrid implements AfterViewInit {
      */
     loadData(query: FourDQuery &#x3D; null, filter: string &#x3D; null, orderby: string &#x3D; null) {
         if (this.dataProvider) {
-            this.queryString &#x3D; query;
-            this.filterQuery &#x3D; filter;
-            this.orderBy &#x3D; orderby;
+            if (query) { this.queryString &#x3D; query; }
+            if (filter) { this.filterQuery &#x3D; filter; }
+            if (orderby) { this.orderBy &#x3D; orderby; }
 
             this.dataSource.fetch()
                 .then(() &#x3D;&gt; {

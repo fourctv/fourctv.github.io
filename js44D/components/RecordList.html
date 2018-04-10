@@ -780,6 +780,20 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
+                        <h6><b>HostListeners</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#window:resize">window:resize</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
                         <h6><b>Accessors</b></h6>
                     </td>
                 </tr>
@@ -928,6 +942,36 @@
 
 
 
+    <section>
+        <h3>HostListeners</h3>        <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="window:resize"></a>
+                            <span class="name">
+                                <b>
+                                window:resize
+                                </b>
+                                <a href="#window:resize"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>window:resize()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="134" class="link-to-prism">src/containers/recordList.ts:134</a></div>
+                                </td>
+                            </tr>
+    
+                </tbody>
+            </table>
+    </section>
 
     <section>
         
@@ -999,7 +1043,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="171" class="link-to-prism">src/containers/recordList.ts:171</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="177" class="link-to-prism">src/containers/recordList.ts:177</a></div>
                                 </td>
                             </tr>
     
@@ -1040,7 +1084,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="208" class="link-to-prism">src/containers/recordList.ts:208</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="214" class="link-to-prism">src/containers/recordList.ts:214</a></div>
                                 </td>
                             </tr>
     
@@ -1110,7 +1154,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="184" class="link-to-prism">src/containers/recordList.ts:184</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">src/containers/recordList.ts:190</a></div>
                                 </td>
                             </tr>
     
@@ -1291,7 +1335,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="336" class="link-to-prism">src/containers/recordList.ts:336</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="342" class="link-to-prism">src/containers/recordList.ts:342</a></div>
                                 </td>
                             </tr>
     
@@ -1359,7 +1403,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="191" class="link-to-prism">src/containers/recordList.ts:191</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="197" class="link-to-prism">src/containers/recordList.ts:197</a></div>
                                 </td>
                             </tr>
     
@@ -1400,7 +1444,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="143" class="link-to-prism">src/containers/recordList.ts:143</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="149" class="link-to-prism">src/containers/recordList.ts:149</a></div>
                                 </td>
                             </tr>
     
@@ -1470,7 +1514,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="136" class="link-to-prism">src/containers/recordList.ts:136</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="142" class="link-to-prism">src/containers/recordList.ts:142</a></div>
                                 </td>
                             </tr>
     
@@ -1761,7 +1805,7 @@
 
 
     <div class="tab-pane fade tab-source-code" id="c-source">
-        <pre class="line-numbers"><code class="language-typescript">import { Component, ContentChild, ElementRef, ViewContainerRef, AfterContentInit, Input } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers"><code class="language-typescript">import { Component, ContentChild, ElementRef, ViewContainerRef, AfterContentInit, Input, HostListener } from &#x27;@angular/core&#x27;;
 import { HttpClient } from &#x27;@angular/common/http&#x27;;
 
 import { FourDInterface } from &#x27;../js44D/JSFourDInterface&#x27;;
@@ -1891,6 +1935,12 @@ export class RecordList implements AfterContentInit {
         this._previousQuery &#x3D; query; // save last queryDeleteRecord
     }
 
+    /**
+     * Handle browser window resize and resize grid
+     */
+    @HostListener(&#x27;window:resize&#x27;) onResize() {
+        this.windowResized(null);
+    }
 
     /**
      * Intercept Dialog Window resize event and resize the Grid to fit the entire window
