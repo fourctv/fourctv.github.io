@@ -718,7 +718,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="600" class="link-to-prism">src/js44D/JSFourDInterface.ts:600</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="620" class="link-to-prism">src/js44D/JSFourDInterface.ts:620</a></div>
                                         </td>
                                     </tr>
             
@@ -758,7 +758,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="598" class="link-to-prism">src/js44D/JSFourDInterface.ts:598</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="618" class="link-to-prism">src/js44D/JSFourDInterface.ts:618</a></div>
                                         </td>
                                     </tr>
             
@@ -798,7 +798,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="602" class="link-to-prism">src/js44D/JSFourDInterface.ts:602</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="622" class="link-to-prism">src/js44D/JSFourDInterface.ts:622</a></div>
                                         </td>
                                     </tr>
             
@@ -838,7 +838,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="608" class="link-to-prism">src/js44D/JSFourDInterface.ts:608</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="628" class="link-to-prism">src/js44D/JSFourDInterface.ts:628</a></div>
                                         </td>
                                     </tr>
             
@@ -878,7 +878,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="606" class="link-to-prism">src/js44D/JSFourDInterface.ts:606</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="626" class="link-to-prism">src/js44D/JSFourDInterface.ts:626</a></div>
                                         </td>
                                     </tr>
             
@@ -918,7 +918,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="604" class="link-to-prism">src/js44D/JSFourDInterface.ts:604</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="624" class="link-to-prism">src/js44D/JSFourDInterface.ts:624</a></div>
                                         </td>
                                     </tr>
             
@@ -958,7 +958,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="592" class="link-to-prism">src/js44D/JSFourDInterface.ts:592</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="612" class="link-to-prism">src/js44D/JSFourDInterface.ts:612</a></div>
                                         </td>
                                     </tr>
             
@@ -998,7 +998,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="594" class="link-to-prism">src/js44D/JSFourDInterface.ts:594</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="614" class="link-to-prism">src/js44D/JSFourDInterface.ts:614</a></div>
                                         </td>
                                     </tr>
             
@@ -1038,7 +1038,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="596" class="link-to-prism">src/js44D/JSFourDInterface.ts:596</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="616" class="link-to-prism">src/js44D/JSFourDInterface.ts:616</a></div>
                                         </td>
                                     </tr>
             
@@ -1057,7 +1057,7 @@
 
 
     <div class="tab-pane fade tab-source-code" id="c-source">
-        <pre class="line-numbers"><code class="language-typescript">import { Injectable, Inject, EventEmitter, ReflectiveInjector } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers"><code class="language-typescript">import { Injectable, Inject, EventEmitter } from &#x27;@angular/core&#x27;;
 import { HttpClient, HttpClientModule, HttpHeaders } from &#x27;@angular/common/http&#x27;;
 import { Observable } from &#x27;rxjs/Observable&#x27;;
 import { Base64 } from &#x27;./base64&#x27;;
@@ -1419,6 +1419,26 @@ export class FourDInterface {
         return new Date(dateValue);
     }
 
+    		 
+		 /**
+		  * assemble an URL request string with session &amp; hash tokens 
+		  * @param req the URL request root
+		  * @param args query parameters as a URLVariables object
+		  * @return the assembled URL string
+		  * 
+		  */
+		 public assembleURLWithHash(req:string, args:any):string {
+			args.Sessionkey&#x3D;escape(FourDInterface.sessionKey);
+			
+	    	var str:String &#x3D; &quot;&quot;;
+	    	for (const item in args) {
+	    		str +&#x3D; ((str &#x3D;&#x3D; &#x27;&#x27;)?&#x27;?&#x27;:&#x27;&amp;&#x27;)+item+&quot;&#x3D;&quot;+escape(args[item]); 		
+	    	}
+	    	
+            return req + str + &quot;&amp;hash&#x3D;&quot;+calculateHash(args);
+            
+		 }
+	    
 }
 
 
