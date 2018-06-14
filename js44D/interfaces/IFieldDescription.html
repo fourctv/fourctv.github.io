@@ -1652,7 +1652,20 @@ export class FourDModel {
      *
      */
     public getRecord(recordNumber: number &#x3D; null, recordID: string &#x3D; null, query: FourDQuery &#x3D; null): Promise&lt;FourDModel&gt; {
-        if (recordNumber || this.recordNumber &gt;&#x3D; 0) {
+        if (query) {
+            // if we have a query, use it...
+        } else if (recordID) { // get record using its record ID
+            // build query for record
+            if (!this.primaryKey_) {
+                // uh-oh no primary key field for this record, duh!
+                alert(&#x27;No Primary Key specified for &#x27; + this.tableName);
+            } else {
+                // getting a record based on its primary key
+                query &#x3D; { query: [this.tableName + &#x27;.&#x27; + this.primaryKey_ + &#x27;;&#x3D;;&#x27; + recordID] }; // build query on record id
+            }
+
+        } else if (recordNumber || this.recordNumber &gt;&#x3D; 0) {
+            // if we ahve a record number, use it directly then
             if (recordNumber) { this.recordNumber &#x3D; recordNumber; }
 
             // build request body with record number to retrieve
@@ -1676,16 +1689,7 @@ export class FourDModel {
                         });
             });
 
-        } else if (recordID) { // get record using its record ID
-            if (!this.primaryKey_) {
-                // uh-oh no primary key field for this record, duh!
-                alert(&#x27;No Primary Key specified for &#x27; + this.tableName);
-            } else {
-                // getting a record based on its primary key
-                query &#x3D; { query: [this.tableName + &#x27;.&#x27; + this.primaryKey_ + &#x27;;&#x3D;;&#x27; + recordID] }; // build query on record id
-            }
-
-        } else if (!query) { // get record based on a query string
+        } else { 
             return new Promise((resolve, reject) &#x3D;&gt; {
                 reject(&#x27;No current record number set, and no query specified!&#x27;);
             });
