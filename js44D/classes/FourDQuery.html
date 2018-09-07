@@ -718,7 +718,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="620" class="link-to-prism">src/js44D/JSFourDInterface.ts:620</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="668" class="link-to-prism">src/js44D/JSFourDInterface.ts:668</a></div>
                                         </td>
                                     </tr>
             
@@ -758,7 +758,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="618" class="link-to-prism">src/js44D/JSFourDInterface.ts:618</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="666" class="link-to-prism">src/js44D/JSFourDInterface.ts:666</a></div>
                                         </td>
                                     </tr>
             
@@ -798,7 +798,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="622" class="link-to-prism">src/js44D/JSFourDInterface.ts:622</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="670" class="link-to-prism">src/js44D/JSFourDInterface.ts:670</a></div>
                                         </td>
                                     </tr>
             
@@ -838,7 +838,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="628" class="link-to-prism">src/js44D/JSFourDInterface.ts:628</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="676" class="link-to-prism">src/js44D/JSFourDInterface.ts:676</a></div>
                                         </td>
                                     </tr>
             
@@ -878,7 +878,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="626" class="link-to-prism">src/js44D/JSFourDInterface.ts:626</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="674" class="link-to-prism">src/js44D/JSFourDInterface.ts:674</a></div>
                                         </td>
                                     </tr>
             
@@ -918,7 +918,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="624" class="link-to-prism">src/js44D/JSFourDInterface.ts:624</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="672" class="link-to-prism">src/js44D/JSFourDInterface.ts:672</a></div>
                                         </td>
                                     </tr>
             
@@ -958,7 +958,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="612" class="link-to-prism">src/js44D/JSFourDInterface.ts:612</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="660" class="link-to-prism">src/js44D/JSFourDInterface.ts:660</a></div>
                                         </td>
                                     </tr>
             
@@ -998,7 +998,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="614" class="link-to-prism">src/js44D/JSFourDInterface.ts:614</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="662" class="link-to-prism">src/js44D/JSFourDInterface.ts:662</a></div>
                                         </td>
                                     </tr>
             
@@ -1038,7 +1038,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="616" class="link-to-prism">src/js44D/JSFourDInterface.ts:616</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="664" class="link-to-prism">src/js44D/JSFourDInterface.ts:664</a></div>
                                         </td>
                                     </tr>
             
@@ -1131,7 +1131,20 @@ export class FourDInterface {
     /**
       * 4D Web Server URL
       */
-    public static fourDUrl &#x3D; &#x27;http://localhost:8080&#x27;; // defaults to the initiator URL, can be modified by the main app during development
+    private static _fourDUrl &#x3D; &#x27;http://localhost:8080&#x27;; // defaults to the initiator URL, can be modified by the main app during development
+    public static get fourDUrl():string {return FourDInterface._fourDUrl}
+    public static set fourDUrl (url) {
+        FourDInterface._fourDUrl &#x3D; url;
+        if (FourDInterface.interfaceInstance) {
+            FourDInterface.interfaceInstance.call4DRESTMethod(&#x27;REST_GetAPIVersion&#x27;,{}, {responseType:&#x27;text&#x27;})
+            .subscribe((v) &#x3D;&gt; {FourDInterface.fourdAPIVersion &#x3D; v;});
+        }
+    }
+
+    /**
+     * current FourDREST API version
+     */
+    public static fourdAPIVersion &#x3D; &#x27;&#x27;;
 
     /**
      * current session key used in all http requests
@@ -1172,6 +1185,13 @@ export class FourDInterface {
      * @returns returns an Observable for the database operation; caller can subscribe to it and act upon the request completion
      */
     public call4DRESTMethod(fourdMethod: string, body: any, options?: any): Observable&lt;any&gt; {
+        const contentHeaders &#x3D; new HttpHeaders({ &#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27; });
+        contentHeaders.append(&#x27;Accept&#x27;, &#x27;text/json;text/html,application/xhtml+xml,application/xml,application/json;q&#x3D;0.9,image/webp,*/*;q&#x3D;0.8&#x27;); // need all this crap for 4D V15!!
+
+        if (options) {
+            options.headers &#x3D; contentHeaders;
+        } else options &#x3D; { headers: contentHeaders };
+
         body.Sessionkey &#x3D; FourDInterface.sessionKey;
         body.hash &#x3D; calculateHash(body);
 
@@ -1417,6 +1437,34 @@ export class FourDInterface {
     public dateToDOMFormat(theDate: string): Date {
         const dateValue &#x3D; theDate.substr(0,4)+&#x27;/&#x27;+theDate.substr(4,2)+&#x27;/&#x27;+theDate.substr(6,2);
         return new Date(dateValue);
+    }
+
+    /**
+     * Converts a DOM Time to 4D format (hh:mm:ss).
+     *  
+     * @param theDate a DOM date-time value
+     * @returns a 4D formatted date string (hh:mm:ss)
+     * 
+     */
+    public timeTo4DFormat(theDate: Date): string {
+        let theTime:string &#x3D; (theDate.getHours() &lt; 10)?&#x27;0&#x27;+theDate.getHours():theDate.getHours().toString();
+        theTime +&#x3D; (theDate.getMinutes() &lt; 10)?&#x27;:0&#x27;+theDate.getMinutes():&#x27;:&#x27;+theDate.getMinutes();
+        theTime +&#x3D; (theDate.getSeconds() &lt; 10)?&#x27;:0&#x27;+theDate.getSeconds():&#x27;:&#x27;+theDate.getSeconds();
+        return theTime;
+    }
+
+    /**
+     * Converts a 4D HH:MM:SS time to DOM format .
+     *  
+     * @param theTime a 4D time value, formatted as string (HH:MM:SS)
+     * @returns a DOM date 
+     * 
+     */
+    public timeToDOMFormat(theTime: string): Date {
+        const hh &#x3D; +theTime.substr(0,2);
+        const mm &#x3D; +theTime.substr(3,2);
+        const ss &#x3D; +theTime.substr(6,2);
+        return new Date(0,0,0,hh,mm,ss);
     }
 
     		 

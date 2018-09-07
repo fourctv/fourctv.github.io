@@ -714,6 +714,20 @@
                         </ul>
                     </td>
                 </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Accessors</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#modelContentData">modelContentData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </section>
@@ -724,12 +738,12 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <code>constructor(dialog: <a href="../injectables/ModalDialogInstance.html">ModalDialogInstance</a>, modelContentData: <a href="../injectables/Modal.html">ICustomModal</a>)</code>
+                            <code>constructor(dialog: <a href="../injectables/ModalDialogInstance.html">ModalDialogInstance</a>)</code>
                         </td>
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/angular2-modal/commonModals/okOnlyModal.ts:34</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/angular2-modal/commonModals/okOnlyModal.ts:40</a></div>
                                 </td>
                             </tr>
     
@@ -751,15 +765,6 @@
                                                       <td>dialog</td>
                                                       <td>
                                                                 <code><a href="../injectables/ModalDialogInstance.html" target="_self" >ModalDialogInstance</a></code>
-                                                      </td>
-                                                      <td>
-                                                      </td>
-                                                      <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>modelContentData</td>
-                                                      <td>
-                                                                <code><a href="../injectables/Modal.html" target="_self" >ICustomModal</a></code>
                                                       </td>
                                                       <td>
                                                       </td>
@@ -805,7 +810,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/angular2-modal/commonModals/okOnlyModal.ts:41</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/angular2-modal/commonModals/okOnlyModal.ts:45</a></div>
                                 </td>
                             </tr>
     
@@ -897,6 +902,33 @@
             </table>
     </section>
 
+    <section>
+        <h3 id="accessors">
+            Accessors
+        </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="modelContentData"></a>
+                            <span class="name"><b>modelContentData</b><a href="#modelContentData"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+    
+    
+                    <tr>
+                        <td class="col-md-4">
+                            <span class="accessor"><b>set</b><code>modelContentData(parms: )</code></span>
+                        </td>
+                    </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/angular2-modal/commonModals/okOnlyModal.ts:36</a></div>
+                                    </td>
+                                </tr>
+                </tbody>
+            </table>
+    </section>
 </div>
 
 
@@ -936,9 +968,13 @@ export class OKOnlyModal implements ICustomModalComponent {
     dialog: ModalDialogInstance;
     context: OKOnlyContent;
 
-    constructor(dialog: ModalDialogInstance, modelContentData: ICustomModal) {
+    public set modelContentData(parms: ICustomModal) {
+        if (parms) {
+            this.context &#x3D; &lt;OKOnlyContent&gt;parms;
+        }
+    }
+    constructor(dialog: ModalDialogInstance) {
         this.dialog &#x3D; dialog;
-        this.context &#x3D; &lt;OKOnlyContent&gt;modelContentData;
     }
 
     ok() {

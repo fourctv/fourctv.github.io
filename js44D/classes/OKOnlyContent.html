@@ -901,9 +901,13 @@ export class OKOnlyModal implements ICustomModalComponent {
     dialog: ModalDialogInstance;
     context: OKOnlyContent;
 
-    constructor(dialog: ModalDialogInstance, modelContentData: ICustomModal) {
+    public set modelContentData(parms: ICustomModal) {
+        if (parms) {
+            this.context &#x3D; &lt;OKOnlyContent&gt;parms;
+        }
+    }
+    constructor(dialog: ModalDialogInstance) {
         this.dialog &#x3D; dialog;
-        this.context &#x3D; &lt;OKOnlyContent&gt;modelContentData;
     }
 
     ok() {

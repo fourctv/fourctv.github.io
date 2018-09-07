@@ -812,6 +812,7 @@ import { ModalDialogInstance } from &#x27;./angular2-modal/models/ModalDialogIns
 import { Modal } from &#x27;./angular2-modal/providers/Modal&#x27;;
 import { OKOnlyModal } from &#x27;./angular2-modal/commonModals/okOnlyModal&#x27;;
 import { YesNoModal } from &#x27;./angular2-modal/commonModals/yesNoModal&#x27;;
+import { ICustomModal } from &#x27;./angular2-modal/models/ICustomModal&#x27;;
 
 @NgModule({
       declarations: [
@@ -821,7 +822,7 @@ import { YesNoModal } from &#x27;./angular2-modal/commonModals/yesNoModal&#x27;;
             OKOnlyModal, YesNoModal
       ],
       entryComponents: [OKOnlyModal, YesNoModal],
-      providers: [Modal, ModalDialogInstance]
+      providers: [Modal, ModalDialogInstance, ICustomModal]
 })
 export class ModalModule { }
 </code></pre>

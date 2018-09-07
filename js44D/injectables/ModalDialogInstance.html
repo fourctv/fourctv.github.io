@@ -878,7 +878,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/angular2-modal/models/ModalDialogInstance.ts:89</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">src/angular2-modal/models/ModalDialogInstance.ts:91</a></div>
                                         </td>
                                     </tr>
             
@@ -1356,7 +1356,9 @@ export class ModalDialogInstance {
     dismiss() {
         if (this.contentRef.instance.beforeDismiss &amp;&amp;
             this.contentRef.instance.beforeDismiss() &#x3D;&#x3D;&#x3D; true) { return; }
-        this.dispose();
+//        this.dispose();
+        const dialog &#x3D; $(this.contentRef.location.nativeElement).data(&#x27;kendoWindow&#x27;);
+        dialog.close();
         this._resultDefered.reject();
     }
 
