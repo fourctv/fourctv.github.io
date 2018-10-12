@@ -75,10 +75,10 @@ var AppComponent = /** @class */ (function () {
         cornerstoneWADOImageLoader.external.cornerstone = cornerstone; // inicializa WADO Image loader
         // configura codecs e web workers
         cornerstoneWADOImageLoader.webWorkerManager.initialize({
-            webWorkerPath: './assets/cornerstone/webworkers/cornerstoneWADOImageLoaderWebWorker.js',
+            webWorkerPath: '~/assets/cornerstone/webworkers/cornerstoneWADOImageLoaderWebWorker.js',
             taskConfiguration: {
                 'decodeTask': {
-                    codecsPath: './assets/cornerstone/codecs/cornerstoneWADOImageLoaderCodecs.js'
+                    codecsPath: '~/assets/cornerstone/codecs/cornerstoneWADOImageLoaderCodecs.js'
                 }
             }
         });
