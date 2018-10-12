@@ -78,7 +78,7 @@ var AppComponent = /** @class */ (function () {
             webWorkerPath: '~/assets/cornerstone/webworkers/cornerstoneWADOImageLoaderWebWorker.js',
             taskConfiguration: {
                 'decodeTask': {
-                    codecsPath: '~/assets/cornerstone/codecs/cornerstoneWADOImageLoaderCodecs.js'
+                    codecsPath: '../codecs/cornerstoneWADOImageLoaderCodecs.js'
                 }
             }
         });
