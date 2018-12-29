@@ -8,1053 +8,536 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	    <link rel="stylesheet" href="../styles/style.css">
+	      <link rel="stylesheet" href="../styles/style.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
             <a href="../" class="navbar-brand">js44d documentation</a>
-            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-            <div id="book-search-input" role="search">
-                <input type="text" placeholder="Type to search">
-            </div>
-            <nav>
-            
-                <ul class="list">
-            
-                    <li class="title">
-                        <a href="../index.html">js44d documentation</a>
-                    </li>
-            
-                    <li class="divider"></li>
-            
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
-                        <ul class="links">
-                                <li class="link">
-                                    <a 
-                                        
-                                         href="../overview.html" 
-                                         href="../overview.html" 
-                                        >
-                                        <span class="fa fa-th"></span>Overview
-                                    </a>
-                                </li>
-                                <li class="link">
-                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
-                                </li>
-                                <li class="link">
-                                        <a href="../license.html"
-                                    >
-                                        <span class="fa fa-file-text-o"></span>LICENSE
-                                    </a>
-                                </li>
-                        </ul>
-                    </li>
-            
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="../modules.html" >
-                            <div class="menu-toggler linked" data-toggle="collapse"
-                                    data-target="#xs-modules-links"
-                            >
-                                <span class="fa fa-archive"></span>
-                                <span class="link-name">Modules</span>
-                                <span class="fa fa-angle-down"></span>
-                            </div>
-                        </a>
-                        <ul class="links collapse "
-                                id="xs-modules-links"
-                            >
-                                <li class="link">
-                                    <a href="../modules/FourDModule.html" >FourDModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/JS44DModule.html"  data-type="entity-link" class="active" >JS44DModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/ModalModule.html" >ModalModule</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-components-links"
-                            >
-                            <span class="fa fa-cogs"></span>
-                            <span>Components</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-components-links"
-                            >
-                                <li class="link">
-                                    <a href="../components/AdvancedQueryComponent.html" >AdvancedQueryComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/DataGrid.html" >DataGrid</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/FourDDropDown.html" >FourDDropDown</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/ListSelectorDialog.html" >ListSelectorDialog</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/LoginCmp.html" >LoginCmp</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/OKOnlyModal.html" >OKOnlyModal</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/QueryBand.html" >QueryBand</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/QuickFindInput.html" >QuickFindInput</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/RecordEditWindow.html" >RecordEditWindow</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/RecordList.html" >RecordList</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/Tab.html" >Tab</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/Tabs.html" >Tabs</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/WebAppContainer.html" >WebAppContainer</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/YesNoModal.html" >YesNoModal</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-directives-links"
-                            >
-                            <span class="fa fa-code"></span>
-                            <span>Directives</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-directives-links"
-                            >
-                                <li class="link">
-                                    <a href="../directives/CustomButtonBarDirective.html" >CustomButtonBarDirective</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../directives/QueryBandDirective.html" >QueryBandDirective</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-classes-links"
-                            >
-                            <span class="fa fa-file-code-o"></span>
-                            <span>Classes</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-classes-links"
-                            >
-                                <li class="link">
-                                    <a href="../classes/Base64.html" >Base64</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/Deferred.html" >Deferred</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/FourDQuery.html" >FourDQuery</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/ICustomModal.html" >ICustomModal</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/ICustomModalComponent.html" >ICustomModalComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/MD5.html" >MD5</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/OKOnlyContent.html" >OKOnlyContent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/Utf8.html" >Utf8</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/YesNoModalContent.html" >YesNoModalContent</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-injectables-links"
-                            >
-                            <span class="fa fa-long-arrow-down"></span>
-                            <span>Injectables</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-injectables-links"
-                            >
-                                <li class="link">
-                                    <a href="../injectables/FourDCollection.html" >FourDCollection</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/FourDInterface.html" >FourDInterface</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/FourDModel.html" >FourDModel</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/Modal.html" >Modal</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/ModalConfig.html" >ModalConfig</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/ModalDialogInstance.html" >ModalDialogInstance</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-interfaces-links"
-                            >
-                            <span class="fa fa-info"></span>
-                            <span>Interfaces</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-interfaces-links"
-                            >
-                                <li class="link">
-                                    <a href="../interfaces/IFieldDescription.html" >IFieldDescription</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-pipes-links"
-                            >
-                            <span class="fa fa-plus"></span>
-                            <span>Pipes</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-pipes-links"
-                            >
-                                <li class="link">
-                                    <a href="../pipes/Base64ImageRef.html" >Base64ImageRef</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../pipes/FourDDateToString.html" >FourDDateToString</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-miscellaneous-links"
-                            >
-                            <span class="fa fa-cubes"></span>
-                            <span>Miscellaneous</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-miscellaneous-links"
-                            >
-                                <li class="link">
-                                  <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
-                    </li>
-            
-                    <li class="divider"></li>
-                    <li class="copyright">
-                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
-                            </a>
-                    </li>
-            
-                </ul>
-            
-            </nav>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
            <div class="row main">
                <div class="hidden-xs menu">
-                   <nav>
-                   
-                       <ul class="list">
-                   
-                           <li class="title">
-                               <a href="../index.html">js44d documentation</a>
-                           </li>
-                   
-                           <li class="divider"></li>
-                   
-                               <div id="book-search-input" role="search">
-                                   <input type="text" placeholder="Type to search">
-                               </div>
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
-                               <ul class="links">
-                                       <li class="link">
-                                           <a 
-                                               
-                                                href="../overview.html" 
-                                                href="../overview.html" 
-                                               >
-                                               <span class="fa fa-th"></span>Overview
-                                           </a>
-                                       </li>
-                                       <li class="link">
-                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
-                                       </li>
-                                       <li class="link">
-                                               <a href="../license.html"
-                                           >
-                                               <span class="fa fa-file-text-o"></span>LICENSE
-                                           </a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="../modules.html" >
-                                   <div class="menu-toggler linked" data-toggle="collapse"
-                                           data-target="#modules-links"
-                                   >
-                                       <span class="fa fa-archive"></span>
-                                       <span class="link-name">Modules</span>
-                                       <span class="fa fa-angle-down"></span>
-                                   </div>
-                               </a>
-                               <ul class="links collapse "
-                                       id="modules-links"
-                   >
-                                       <li class="link">
-                                           <a href="../modules/FourDModule.html" >FourDModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/JS44DModule.html"  data-type="entity-link" class="active" >JS44DModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/ModalModule.html" >ModalModule</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#components-links"
-                   >
-                                   <span class="fa fa-cogs"></span>
-                                   <span>Components</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="components-links"
-                   >
-                                       <li class="link">
-                                           <a href="../components/AdvancedQueryComponent.html" >AdvancedQueryComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/DataGrid.html" >DataGrid</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/FourDDropDown.html" >FourDDropDown</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/ListSelectorDialog.html" >ListSelectorDialog</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/LoginCmp.html" >LoginCmp</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/OKOnlyModal.html" >OKOnlyModal</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/QueryBand.html" >QueryBand</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/QuickFindInput.html" >QuickFindInput</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/RecordEditWindow.html" >RecordEditWindow</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/RecordList.html" >RecordList</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/Tab.html" >Tab</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/Tabs.html" >Tabs</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/WebAppContainer.html" >WebAppContainer</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/YesNoModal.html" >YesNoModal</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#directives-links"
-                   >
-                                   <span class="fa fa-code"></span>
-                                   <span>Directives</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="directives-links"
-                   >
-                                       <li class="link">
-                                           <a href="../directives/CustomButtonBarDirective.html" >CustomButtonBarDirective</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../directives/QueryBandDirective.html" >QueryBandDirective</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#classes-links"
-                   >
-                                   <span class="fa fa-file-code-o"></span>
-                                   <span>Classes</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="classes-links"
-                   >
-                                       <li class="link">
-                                           <a href="../classes/Base64.html" >Base64</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/Deferred.html" >Deferred</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/FourDQuery.html" >FourDQuery</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/ICustomModal.html" >ICustomModal</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/ICustomModalComponent.html" >ICustomModalComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/MD5.html" >MD5</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/OKOnlyContent.html" >OKOnlyContent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/Utf8.html" >Utf8</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/YesNoModalContent.html" >YesNoModalContent</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#injectables-links"
-                   >
-                                   <span class="fa fa-long-arrow-down"></span>
-                                   <span>Injectables</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="injectables-links"
-                   >
-                                       <li class="link">
-                                           <a href="../injectables/FourDCollection.html" >FourDCollection</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/FourDInterface.html" >FourDInterface</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/FourDModel.html" >FourDModel</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/Modal.html" >Modal</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/ModalConfig.html" >ModalConfig</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/ModalDialogInstance.html" >ModalDialogInstance</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#interfaces-links"
-                   >
-                                   <span class="fa fa-info"></span>
-                                   <span>Interfaces</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="interfaces-links"
-                   >
-                                       <li class="link">
-                                           <a href="../interfaces/IFieldDescription.html" >IFieldDescription</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#pipes-links"
-                   >
-                                   <span class="fa fa-plus"></span>
-                                   <span>Pipes</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="pipes-links"
-                   >
-                                       <li class="link">
-                                           <a href="../pipes/Base64ImageRef.html" >Base64ImageRef</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../pipes/FourDDateToString.html" >FourDDateToString</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#miscellaneous-links"
-                   >
-                                   <span class="fa fa-cubes"></span>
-                                   <span>Miscellaneous</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="miscellaneous-links"
-                   >
-                                       <li class="link">
-                                         <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
-                           </li>
-                   
-                           <li class="divider"></li>
-                           <li class="copyright">
-                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
-                                   </a>
-                           </li>
-                   
-                       </ul>
-                   
-                   </nav>
+                   <compodoc-menu mode="normal"></compodoc-menu>
                </div>
+               <!-- START CONTENT -->
                <div class="content module">
                    <div class="content-data">
 
 
 
 <ol class="breadcrumb">
-  <li>Modules</li>
-  <li>JS44DModule</li>
+    <li>Modules</li>
+    <li>JS44DModule</li>
 </ol>
 
-      <div class="text-center module-graph-container">
-          <div id="module-graph-svg">
-              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div class="text-center module-graph-container">
+    <div id="module-graph-svg">
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.40.1 (20161225.0304)
  -->
 <!-- Title: dependencies Pages: 1 -->
-<svg width="2183pt" height="284pt"
- viewBox="0.00 0.00 2183.00 284.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="2482pt" height="284pt"
+ viewBox="0.00 0.00 2482.00 284.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 280)">
 <title>dependencies</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-280 2179,-280 2179,4 -4,4"/>
-<text text-anchor="start" x="1066.5091" y="-42.4" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#000000">Legend</text>
-<polygon fill="#ffffb3" stroke="transparent" points="853.5,-10 853.5,-30 873.5,-30 873.5,-10 853.5,-10"/>
-<text text-anchor="start" x="877.129" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Declarations</text>
-<polygon fill="#8dd3c7" stroke="transparent" points="966.5,-10 966.5,-30 986.5,-30 986.5,-10 966.5,-10"/>
-<text text-anchor="start" x="990.2251" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Module</text>
-<polygon fill="#80b1d3" stroke="transparent" points="1052.5,-10 1052.5,-30 1072.5,-30 1072.5,-10 1052.5,-10"/>
-<text text-anchor="start" x="1076.2812" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Bootstrap</text>
-<polygon fill="#fdb462" stroke="transparent" points="1149.5,-10 1149.5,-30 1169.5,-30 1169.5,-10 1149.5,-10"/>
-<text text-anchor="start" x="1173.1732" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Providers</text>
-<polygon fill="#fb8072" stroke="transparent" points="1245.5,-10 1245.5,-30 1265.5,-30 1265.5,-10 1245.5,-10"/>
-<text text-anchor="start" x="1269.2258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-280 2478,-280 2478,4 -4,4"/>
+<text text-anchor="start" x="1216.0091" y="-42.4" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#000000">Legend</text>
+<polygon fill="#ffffb3" stroke="transparent" points="1003,-10 1003,-30 1023,-30 1023,-10 1003,-10"/>
+<text text-anchor="start" x="1026.629" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Declarations</text>
+<polygon fill="#8dd3c7" stroke="transparent" points="1116,-10 1116,-30 1136,-30 1136,-10 1116,-10"/>
+<text text-anchor="start" x="1139.7251" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Module</text>
+<polygon fill="#80b1d3" stroke="transparent" points="1202,-10 1202,-30 1222,-30 1222,-10 1202,-10"/>
+<text text-anchor="start" x="1225.7812" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Bootstrap</text>
+<polygon fill="#fdb462" stroke="transparent" points="1299,-10 1299,-30 1319,-30 1319,-10 1299,-10"/>
+<text text-anchor="start" x="1322.6732" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Providers</text>
+<polygon fill="#fb8072" stroke="transparent" points="1395,-10 1395,-30 1415,-30 1415,-10 1395,-10"/>
+<text text-anchor="start" x="1418.7258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_JS44DModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="8,-70 8,-268 2167,-268 2167,-70 8,-70"/>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="8,-70 8,-268 2466,-268 2466,-70 8,-70"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_JS44DModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="302,-78 302,-130 2159,-130 2159,-78 302,-78"/>
+<polygon fill="none" stroke="#000000" points="302,-78 302,-130 2458,-130 2458,-78 302,-78"/>
 </g>
-<g id="clust18" class="cluster">
+<g id="clust20" class="cluster">
 <title>cluster_JS44DModule_imports</title>
 <polygon fill="none" stroke="#000000" points="182,-78 182,-130 294,-130 294,-78 182,-78"/>
 </g>
-<g id="clust19" class="cluster">
-<title>cluster_JS44DModule_exports</title>
-<polygon fill="none" stroke="#000000" points="140,-208 140,-260 2042,-260 2042,-208 140,-208"/>
-</g>
 <g id="clust21" class="cluster">
+<title>cluster_JS44DModule_exports</title>
+<polygon fill="none" stroke="#000000" points="182,-208 182,-260 2391,-260 2391,-208 182,-208"/>
+</g>
+<g id="clust23" class="cluster">
 <title>cluster_JS44DModule_providers</title>
 <polygon fill="none" stroke="#000000" points="16,-78 16,-130 174,-130 174,-78 16,-78"/>
 </g>
-<!-- QueryBand -->
+<!-- AdvancedQueryComponent -->
 <g id="node1" class="node">
-<title>QueryBand</title>
-<polygon fill="#ffffb3" stroke="#000000" points="2151.0343,-122 2070.9657,-122 2070.9657,-86 2151.0343,-86 2151.0343,-122"/>
-<text text-anchor="middle" x="2111" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">QueryBand</text>
+<title>AdvancedQueryComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="2449.5646,-122 2276.4354,-122 2276.4354,-86 2449.5646,-86 2449.5646,-122"/>
+<text text-anchor="middle" x="2363" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">AdvancedQueryComponent</text>
 </g>
 <!-- JS44DModule -->
-<g id="node16" class="node">
+<g id="node18" class="node">
 <title>JS44DModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="1137.3837,-187 1134.3837,-191 1113.3837,-191 1110.3837,-187 1040.6163,-187 1040.6163,-151 1137.3837,-151 1137.3837,-187"/>
-<text text-anchor="middle" x="1089" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">JS44DModule</text>
-</g>
-<!-- QueryBand&#45;&gt;JS44DModule -->
-<g id="edge1" class="edge">
-<title>QueryBand&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M2111,-122.1061C2111,-141.3391 2111,-169 2111,-169 2111,-169 1147.6056,-169 1147.6056,-169"/>
-<polygon fill="#000000" stroke="#000000" points="1147.6057,-165.5001 1137.6056,-169 1147.6056,-172.5001 1147.6057,-165.5001"/>
-</g>
-<!-- CustomButtonBarDirective -->
-<g id="node2" class="node">
-<title>CustomButtonBarDirective</title>
-<polygon fill="#ffffb3" stroke="#000000" points="2052.9748,-122 1883.0252,-122 1883.0252,-86 2052.9748,-86 2052.9748,-122"/>
-<text text-anchor="middle" x="1968" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">CustomButtonBarDirective</text>
-</g>
-<!-- CustomButtonBarDirective&#45;&gt;JS44DModule -->
-<g id="edge2" class="edge">
-<title>CustomButtonBarDirective&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M1907.375,-122.2222C1907.375,-140.8285 1907.375,-167 1907.375,-167 1907.375,-167 1147.4396,-167 1147.4396,-167"/>
-<polygon fill="#000000" stroke="#000000" points="1147.4397,-163.5001 1137.4396,-167 1147.4396,-170.5001 1147.4397,-163.5001"/>
-</g>
-<!-- AdvancedQueryComponent -->
-<g id="node3" class="node">
-<title>AdvancedQueryComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1864.5646,-122 1691.4354,-122 1691.4354,-86 1864.5646,-86 1864.5646,-122"/>
-<text text-anchor="middle" x="1778" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">AdvancedQueryComponent</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="1199.3837,-187 1196.3837,-191 1175.3837,-191 1172.3837,-187 1102.6163,-187 1102.6163,-151 1199.3837,-151 1199.3837,-187"/>
+<text text-anchor="middle" x="1151" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">JS44DModule</text>
 </g>
 <!-- AdvancedQueryComponent&#45;&gt;JS44DModule -->
-<g id="edge3" class="edge">
+<g id="edge1" class="edge">
 <title>AdvancedQueryComponent&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M1715.875,-122.302C1715.875,-140.2699 1715.875,-165 1715.875,-165 1715.875,-165 1147.4083,-165 1147.4083,-165"/>
-<polygon fill="#000000" stroke="#000000" points="1147.4083,-161.5001 1137.4083,-165 1147.4082,-168.5001 1147.4083,-161.5001"/>
-</g>
-<!-- RecordEditWindow -->
-<g id="node4" class="node">
-<title>RecordEditWindow</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1672.972,-122 1545.028,-122 1545.028,-86 1672.972,-86 1672.972,-122"/>
-<text text-anchor="middle" x="1609" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">RecordEditWindow</text>
-</g>
-<!-- RecordEditWindow&#45;&gt;JS44DModule -->
-<g id="edge4" class="edge">
-<title>RecordEditWindow&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M1554.7269,-122.0225C1554.7269,-139.3734 1554.7269,-163 1554.7269,-163 1554.7269,-163 1147.5229,-163 1147.5229,-163"/>
-<polygon fill="#000000" stroke="#000000" points="1147.523,-159.5001 1137.5229,-163 1147.5229,-166.5001 1147.523,-159.5001"/>
-</g>
-<!-- RecordList -->
-<g id="node5" class="node">
-<title>RecordList</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1527.2051,-122 1448.7949,-122 1448.7949,-86 1527.2051,-86 1527.2051,-122"/>
-<text text-anchor="middle" x="1488" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">RecordList</text>
-</g>
-<!-- RecordList&#45;&gt;JS44DModule -->
-<g id="edge5" class="edge">
-<title>RecordList&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M1488,-122.027C1488,-138.3976 1488,-160 1488,-160 1488,-160 1147.5263,-160 1147.5263,-160"/>
-<polygon fill="#000000" stroke="#000000" points="1147.5264,-156.5001 1137.5263,-160 1147.5263,-163.5001 1147.5264,-156.5001"/>
-</g>
-<!-- Tabs -->
-<g id="node6" class="node">
-<title>Tabs</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1431,-122 1377,-122 1377,-86 1431,-86 1431,-122"/>
-<text text-anchor="middle" x="1404" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">Tabs</text>
-</g>
-<!-- Tabs&#45;&gt;JS44DModule -->
-<g id="edge6" class="edge">
-<title>Tabs&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M1386.4262,-122.2819C1386.4262,-137.9478 1386.4262,-158 1386.4262,-158 1386.4262,-158 1147.4486,-158 1147.4486,-158"/>
-<polygon fill="#000000" stroke="#000000" points="1147.4486,-154.5001 1137.4486,-158 1147.4486,-161.5001 1147.4486,-154.5001"/>
-</g>
-<!-- Tab -->
-<g id="node7" class="node">
-<title>Tab</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1359,-122 1305,-122 1305,-86 1359,-86 1359,-122"/>
-<text text-anchor="middle" x="1332" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">Tab</text>
-</g>
-<!-- Tab&#45;&gt;JS44DModule -->
-<g id="edge7" class="edge">
-<title>Tab&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M1309.5738,-122.1871C1309.5738,-137.1824 1309.5738,-156 1309.5738,-156 1309.5738,-156 1147.4059,-156 1147.4059,-156"/>
-<polygon fill="#000000" stroke="#000000" points="1147.4059,-152.5001 1137.4059,-156 1147.4058,-159.5001 1147.4059,-152.5001"/>
-</g>
-<!-- WebAppContainer -->
-<g id="node8" class="node">
-<title>WebAppContainer</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1286.7437,-122 1165.2563,-122 1165.2563,-86 1286.7437,-86 1286.7437,-122"/>
-<text text-anchor="middle" x="1226" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">WebAppContainer</text>
-</g>
-<!-- WebAppContainer&#45;&gt;JS44DModule -->
-<g id="edge8" class="edge">
-<title>WebAppContainer&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M1188,-122.0511C1188,-136.373 1188,-154 1188,-154 1188,-154 1147.6299,-154 1147.6299,-154"/>
-<polygon fill="#000000" stroke="#000000" points="1147.63,-150.5001 1137.6299,-154 1147.6299,-157.5001 1147.63,-150.5001"/>
-</g>
-<!-- FourDDropDown -->
-<g id="node9" class="node">
-<title>FourDDropDown</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1146.5312,-122 1031.4688,-122 1031.4688,-86 1146.5312,-86 1146.5312,-122"/>
-<text text-anchor="middle" x="1089" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">FourDDropDown</text>
-</g>
-<!-- FourDDropDown&#45;&gt;JS44DModule -->
-<g id="edge9" class="edge">
-<title>FourDDropDown&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M1089,-122.1061C1089,-122.1061 1089,-140.991 1089,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="1085.5001,-140.9909 1089,-150.991 1092.5001,-140.991 1085.5001,-140.9909"/>
-</g>
-<!-- QuickFindInput -->
-<g id="node10" class="node">
-<title>QuickFindInput</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1013.9371,-122 908.0629,-122 908.0629,-86 1013.9371,-86 1013.9371,-122"/>
-<text text-anchor="middle" x="961" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">QuickFindInput</text>
-</g>
-<!-- QuickFindInput&#45;&gt;JS44DModule -->
-<g id="edge10" class="edge">
-<title>QuickFindInput&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M975.104,-122.0511C975.104,-136.373 975.104,-154 975.104,-154 975.104,-154 1030.3675,-154 1030.3675,-154"/>
-<polygon fill="#000000" stroke="#000000" points="1030.3675,-157.5001 1040.3675,-154 1030.3675,-150.5001 1030.3675,-157.5001"/>
-</g>
-<!-- DataGrid -->
-<g id="node11" class="node">
-<title>DataGrid</title>
-<polygon fill="#ffffb3" stroke="#000000" points="890.0843,-122 821.9157,-122 821.9157,-86 890.0843,-86 890.0843,-122"/>
-<text text-anchor="middle" x="856" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">DataGrid</text>
-</g>
-<!-- DataGrid&#45;&gt;JS44DModule -->
-<g id="edge11" class="edge">
-<title>DataGrid&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M880.4765,-122.1871C880.4765,-137.1824 880.4765,-156 880.4765,-156 880.4765,-156 1030.3737,-156 1030.3737,-156"/>
-<polygon fill="#000000" stroke="#000000" points="1030.3737,-159.5001 1040.3737,-156 1030.3736,-152.5001 1030.3737,-159.5001"/>
-</g>
-<!-- ListSelectorDialog -->
-<g id="node12" class="node">
-<title>ListSelectorDialog</title>
-<polygon fill="#ffffb3" stroke="#000000" points="803.7493,-122 682.2507,-122 682.2507,-86 803.7493,-86 803.7493,-122"/>
-<text text-anchor="middle" x="743" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ListSelectorDialog</text>
-</g>
-<!-- ListSelectorDialog&#45;&gt;JS44DModule -->
-<g id="edge12" class="edge">
-<title>ListSelectorDialog&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M783.2032,-122.2819C783.2032,-137.9478 783.2032,-158 783.2032,-158 783.2032,-158 1030.5456,-158 1030.5456,-158"/>
-<polygon fill="#000000" stroke="#000000" points="1030.5456,-161.5001 1040.5456,-158 1030.5456,-154.5001 1030.5456,-161.5001"/>
+<path fill="none" stroke="#000000" d="M2329.875,-122.1061C2329.875,-141.3391 2329.875,-169 2329.875,-169 2329.875,-169 1209.4111,-169 1209.4111,-169"/>
+<polygon fill="#000000" stroke="#000000" points="1209.4111,-165.5001 1199.4111,-169 1209.4111,-172.5001 1209.4111,-165.5001"/>
 </g>
 <!-- Base64ImageRef -->
-<g id="node13" class="node">
+<g id="node2" class="node">
 <title>Base64ImageRef</title>
-<polygon fill="#ffffb3" stroke="#000000" points="664.4033,-122 551.5967,-122 551.5967,-86 664.4033,-86 664.4033,-122"/>
-<text text-anchor="middle" x="608" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">Base64ImageRef</text>
+<polygon fill="#ffffb3" stroke="#000000" points="2258.4033,-122 2145.5967,-122 2145.5967,-86 2258.4033,-86 2258.4033,-122"/>
+<text text-anchor="middle" x="2202" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">Base64ImageRef</text>
 </g>
 <!-- Base64ImageRef&#45;&gt;JS44DModule -->
-<g id="edge13" class="edge">
+<g id="edge2" class="edge">
 <title>Base64ImageRef&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M659.9129,-122.027C659.9129,-138.3976 659.9129,-160 659.9129,-160 659.9129,-160 1030.6123,-160 1030.6123,-160"/>
-<polygon fill="#000000" stroke="#000000" points="1030.6124,-163.5001 1040.6123,-160 1030.6123,-156.5001 1030.6124,-163.5001"/>
+<path fill="none" stroke="#000000" d="M2167.375,-122.2222C2167.375,-140.8285 2167.375,-167 2167.375,-167 2167.375,-167 1209.6795,-167 1209.6795,-167"/>
+<polygon fill="#000000" stroke="#000000" points="1209.6795,-163.5001 1199.6795,-167 1209.6794,-170.5001 1209.6795,-163.5001"/>
+</g>
+<!-- CustomButtonBarDirective -->
+<g id="node3" class="node">
+<title>CustomButtonBarDirective</title>
+<polygon fill="#ffffb3" stroke="#000000" points="2127.9748,-122 1958.0252,-122 1958.0252,-86 2127.9748,-86 2127.9748,-122"/>
+<text text-anchor="middle" x="2043" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">CustomButtonBarDirective</text>
+</g>
+<!-- CustomButtonBarDirective&#45;&gt;JS44DModule -->
+<g id="edge3" class="edge">
+<title>CustomButtonBarDirective&#45;&gt;JS44DModule</title>
+<path fill="none" stroke="#000000" d="M2006.375,-122.302C2006.375,-140.2699 2006.375,-165 2006.375,-165 2006.375,-165 1209.4395,-165 1209.4395,-165"/>
+<polygon fill="#000000" stroke="#000000" points="1209.4395,-161.5001 1199.4395,-165 1209.4395,-168.5001 1209.4395,-161.5001"/>
+</g>
+<!-- DataGrid -->
+<g id="node4" class="node">
+<title>DataGrid</title>
+<polygon fill="#ffffb3" stroke="#000000" points="1940.0843,-122 1871.9157,-122 1871.9157,-86 1940.0843,-86 1940.0843,-122"/>
+<text text-anchor="middle" x="1906" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">DataGrid</text>
+</g>
+<!-- DataGrid&#45;&gt;JS44DModule -->
+<g id="edge4" class="edge">
+<title>DataGrid&#45;&gt;JS44DModule</title>
+<path fill="none" stroke="#000000" d="M1876.6103,-122.0225C1876.6103,-139.3734 1876.6103,-163 1876.6103,-163 1876.6103,-163 1209.4533,-163 1209.4533,-163"/>
+<polygon fill="#000000" stroke="#000000" points="1209.4533,-159.5001 1199.4533,-163 1209.4533,-166.5001 1209.4533,-159.5001"/>
 </g>
 <!-- FourDDateToString -->
-<g id="node14" class="node">
+<g id="node5" class="node">
 <title>FourDDateToString</title>
-<polygon fill="#ffffb3" stroke="#000000" points="533.2534,-122 404.7466,-122 404.7466,-86 533.2534,-86 533.2534,-122"/>
-<text text-anchor="middle" x="469" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">FourDDateToString</text>
+<polygon fill="#ffffb3" stroke="#000000" points="1854.2534,-122 1725.7466,-122 1725.7466,-86 1854.2534,-86 1854.2534,-122"/>
+<text text-anchor="middle" x="1790" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">FourDDateToString</text>
 </g>
 <!-- FourDDateToString&#45;&gt;JS44DModule -->
-<g id="edge14" class="edge">
+<g id="edge5" class="edge">
 <title>FourDDateToString&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M521.1634,-122.0225C521.1634,-139.3734 521.1634,-163 521.1634,-163 521.1634,-163 1030.5866,-163 1030.5866,-163"/>
-<polygon fill="#000000" stroke="#000000" points="1030.5866,-166.5001 1040.5866,-163 1030.5865,-159.5001 1030.5866,-166.5001"/>
+<path fill="none" stroke="#000000" d="M1749.375,-122.027C1749.375,-138.3976 1749.375,-160 1749.375,-160 1749.375,-160 1209.4607,-160 1209.4607,-160"/>
+<polygon fill="#000000" stroke="#000000" points="1209.4607,-156.5001 1199.4607,-160 1209.4606,-163.5001 1209.4607,-156.5001"/>
+</g>
+<!-- FourDDropDown -->
+<g id="node6" class="node">
+<title>FourDDropDown</title>
+<polygon fill="#ffffb3" stroke="#000000" points="1707.5312,-122 1592.4688,-122 1592.4688,-86 1707.5312,-86 1707.5312,-122"/>
+<text text-anchor="middle" x="1650" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">FourDDropDown</text>
+</g>
+<!-- FourDDropDown&#45;&gt;JS44DModule -->
+<g id="edge6" class="edge">
+<title>FourDDropDown&#45;&gt;JS44DModule</title>
+<path fill="none" stroke="#000000" d="M1607.375,-122.2819C1607.375,-137.9478 1607.375,-158 1607.375,-158 1607.375,-158 1209.4081,-158 1209.4081,-158"/>
+<polygon fill="#000000" stroke="#000000" points="1209.4081,-154.5001 1199.4081,-158 1209.408,-161.5001 1209.4081,-154.5001"/>
+</g>
+<!-- FourDRegistryInput -->
+<g id="node7" class="node">
+<title>FourDRegistryInput</title>
+<polygon fill="#ffffb3" stroke="#000000" points="1573.5394,-122 1444.4606,-122 1444.4606,-86 1573.5394,-86 1573.5394,-122"/>
+<text text-anchor="middle" x="1509" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">FourDRegistryInput</text>
+</g>
+<!-- FourDRegistryInput&#45;&gt;JS44DModule -->
+<g id="edge7" class="edge">
+<title>FourDRegistryInput&#45;&gt;JS44DModule</title>
+<path fill="none" stroke="#000000" d="M1464.875,-122.1871C1464.875,-137.1824 1464.875,-156 1464.875,-156 1464.875,-156 1209.6986,-156 1209.6986,-156"/>
+<polygon fill="#000000" stroke="#000000" points="1209.6986,-152.5001 1199.6986,-156 1209.6985,-159.5001 1209.6986,-152.5001"/>
+</g>
+<!-- ListSelectorDialog -->
+<g id="node8" class="node">
+<title>ListSelectorDialog</title>
+<polygon fill="#ffffb3" stroke="#000000" points="1425.7493,-122 1304.2507,-122 1304.2507,-86 1425.7493,-86 1425.7493,-122"/>
+<text text-anchor="middle" x="1365" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ListSelectorDialog</text>
+</g>
+<!-- ListSelectorDialog&#45;&gt;JS44DModule -->
+<g id="edge8" class="edge">
+<title>ListSelectorDialog&#45;&gt;JS44DModule</title>
+<path fill="none" stroke="#000000" d="M1319.375,-122.0511C1319.375,-136.373 1319.375,-154 1319.375,-154 1319.375,-154 1209.701,-154 1209.701,-154"/>
+<polygon fill="#000000" stroke="#000000" points="1209.7011,-150.5001 1199.701,-154 1209.701,-157.5001 1209.7011,-150.5001"/>
 </g>
 <!-- LoginCmp -->
-<g id="node15" class="node">
+<g id="node9" class="node">
 <title>LoginCmp</title>
-<polygon fill="#ffffb3" stroke="#000000" points="386.1711,-122 309.8289,-122 309.8289,-86 386.1711,-86 386.1711,-122"/>
-<text text-anchor="middle" x="348" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoginCmp</text>
+<polygon fill="#ffffb3" stroke="#000000" points="1286.1711,-122 1209.8289,-122 1209.8289,-86 1286.1711,-86 1286.1711,-122"/>
+<text text-anchor="middle" x="1248" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoginCmp</text>
 </g>
 <!-- LoginCmp&#45;&gt;JS44DModule -->
-<g id="edge15" class="edge">
+<g id="edge9" class="edge">
 <title>LoginCmp&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M382.2309,-122.302C382.2309,-140.2699 382.2309,-165 382.2309,-165 382.2309,-165 1030.4209,-165 1030.4209,-165"/>
-<polygon fill="#000000" stroke="#000000" points="1030.4209,-168.5001 1040.4209,-165 1030.4209,-161.5001 1030.4209,-168.5001"/>
+<path fill="none" stroke="#000000" d="M1209.7399,-104C1201.575,-104 1195.3542,-104 1195.3542,-104 1195.3542,-104 1195.3542,-140.8939 1195.3542,-140.8939"/>
+<polygon fill="#000000" stroke="#000000" points="1191.8542,-140.8938 1195.3542,-150.8939 1198.8542,-140.8939 1191.8542,-140.8938"/>
 </g>
-<!-- QueryBand  -->
-<g id="node18" class="node">
-<title>QueryBand </title>
-<polygon fill="#fb8072" stroke="#000000" points="2034.033,-252 1949.967,-252 1949.967,-216 2034.033,-216 2034.033,-252"/>
-<text text-anchor="middle" x="1992" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">QueryBand </text>
+<!-- QueryBand -->
+<g id="node10" class="node">
+<title>QueryBand</title>
+<polygon fill="#ffffb3" stroke="#000000" points="1191.0343,-122 1110.9657,-122 1110.9657,-86 1191.0343,-86 1191.0343,-122"/>
+<text text-anchor="middle" x="1151" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">QueryBand</text>
 </g>
-<!-- JS44DModule&#45;&gt;QueryBand  -->
+<!-- QueryBand&#45;&gt;JS44DModule -->
+<g id="edge10" class="edge">
+<title>QueryBand&#45;&gt;JS44DModule</title>
+<path fill="none" stroke="#000000" d="M1151,-122.1061C1151,-122.1061 1151,-140.991 1151,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="1147.5001,-140.9909 1151,-150.991 1154.5001,-140.991 1147.5001,-140.9909"/>
+</g>
+<!-- QueryBandDirective -->
+<g id="node11" class="node">
+<title>QueryBandDirective</title>
+<polygon fill="#ffffb3" stroke="#000000" points="1092.1164,-122 959.8836,-122 959.8836,-86 1092.1164,-86 1092.1164,-122"/>
+<text text-anchor="middle" x="1026" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">QueryBandDirective</text>
+</g>
+<!-- QueryBandDirective&#45;&gt;JS44DModule -->
+<g id="edge11" class="edge">
+<title>QueryBandDirective&#45;&gt;JS44DModule</title>
+<path fill="none" stroke="#000000" d="M1092.228,-104C1100.7872,-104 1106.6458,-104 1106.6458,-104 1106.6458,-104 1106.6458,-140.8939 1106.6458,-140.8939"/>
+<polygon fill="#000000" stroke="#000000" points="1103.1459,-140.8938 1106.6458,-150.8939 1110.1459,-140.8939 1103.1459,-140.8938"/>
+</g>
+<!-- QuickFindInput -->
+<g id="node12" class="node">
+<title>QuickFindInput</title>
+<polygon fill="#ffffb3" stroke="#000000" points="941.9371,-122 836.0629,-122 836.0629,-86 941.9371,-86 941.9371,-122"/>
+<text text-anchor="middle" x="889" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">QuickFindInput</text>
+</g>
+<!-- QuickFindInput&#45;&gt;JS44DModule -->
+<g id="edge12" class="edge">
+<title>QuickFindInput&#45;&gt;JS44DModule</title>
+<path fill="none" stroke="#000000" d="M898.3301,-122.0511C898.3301,-136.373 898.3301,-154 898.3301,-154 898.3301,-154 1092.5817,-154 1092.5817,-154"/>
+<polygon fill="#000000" stroke="#000000" points="1092.5817,-157.5001 1102.5817,-154 1092.5816,-150.5001 1092.5817,-157.5001"/>
+</g>
+<!-- RecordEditWindow -->
+<g id="node13" class="node">
+<title>RecordEditWindow</title>
+<polygon fill="#ffffb3" stroke="#000000" points="817.972,-122 690.028,-122 690.028,-86 817.972,-86 817.972,-122"/>
+<text text-anchor="middle" x="754" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">RecordEditWindow</text>
+</g>
+<!-- RecordEditWindow&#45;&gt;JS44DModule -->
+<g id="edge13" class="edge">
+<title>RecordEditWindow&#45;&gt;JS44DModule</title>
+<path fill="none" stroke="#000000" d="M772.7589,-122.1871C772.7589,-137.1824 772.7589,-156 772.7589,-156 772.7589,-156 1092.3259,-156 1092.3259,-156"/>
+<polygon fill="#000000" stroke="#000000" points="1092.326,-159.5001 1102.3259,-156 1092.3259,-152.5001 1092.326,-159.5001"/>
+</g>
+<!-- RecordList -->
+<g id="node14" class="node">
+<title>RecordList</title>
+<polygon fill="#ffffb3" stroke="#000000" points="672.2051,-122 593.7949,-122 593.7949,-86 672.2051,-86 672.2051,-122"/>
+<text text-anchor="middle" x="633" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">RecordList</text>
+</g>
+<!-- RecordList&#45;&gt;JS44DModule -->
+<g id="edge14" class="edge">
+<title>RecordList&#45;&gt;JS44DModule</title>
+<path fill="none" stroke="#000000" d="M633,-122.2819C633,-137.9478 633,-158 633,-158 633,-158 1092.2678,-158 1092.2678,-158"/>
+<polygon fill="#000000" stroke="#000000" points="1092.2679,-161.5001 1102.2678,-158 1092.2678,-154.5001 1092.2679,-161.5001"/>
+</g>
+<!-- Tab -->
+<g id="node15" class="node">
+<title>Tab</title>
+<polygon fill="#ffffb3" stroke="#000000" points="576,-122 522,-122 522,-86 576,-86 576,-122"/>
+<text text-anchor="middle" x="549" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">Tab</text>
+</g>
+<!-- Tab&#45;&gt;JS44DModule -->
+<g id="edge15" class="edge">
+<title>Tab&#45;&gt;JS44DModule</title>
+<path fill="none" stroke="#000000" d="M567.9262,-122.027C567.9262,-138.3976 567.9262,-160 567.9262,-160 567.9262,-160 1092.2903,-160 1092.2903,-160"/>
+<polygon fill="#000000" stroke="#000000" points="1092.2904,-163.5001 1102.2903,-160 1092.2903,-156.5001 1092.2904,-163.5001"/>
+</g>
+<!-- Tabs -->
+<g id="node16" class="node">
+<title>Tabs</title>
+<polygon fill="#ffffb3" stroke="#000000" points="504,-122 450,-122 450,-86 504,-86 504,-122"/>
+<text text-anchor="middle" x="477" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">Tabs</text>
+</g>
+<!-- Tabs&#45;&gt;JS44DModule -->
+<g id="edge16" class="edge">
+<title>Tabs&#45;&gt;JS44DModule</title>
+<path fill="none" stroke="#000000" d="M491.0738,-122.0225C491.0738,-139.3734 491.0738,-163 491.0738,-163 491.0738,-163 1092.4741,-163 1092.4741,-163"/>
+<polygon fill="#000000" stroke="#000000" points="1092.4741,-166.5001 1102.4741,-163 1092.474,-159.5001 1092.4741,-166.5001"/>
+</g>
+<!-- WebAppContainer -->
+<g id="node17" class="node">
+<title>WebAppContainer</title>
+<polygon fill="#ffffb3" stroke="#000000" points="431.7437,-122 310.2563,-122 310.2563,-86 431.7437,-86 431.7437,-122"/>
+<text text-anchor="middle" x="371" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">WebAppContainer</text>
+</g>
+<!-- WebAppContainer&#45;&gt;JS44DModule -->
 <g id="edge17" class="edge">
-<title>JS44DModule&#45;&gt;QueryBand </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1137.5492,-172C1325.1116,-172 1992,-172 1992,-172 1992,-172 1992,-205.7333 1992,-205.7333"/>
-<polygon fill="#000000" stroke="#000000" points="1988.5001,-205.7333 1992,-215.7333 1995.5001,-205.7333 1988.5001,-205.7333"/>
-</g>
-<!-- CustomButtonBarDirective  -->
-<g id="node19" class="node">
-<title>CustomButtonBarDirective </title>
-<polygon fill="#fb8072" stroke="#000000" points="1931.9755,-252 1758.0245,-252 1758.0245,-216 1931.9755,-216 1931.9755,-252"/>
-<text text-anchor="middle" x="1845" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">CustomButtonBarDirective </text>
-</g>
-<!-- JS44DModule&#45;&gt;CustomButtonBarDirective  -->
-<g id="edge18" class="edge">
-<title>JS44DModule&#45;&gt;CustomButtonBarDirective </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1137.5203,-174C1299.4907,-174 1811.3975,-174 1811.3975,-174 1811.3975,-174 1811.3975,-205.998 1811.3975,-205.998"/>
-<polygon fill="#000000" stroke="#000000" points="1807.8975,-205.998 1811.3975,-215.998 1814.8975,-205.9981 1807.8975,-205.998"/>
+<title>WebAppContainer&#45;&gt;JS44DModule</title>
+<path fill="none" stroke="#000000" d="M418.9358,-122.302C418.9358,-140.2699 418.9358,-165 418.9358,-165 418.9358,-165 1092.4003,-165 1092.4003,-165"/>
+<polygon fill="#000000" stroke="#000000" points="1092.4003,-168.5001 1102.4003,-165 1092.4003,-161.5001 1092.4003,-168.5001"/>
 </g>
 <!-- AdvancedQueryComponent  -->
 <g id="node20" class="node">
 <title>AdvancedQueryComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="1740.0651,-252 1563.9349,-252 1563.9349,-216 1740.0651,-216 1740.0651,-252"/>
-<text text-anchor="middle" x="1652" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">AdvancedQueryComponent </text>
+<polygon fill="#fb8072" stroke="#000000" points="2383.0651,-252 2206.9349,-252 2206.9349,-216 2383.0651,-216 2383.0651,-252"/>
+<text text-anchor="middle" x="2295" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">AdvancedQueryComponent </text>
 </g>
 <!-- JS44DModule&#45;&gt;AdvancedQueryComponent  -->
 <g id="edge19" class="edge">
 <title>JS44DModule&#45;&gt;AdvancedQueryComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1137.8513,-176C1268.8969,-176 1618.3519,-176 1618.3519,-176 1618.3519,-176 1618.3519,-205.9664 1618.3519,-205.9664"/>
-<polygon fill="#000000" stroke="#000000" points="1614.8519,-205.9663 1618.3519,-215.9664 1621.8519,-205.9664 1614.8519,-205.9663"/>
-</g>
-<!-- RecordEditWindow  -->
-<g id="node21" class="node">
-<title>RecordEditWindow </title>
-<polygon fill="#fb8072" stroke="#000000" points="1545.9729,-252 1414.0271,-252 1414.0271,-216 1545.9729,-216 1545.9729,-252"/>
-<text text-anchor="middle" x="1480" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">RecordEditWindow </text>
-</g>
-<!-- JS44DModule&#45;&gt;RecordEditWindow  -->
-<g id="edge20" class="edge">
-<title>JS44DModule&#45;&gt;RecordEditWindow </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1137.513,-178C1230.045,-178 1422.632,-178 1422.632,-178 1422.632,-178 1422.632,-205.973 1422.632,-205.973"/>
-<polygon fill="#000000" stroke="#000000" points="1419.1321,-205.973 1422.632,-215.973 1426.1321,-205.973 1419.1321,-205.973"/>
-</g>
-<!-- RecordList  -->
-<g id="node22" class="node">
-<title>RecordList </title>
-<polygon fill="#fb8072" stroke="#000000" points="1395.7053,-252 1314.2947,-252 1314.2947,-216 1395.7053,-216 1395.7053,-252"/>
-<text text-anchor="middle" x="1355" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">RecordList </text>
-</g>
-<!-- JS44DModule&#45;&gt;RecordList  -->
-<g id="edge21" class="edge">
-<title>JS44DModule&#45;&gt;RecordList </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1137.6172,-181C1209.7173,-181 1336.5738,-181 1336.5738,-181 1336.5738,-181 1336.5738,-205.7604 1336.5738,-205.7604"/>
-<polygon fill="#000000" stroke="#000000" points="1333.0739,-205.7604 1336.5738,-215.7604 1340.0739,-205.7604 1333.0739,-205.7604"/>
-</g>
-<!-- Tabs  -->
-<g id="node23" class="node">
-<title>Tabs </title>
-<polygon fill="#fb8072" stroke="#000000" points="1296,-252 1242,-252 1242,-216 1296,-216 1296,-252"/>
-<text text-anchor="middle" x="1269" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">Tabs </text>
-</g>
-<!-- JS44DModule&#45;&gt;Tabs  -->
-<g id="edge22" class="edge">
-<title>JS44DModule&#45;&gt;Tabs </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1137.403,-183C1189.331,-183 1264.4358,-183 1264.4358,-183 1264.4358,-183 1264.4358,-205.8757 1264.4358,-205.8757"/>
-<polygon fill="#000000" stroke="#000000" points="1260.9359,-205.8757 1264.4358,-215.8757 1267.9359,-205.8757 1260.9359,-205.8757"/>
-</g>
-<!-- Tab  -->
-<g id="node24" class="node">
-<title>Tab </title>
-<polygon fill="#fb8072" stroke="#000000" points="1224,-252 1170,-252 1170,-216 1224,-216 1224,-252"/>
-<text text-anchor="middle" x="1197" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">Tab </text>
-</g>
-<!-- JS44DModule&#45;&gt;Tab  -->
-<g id="edge23" class="edge">
-<title>JS44DModule&#45;&gt;Tab </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1137.6021,-185C1169.7477,-185 1206,-185 1206,-185 1206,-185 1206,-205.7542 1206,-205.7542"/>
-<polygon fill="#000000" stroke="#000000" points="1202.5001,-205.7542 1206,-215.7542 1209.5001,-205.7542 1202.5001,-205.7542"/>
-</g>
-<!-- WebAppContainer  -->
-<g id="node25" class="node">
-<title>WebAppContainer </title>
-<polygon fill="#fb8072" stroke="#000000" points="1151.7436,-252 1026.2564,-252 1026.2564,-216 1151.7436,-216 1151.7436,-252"/>
-<text text-anchor="middle" x="1089" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">WebAppContainer </text>
-</g>
-<!-- JS44DModule&#45;&gt;WebAppContainer  -->
-<g id="edge24" class="edge">
-<title>JS44DModule&#45;&gt;WebAppContainer </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1089,-187.1061C1089,-187.1061 1089,-205.991 1089,-205.991"/>
-<polygon fill="#000000" stroke="#000000" points="1085.5001,-205.9909 1089,-215.991 1092.5001,-205.991 1085.5001,-205.9909"/>
-</g>
-<!-- FourDDropDown  -->
-<g id="node26" class="node">
-<title>FourDDropDown </title>
-<polygon fill="#fb8072" stroke="#000000" points="1008.5302,-252 889.4698,-252 889.4698,-216 1008.5302,-216 1008.5302,-252"/>
-<text text-anchor="middle" x="949" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">FourDDropDown </text>
-</g>
-<!-- JS44DModule&#45;&gt;FourDDropDown  -->
-<g id="edge25" class="edge">
-<title>JS44DModule&#45;&gt;FourDDropDown </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1040.3579,-185C997.4506,-185 941.693,-185 941.693,-185 941.693,-185 941.693,-205.7542 941.693,-205.7542"/>
-<polygon fill="#000000" stroke="#000000" points="938.1931,-205.7542 941.693,-215.7542 945.1931,-205.7542 938.1931,-205.7542"/>
-</g>
-<!-- QuickFindInput  -->
-<g id="node27" class="node">
-<title>QuickFindInput </title>
-<polygon fill="#fb8072" stroke="#000000" points="871.4362,-252 762.5638,-252 762.5638,-216 871.4362,-216 871.4362,-252"/>
-<text text-anchor="middle" x="817" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">QuickFindInput </text>
-</g>
-<!-- JS44DModule&#45;&gt;QuickFindInput  -->
-<g id="edge26" class="edge">
-<title>JS44DModule&#45;&gt;QuickFindInput </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1040.5519,-183C969.8464,-183 846.713,-183 846.713,-183 846.713,-183 846.713,-205.8757 846.713,-205.8757"/>
-<polygon fill="#000000" stroke="#000000" points="843.2131,-205.8757 846.713,-215.8757 850.2131,-205.8757 843.2131,-205.8757"/>
-</g>
-<!-- DataGrid  -->
-<g id="node28" class="node">
-<title>DataGrid </title>
-<polygon fill="#fb8072" stroke="#000000" points="744.5854,-252 673.4146,-252 673.4146,-216 744.5854,-216 744.5854,-252"/>
-<text text-anchor="middle" x="709" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">DataGrid </text>
-</g>
-<!-- JS44DModule&#45;&gt;DataGrid  -->
-<g id="edge27" class="edge">
-<title>JS44DModule&#45;&gt;DataGrid </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1040.2895,-181C938.6773,-181 713.4588,-181 713.4588,-181 713.4588,-181 713.4588,-205.7604 713.4588,-205.7604"/>
-<polygon fill="#000000" stroke="#000000" points="709.9589,-205.7604 713.4588,-215.7604 716.9589,-205.7604 709.9589,-205.7604"/>
-</g>
-<!-- ListSelectorDialog  -->
-<g id="node29" class="node">
-<title>ListSelectorDialog </title>
-<polygon fill="#fb8072" stroke="#000000" points="655.7492,-252 530.2508,-252 530.2508,-216 655.7492,-216 655.7492,-252"/>
-<text text-anchor="middle" x="593" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">ListSelectorDialog </text>
-</g>
-<!-- JS44DModule&#45;&gt;ListSelectorDialog  -->
-<g id="edge28" class="edge">
-<title>JS44DModule&#45;&gt;ListSelectorDialog </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1040.2468,-178C917.1843,-178 603.7116,-178 603.7116,-178 603.7116,-178 603.7116,-205.973 603.7116,-205.973"/>
-<polygon fill="#000000" stroke="#000000" points="600.2117,-205.973 603.7116,-215.973 607.2117,-205.973 600.2117,-205.973"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1199.569,-172C1410.0024,-172 2232.4595,-172 2232.4595,-172 2232.4595,-172 2232.4595,-205.7333 2232.4595,-205.7333"/>
+<polygon fill="#000000" stroke="#000000" points="2228.9596,-205.7333 2232.4595,-215.7333 2235.9596,-205.7333 2228.9596,-205.7333"/>
 </g>
 <!-- Base64ImageRef  -->
-<g id="node30" class="node">
+<g id="node21" class="node">
 <title>Base64ImageRef </title>
-<polygon fill="#fb8072" stroke="#000000" points="511.9026,-252 396.0974,-252 396.0974,-216 511.9026,-216 511.9026,-252"/>
-<text text-anchor="middle" x="454" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">Base64ImageRef </text>
+<polygon fill="#fb8072" stroke="#000000" points="2188.9026,-252 2073.0974,-252 2073.0974,-216 2188.9026,-216 2188.9026,-252"/>
+<text text-anchor="middle" x="2131" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">Base64ImageRef </text>
 </g>
 <!-- JS44DModule&#45;&gt;Base64ImageRef  -->
-<g id="edge29" class="edge">
+<g id="edge20" class="edge">
 <title>JS44DModule&#45;&gt;Base64ImageRef </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1040.5563,-176C892.8671,-176 458.2874,-176 458.2874,-176 458.2874,-176 458.2874,-205.9664 458.2874,-205.9664"/>
-<polygon fill="#000000" stroke="#000000" points="454.7874,-205.9663 458.2874,-215.9664 461.7874,-205.9664 454.7874,-205.9663"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1199.3921,-174C1392.8854,-174 2100.5181,-174 2100.5181,-174 2100.5181,-174 2100.5181,-205.998 2100.5181,-205.998"/>
+<polygon fill="#000000" stroke="#000000" points="2097.0181,-205.998 2100.5181,-215.998 2104.0181,-205.9981 2097.0181,-205.998"/>
+</g>
+<!-- CustomButtonBarDirective  -->
+<g id="node22" class="node">
+<title>CustomButtonBarDirective </title>
+<polygon fill="#fb8072" stroke="#000000" points="2054.9755,-252 1881.0245,-252 1881.0245,-216 2054.9755,-216 2054.9755,-252"/>
+<text text-anchor="middle" x="1968" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">CustomButtonBarDirective </text>
+</g>
+<!-- JS44DModule&#45;&gt;CustomButtonBarDirective  -->
+<g id="edge21" class="edge">
+<title>JS44DModule&#45;&gt;CustomButtonBarDirective </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1199.3852,-176C1366.711,-176 1910.6524,-176 1910.6524,-176 1910.6524,-176 1910.6524,-205.9664 1910.6524,-205.9664"/>
+<polygon fill="#000000" stroke="#000000" points="1907.1524,-205.9663 1910.6524,-215.9664 1914.1524,-205.9664 1907.1524,-205.9663"/>
+</g>
+<!-- DataGrid  -->
+<g id="node23" class="node">
+<title>DataGrid </title>
+<polygon fill="#fb8072" stroke="#000000" points="1862.5854,-252 1791.4146,-252 1791.4146,-216 1862.5854,-216 1862.5854,-252"/>
+<text text-anchor="middle" x="1827" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">DataGrid </text>
+</g>
+<!-- JS44DModule&#45;&gt;DataGrid  -->
+<g id="edge22" class="edge">
+<title>JS44DModule&#45;&gt;DataGrid </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1199.5839,-178C1353.8978,-178 1822.7923,-178 1822.7923,-178 1822.7923,-178 1822.7923,-205.973 1822.7923,-205.973"/>
+<polygon fill="#000000" stroke="#000000" points="1819.2923,-205.973 1822.7923,-215.973 1826.2923,-205.973 1819.2923,-205.973"/>
 </g>
 <!-- FourDDateToString  -->
-<g id="node31" class="node">
+<g id="node24" class="node">
 <title>FourDDateToString </title>
-<polygon fill="#fb8072" stroke="#000000" points="378.2534,-252 245.7466,-252 245.7466,-216 378.2534,-216 378.2534,-252"/>
-<text text-anchor="middle" x="312" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">FourDDateToString </text>
+<polygon fill="#fb8072" stroke="#000000" points="1773.2534,-252 1640.7466,-252 1640.7466,-216 1773.2534,-216 1773.2534,-252"/>
+<text text-anchor="middle" x="1707" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">FourDDateToString </text>
 </g>
 <!-- JS44DModule&#45;&gt;FourDDateToString  -->
-<g id="edge30" class="edge">
+<g id="edge23" class="edge">
 <title>JS44DModule&#45;&gt;FourDDateToString </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1040.399,-174C874.9601,-174 343.8957,-174 343.8957,-174 343.8957,-174 343.8957,-205.998 343.8957,-205.998"/>
-<polygon fill="#000000" stroke="#000000" points="340.3958,-205.998 343.8957,-215.998 347.3958,-205.9981 340.3958,-205.998"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1199.7627,-181C1329.6767,-181 1674.3193,-181 1674.3193,-181 1674.3193,-181 1674.3193,-205.7604 1674.3193,-205.7604"/>
+<polygon fill="#000000" stroke="#000000" points="1670.8193,-205.7604 1674.3193,-215.7604 1677.8193,-205.7604 1670.8193,-205.7604"/>
+</g>
+<!-- FourDDropDown  -->
+<g id="node25" class="node">
+<title>FourDDropDown </title>
+<polygon fill="#fb8072" stroke="#000000" points="1622.5302,-252 1503.4698,-252 1503.4698,-216 1622.5302,-216 1622.5302,-252"/>
+<text text-anchor="middle" x="1563" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">FourDDropDown </text>
+</g>
+<!-- JS44DModule&#45;&gt;FourDDropDown  -->
+<g id="edge24" class="edge">
+<title>JS44DModule&#45;&gt;FourDDropDown </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1199.7007,-183C1303.8094,-183 1538.6271,-183 1538.6271,-183 1538.6271,-183 1538.6271,-205.8757 1538.6271,-205.8757"/>
+<polygon fill="#000000" stroke="#000000" points="1535.1272,-205.8757 1538.6271,-215.8757 1542.1272,-205.8757 1535.1272,-205.8757"/>
+</g>
+<!-- FourDRegistryInput  -->
+<g id="node26" class="node">
+<title>FourDRegistryInput </title>
+<polygon fill="#fb8072" stroke="#000000" points="1485.5386,-252 1352.4614,-252 1352.4614,-216 1485.5386,-216 1485.5386,-252"/>
+<text text-anchor="middle" x="1419" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">FourDRegistryInput </text>
+</g>
+<!-- JS44DModule&#45;&gt;FourDRegistryInput  -->
+<g id="edge25" class="edge">
+<title>JS44DModule&#45;&gt;FourDRegistryInput </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1199.4859,-185C1269.1255,-185 1389.1776,-185 1389.1776,-185 1389.1776,-185 1389.1776,-205.7542 1389.1776,-205.7542"/>
+<polygon fill="#000000" stroke="#000000" points="1385.6777,-205.7542 1389.1776,-215.7542 1392.6777,-205.7542 1385.6777,-205.7542"/>
+</g>
+<!-- ListSelectorDialog  -->
+<g id="node27" class="node">
+<title>ListSelectorDialog </title>
+<polygon fill="#fb8072" stroke="#000000" points="1334.7492,-252 1209.2508,-252 1209.2508,-216 1334.7492,-216 1334.7492,-252"/>
+<text text-anchor="middle" x="1272" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">ListSelectorDialog </text>
+</g>
+<!-- JS44DModule&#45;&gt;ListSelectorDialog  -->
+<g id="edge26" class="edge">
+<title>JS44DModule&#45;&gt;ListSelectorDialog </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1195.2635,-187.1061C1195.2635,-206.3391 1195.2635,-234 1195.2635,-234 1195.2635,-234 1199.3382,-234 1199.3382,-234"/>
+<polygon fill="#000000" stroke="#000000" points="1199.3382,-237.5001 1209.3382,-234 1199.3381,-230.5001 1199.3382,-237.5001"/>
 </g>
 <!-- LoginCmp  -->
-<g id="node32" class="node">
+<g id="node28" class="node">
 <title>LoginCmp </title>
-<polygon fill="#fb8072" stroke="#000000" points="228.1706,-252 147.8294,-252 147.8294,-216 228.1706,-216 228.1706,-252"/>
-<text text-anchor="middle" x="188" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoginCmp </text>
+<polygon fill="#fb8072" stroke="#000000" points="1191.1706,-252 1110.8294,-252 1110.8294,-216 1191.1706,-216 1191.1706,-252"/>
+<text text-anchor="middle" x="1151" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoginCmp </text>
 </g>
 <!-- JS44DModule&#45;&gt;LoginCmp  -->
-<g id="edge31" class="edge">
+<g id="edge27" class="edge">
 <title>JS44DModule&#45;&gt;LoginCmp </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1040.4349,-172C855.9563,-172 209.0177,-172 209.0177,-172 209.0177,-172 209.0177,-205.7333 209.0177,-205.7333"/>
-<polygon fill="#000000" stroke="#000000" points="205.5178,-205.7333 209.0177,-215.7333 212.5178,-205.7333 205.5178,-205.7333"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1151,-187.1061C1151,-187.1061 1151,-205.991 1151,-205.991"/>
+<polygon fill="#000000" stroke="#000000" points="1147.5001,-205.9909 1151,-215.991 1154.5001,-205.991 1147.5001,-205.9909"/>
+</g>
+<!-- QueryBand  -->
+<g id="node29" class="node">
+<title>QueryBand </title>
+<polygon fill="#fb8072" stroke="#000000" points="1093.033,-252 1008.967,-252 1008.967,-216 1093.033,-216 1093.033,-252"/>
+<text text-anchor="middle" x="1051" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">QueryBand </text>
+</g>
+<!-- JS44DModule&#45;&gt;QueryBand  -->
+<g id="edge28" class="edge">
+<title>JS44DModule&#45;&gt;QueryBand </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1106.7365,-187.1061C1106.7365,-206.3391 1106.7365,-234 1106.7365,-234 1106.7365,-234 1103.2442,-234 1103.2442,-234"/>
+<polygon fill="#000000" stroke="#000000" points="1103.2443,-230.5001 1093.2442,-234 1103.2442,-237.5001 1103.2443,-230.5001"/>
+</g>
+<!-- QueryBandDirective  -->
+<g id="node30" class="node">
+<title>QueryBandDirective </title>
+<polygon fill="#fb8072" stroke="#000000" points="991.1158,-252 854.8842,-252 854.8842,-216 991.1158,-216 991.1158,-252"/>
+<text text-anchor="middle" x="923" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">QueryBandDirective </text>
+</g>
+<!-- JS44DModule&#45;&gt;QueryBandDirective  -->
+<g id="edge29" class="edge">
+<title>JS44DModule&#45;&gt;QueryBandDirective </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1102.5448,-185C1050.5608,-185 975.375,-185 975.375,-185 975.375,-185 975.375,-205.7542 975.375,-205.7542"/>
+<polygon fill="#000000" stroke="#000000" points="971.8751,-205.7542 975.375,-215.7542 978.8751,-205.7542 971.8751,-205.7542"/>
+</g>
+<!-- QuickFindInput  -->
+<g id="node31" class="node">
+<title>QuickFindInput </title>
+<polygon fill="#fb8072" stroke="#000000" points="836.4362,-252 727.5638,-252 727.5638,-216 836.4362,-216 836.4362,-252"/>
+<text text-anchor="middle" x="782" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">QuickFindInput </text>
+</g>
+<!-- JS44DModule&#45;&gt;QuickFindInput  -->
+<g id="edge30" class="edge">
+<title>JS44DModule&#45;&gt;QuickFindInput </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1102.514,-183C1012.1662,-183 827.1339,-183 827.1339,-183 827.1339,-183 827.1339,-205.8757 827.1339,-205.8757"/>
+<polygon fill="#000000" stroke="#000000" points="823.634,-205.8757 827.1339,-215.8757 830.634,-205.8757 823.634,-205.8757"/>
+</g>
+<!-- RecordEditWindow  -->
+<g id="node32" class="node">
+<title>RecordEditWindow </title>
+<polygon fill="#fb8072" stroke="#000000" points="709.9729,-252 578.0271,-252 578.0271,-216 709.9729,-216 709.9729,-252"/>
+<text text-anchor="middle" x="644" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">RecordEditWindow </text>
+</g>
+<!-- JS44DModule&#45;&gt;RecordEditWindow  -->
+<g id="edge31" class="edge">
+<title>JS44DModule&#45;&gt;RecordEditWindow </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1102.2931,-181C985.6421,-181 699.875,-181 699.875,-181 699.875,-181 699.875,-205.7604 699.875,-205.7604"/>
+<polygon fill="#000000" stroke="#000000" points="696.3751,-205.7604 699.875,-215.7604 703.3751,-205.7604 696.3751,-205.7604"/>
+</g>
+<!-- RecordList  -->
+<g id="node33" class="node">
+<title>RecordList </title>
+<polygon fill="#fb8072" stroke="#000000" points="559.7053,-252 478.2947,-252 478.2947,-216 559.7053,-216 559.7053,-252"/>
+<text text-anchor="middle" x="519" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">RecordList </text>
+</g>
+<!-- JS44DModule&#45;&gt;RecordList  -->
+<g id="edge32" class="edge">
+<title>JS44DModule&#45;&gt;RecordList </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1102.3628,-178C957.8305,-178 540.9262,-178 540.9262,-178 540.9262,-178 540.9262,-205.973 540.9262,-205.973"/>
+<polygon fill="#000000" stroke="#000000" points="537.4263,-205.973 540.9262,-215.973 544.4263,-205.973 537.4263,-205.973"/>
+</g>
+<!-- Tab  -->
+<g id="node34" class="node">
+<title>Tab </title>
+<polygon fill="#fb8072" stroke="#000000" points="460,-252 406,-252 406,-216 460,-216 460,-252"/>
+<text text-anchor="middle" x="433" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">Tab </text>
+</g>
+<!-- JS44DModule&#45;&gt;Tab  -->
+<g id="edge33" class="edge">
+<title>JS44DModule&#45;&gt;Tab </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1102.6112,-176C944.7739,-176 455,-176 455,-176 455,-176 455,-205.9664 455,-205.9664"/>
+<polygon fill="#000000" stroke="#000000" points="451.5001,-205.9663 455,-215.9664 458.5001,-205.9664 451.5001,-205.9663"/>
+</g>
+<!-- Tabs  -->
+<g id="node35" class="node">
+<title>Tabs </title>
+<polygon fill="#fb8072" stroke="#000000" points="388,-252 334,-252 334,-216 388,-216 388,-252"/>
+<text text-anchor="middle" x="361" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">Tabs </text>
+</g>
+<!-- JS44DModule&#45;&gt;Tabs  -->
+<g id="edge34" class="edge">
+<title>JS44DModule&#45;&gt;Tabs </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1102.4751,-174C930.5952,-174 361,-174 361,-174 361,-174 361,-205.998 361,-205.998"/>
+<polygon fill="#000000" stroke="#000000" points="357.5001,-205.998 361,-215.998 364.5001,-205.9981 357.5001,-205.998"/>
+</g>
+<!-- WebAppContainer  -->
+<g id="node36" class="node">
+<title>WebAppContainer </title>
+<polygon fill="#fb8072" stroke="#000000" points="315.7436,-252 190.2564,-252 190.2564,-216 315.7436,-216 315.7436,-252"/>
+<text text-anchor="middle" x="253" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">WebAppContainer </text>
+</g>
+<!-- JS44DModule&#45;&gt;WebAppContainer  -->
+<g id="edge35" class="edge">
+<title>JS44DModule&#45;&gt;WebAppContainer </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1102.3907,-172C921.5598,-172 298.0891,-172 298.0891,-172 298.0891,-172 298.0891,-205.7333 298.0891,-205.7333"/>
+<polygon fill="#000000" stroke="#000000" points="294.5891,-205.7333 298.0891,-215.7333 301.5891,-205.7333 294.5891,-205.7333"/>
 </g>
 <!-- FourDModule -->
-<g id="node17" class="node">
+<g id="node19" class="node">
 <title>FourDModule</title>
 <polygon fill="#8dd3c7" stroke="#000000" points="286.0997,-122 283.0997,-126 262.0997,-126 259.0997,-122 189.9003,-122 189.9003,-86 286.0997,-86 286.0997,-122"/>
 <text text-anchor="middle" x="238" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">FourDModule</text>
 </g>
 <!-- FourDModule&#45;&gt;JS44DModule -->
-<g id="edge16" class="edge">
+<g id="edge18" class="edge">
 <title>FourDModule&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M265.9616,-122.2222C265.9616,-140.8285 265.9616,-167 265.9616,-167 265.9616,-167 1030.5879,-167 1030.5879,-167"/>
-<polygon fill="#000000" stroke="#000000" points="1030.5879,-170.5001 1040.5879,-167 1030.5879,-163.5001 1030.5879,-170.5001"/>
+<path fill="none" stroke="#000000" d="M238.2141,-122.2222C238.2141,-140.8285 238.2141,-167 238.2141,-167 238.2141,-167 1092.5691,-167 1092.5691,-167"/>
+<polygon fill="#000000" stroke="#000000" points="1092.5692,-170.5001 1102.5691,-167 1092.5691,-163.5001 1092.5692,-170.5001"/>
 </g>
 <!-- FourDInterface -->
-<g id="node33" class="node">
+<g id="node37" class="node">
 <title>FourDInterface</title>
 <ellipse fill="#fdb462" stroke="#000000" cx="95" cy="-104" rx="70.6026" ry="18"/>
 <text text-anchor="middle" x="95" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">FourDInterface</text>
 </g>
 <!-- FourDInterface&#45;&gt;JS44DModule -->
-<g id="edge32" class="edge">
+<g id="edge36" class="edge">
 <title>FourDInterface&#45;&gt;JS44DModule</title>
-<path fill="none" stroke="#000000" d="M156.733,-112.7662C156.733,-130.5084 156.733,-169 156.733,-169 156.733,-169 1030.5156,-169 1030.5156,-169"/>
-<polygon fill="#000000" stroke="#000000" points="1030.5157,-172.5001 1040.5156,-169 1030.5156,-165.5001 1030.5157,-172.5001"/>
+<path fill="none" stroke="#000000" d="M95,-122.1061C95,-141.3391 95,-169 95,-169 95,-169 1092.5339,-169 1092.5339,-169"/>
+<polygon fill="#000000" stroke="#000000" points="1092.5339,-172.5001 1102.5339,-169 1092.5338,-165.5001 1092.5339,-172.5001"/>
 </g>
 </g>
 </svg>
 
-          </div>
-          <i id="fullscreen" class="fa fa-expand module-graph-fullscreen-btn" aria-hidden="true"></i>
-          <div class="btn-group">
-              <button id="zoom-in" class="btn btn-default btn-sm">Zoom in</button>
-              <button id="reset" class="btn btn-default btn-sm">Reset</button>
-              <button id="zoom-out" class="btn btn-default btn-sm">Zoom out</button>
-          </div>
-      </div>
-      <script src="../js/libs/svg-pan-zoom.min.js"></script>
-      <script src="../js/svg-pan-zoom.controls.js"></script>
+    </div>
+    <i id="fullscreen" class="icon ion-ios-resize module-graph-fullscreen-btn" aria-hidden="true"></i>
+    <div class="btn-group">
+        <button id="zoom-in" class="btn btn-default btn-sm">Zoom in</button>
+        <button id="reset" class="btn btn-default btn-sm">Reset</button>
+        <button id="zoom-out" class="btn btn-default btn-sm">Zoom out</button>
+    </div>
+</div>
+<script src="../js/libs/svg-pan-zoom.min.js"></script>
+<script src="../js/svg-pan-zoom.controls.js"></script>
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="active">
-        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    <li  class="active" >
+        <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
     </li>
-
-
-    <li>
+    <li >
         <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
     </li>
 </ul>
@@ -1070,145 +553,167 @@
         </p>
 
 
+
+
         <div class="container-fluid module">
             <div class="row">
                 <div class="col-sm-3">
-                    <h3>Declarations<a href="https://angular.io/api/core/NgModule#declarations" target="_blank" title="Official documentation about module declarations"><span class="fa fa-info-circle"></span></a></h3>
+                    <h3>Declarations<a href="https://angular.io/api/core/NgModule#declarations" target="_blank"
+                            title="Official documentation about module declarations"><span class="icon ion-ios-information-circle-outline"></span></a></h3>
                     <ul class="list-group">
-                            <li class="list-group-item">
-                                <a href="../components/QueryBand.html">QueryBand</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../directives/CustomButtonBarDirective.html">CustomButtonBarDirective</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../components/AdvancedQueryComponent.html">AdvancedQueryComponent</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../components/RecordEditWindow.html">RecordEditWindow</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../components/RecordList.html">RecordList</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../components/Tabs.html">Tabs</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../components/Tab.html">Tab</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../components/WebAppContainer.html">WebAppContainer</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../components/FourDDropDown.html">FourDDropDown</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../components/QuickFindInput.html">QuickFindInput</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../components/DataGrid.html">DataGrid</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../components/ListSelectorDialog.html">ListSelectorDialog</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../pipes/Base64ImageRef.html">Base64ImageRef</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../pipes/FourDDateToString.html">FourDDateToString</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../components/LoginCmp.html">LoginCmp</a>
-                            </li>
+                        <li class="list-group-item">
+                            <a href="../components/AdvancedQueryComponent.html">AdvancedQueryComponent</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../pipes/Base64ImageRef.html">Base64ImageRef</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../directives/CustomButtonBarDirective.html">CustomButtonBarDirective</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/DataGrid.html">DataGrid</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../pipes/FourDDateToString.html">FourDDateToString</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/FourDDropDown.html">FourDDropDown</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/FourDRegistryInput.html">FourDRegistryInput</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/ListSelectorDialog.html">ListSelectorDialog</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/LoginCmp.html">LoginCmp</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/QueryBand.html">QueryBand</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/QueryBandDirective.html">QueryBandDirective</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/QuickFindInput.html">QuickFindInput</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/RecordEditWindow.html">RecordEditWindow</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/RecordList.html">RecordList</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/Tab.html">Tab</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/Tabs.html">Tabs</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/WebAppContainer.html">WebAppContainer</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
-                    <h3>EntryComponents<a href="https://angular.io/api/core/NgModule#entryComponents" target="_blank" title="Official documentation about module entryComponents"><span class="fa fa-info-circle"></span></a></h3>
+                    <h3>EntryComponents<a href="https://angular.io/api/core/NgModule#entryComponents" target="_blank"
+                            title="Official documentation about module entryComponents"><span class="icon ion-ios-information-circle-outline"></span></a></h3>
                     <ul class="list-group">
-                            <li class="list-group-item">
-                                <a href="../components/LoginCmp.html">LoginCmp</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../components/AdvancedQueryComponent.html">AdvancedQueryComponent</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="../components/ListSelectorDialog.html">ListSelectorDialog</a>
-                            </li>
+                        <li class="list-group-item">
+                            <a href="../components/AdvancedQueryComponent.html">AdvancedQueryComponent</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/ListSelectorDialog.html">ListSelectorDialog</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/LoginCmp.html">LoginCmp</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
-                    <h3>Providers<a href="https://angular.io/api/core/NgModule#providers" target="_blank" title="Official documentation about module providers"><span class="fa fa-info-circle"></a></h3>
+                    <h3>Providers<a href="https://angular.io/api/core/NgModule#providers" target="_blank"
+                            title="Official documentation about module providers"><span class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
-                            <li class="list-group-item">
-                                     <a href="../injectables/FourDInterface.html" >FourDInterface</a>
-                            </li>
+                        <li class="list-group-item">
+                            <a href="../injectables/FourDInterface.html">FourDInterface</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
-                    <h3>Imports<a href="https://angular.io/api/core/NgModule#imports" target="_blank" title="Official documentation about module imports"><span class="fa fa-info-circle"></a></h3>
+                    <h3>Imports<a href="https://angular.io/api/core/NgModule#imports" target="_blank" title="Official documentation about module imports"><span
+                                class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
-                            <li class="list-group-item">
-                                    <a href="../modules/FourDModule.html" >FourDModule</a>
-                            </li>
+                        <li class="list-group-item">
+                            <a href="../modules/FourDModule.html">FourDModule</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
-                    <h3>Exports<a href="https://angular.io/api/core/NgModule#exports" target="_blank" title="Official documentation about module exports"><span class="fa fa-info-circle"></a></h3>
+                    <h3>Exports<a href="https://angular.io/api/core/NgModule#exports" target="_blank" title="Official documentation about module exports"><span
+                                class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
-                            <li class="list-group-item">
-                                    <a href="../components/QueryBand.html" >QueryBand</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../directives/CustomButtonBarDirective.html" >CustomButtonBarDirective</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../components/AdvancedQueryComponent.html" >AdvancedQueryComponent</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../components/RecordEditWindow.html" >RecordEditWindow</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../components/RecordList.html" >RecordList</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../components/Tabs.html" >Tabs</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../components/Tab.html" >Tab</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../components/WebAppContainer.html" >WebAppContainer</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../components/FourDDropDown.html" >FourDDropDown</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../components/QuickFindInput.html" >QuickFindInput</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../components/DataGrid.html" >DataGrid</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../components/ListSelectorDialog.html" >ListSelectorDialog</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../pipes/Base64ImageRef.html" >Base64ImageRef</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../pipes/FourDDateToString.html" >FourDDateToString</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../components/LoginCmp.html" >LoginCmp</a>
-                            </li>
+                        <li class="list-group-item">
+                            <a href="../components/AdvancedQueryComponent.html">AdvancedQueryComponent</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../pipes/Base64ImageRef.html">Base64ImageRef</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../directives/CustomButtonBarDirective.html">CustomButtonBarDirective</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/DataGrid.html">DataGrid</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../pipes/FourDDateToString.html">FourDDateToString</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/FourDDropDown.html">FourDDropDown</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/FourDRegistryInput.html">FourDRegistryInput</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/ListSelectorDialog.html">ListSelectorDialog</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/LoginCmp.html">LoginCmp</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/QueryBand.html">QueryBand</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/QueryBandDirective.html">QueryBandDirective</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/QuickFindInput.html">QuickFindInput</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/RecordEditWindow.html">RecordEditWindow</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/RecordList.html">RecordList</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/Tab.html">Tab</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/Tabs.html">Tabs</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/WebAppContainer.html">WebAppContainer</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
+
+
     </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="c-source">
-        <pre class="line-numbers"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">// angular
+import { NgModule } from &#x27;@angular/core&#x27;;
 import { FormsModule } from &#x27;@angular/forms&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import { HttpClient, HttpClientModule } from &#x27;@angular/common/http&#x27;;
@@ -1230,6 +735,7 @@ import { ListSelectorDialog } from &#x27;./dialogs/listSelectorDialog&#x27;;
 
 import { Base64ImageRef } from &#x27;./pipes/Base64ImageRef.pipe&#x27;;
 import { FourDDateToString } from &#x27;./pipes/FourDDateToString.pipe&#x27;;
+import { FourDRegistryInput } from &#x27;./controls/fourDRegistryInput&#x27;;
 
 
 @NgModule({
@@ -1237,7 +743,7 @@ import { FourDDateToString } from &#x27;./pipes/FourDDateToString.pipe&#x27;;
       declarations: [ 
             QueryBand, CustomButtonBarDirective, QueryBandDirective, AdvancedQueryComponent,
             RecordEditWindow, RecordList, Tabs, Tab, WebAppContainer,
-            FourDDropDown, QuickFindInput,
+            FourDDropDown, QuickFindInput, FourDRegistryInput,
             DataGrid,
             ListSelectorDialog,
             Base64ImageRef,
@@ -1248,7 +754,7 @@ import { FourDDateToString } from &#x27;./pipes/FourDDateToString.pipe&#x27;;
       exports: [
             QueryBand, CustomButtonBarDirective, QueryBandDirective, AdvancedQueryComponent,
             RecordEditWindow, RecordList, Tabs, Tab, WebAppContainer,
-            FourDDropDown, QuickFindInput,
+            FourDDropDown, QuickFindInput, FourDRegistryInput,
             DataGrid,
             ListSelectorDialog,
             Base64ImageRef,
@@ -1272,9 +778,12 @@ export class JS44DModule { }
 
 
 
+
+
+
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -1282,8 +791,21 @@ export class JS44DModule { }
     </div>
 </div>
 </div>
+               <!-- END CONTENT -->
            </div>
        </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
+            var COMPODOC_CURRENT_PAGE_URL = 'JS44DModule.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 
@@ -1294,17 +816,17 @@ export class JS44DModule { }
 
        <script src="../js/compodoc.js"></script>
 
-       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
-
-       <script src="../js/search/search.js"></script>
-       <script src="../js/search/lunr.min.js"></script>
-       <script src="../js/search/search-lunr.js"></script>
-
        <script src="../js/tabs.js"></script>
        <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
        <script src="../js/libs/prism.js"></script>
        <script src="../js/sourceCode.js"></script>
-       <script src="../js/search/search_index.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
 
     </body>
 </html>

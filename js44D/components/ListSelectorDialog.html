@@ -8,588 +8,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	    <link rel="stylesheet" href="../styles/style.css">
+	      <link rel="stylesheet" href="../styles/style.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
             <a href="../" class="navbar-brand">js44d documentation</a>
-            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-            <div id="book-search-input" role="search">
-                <input type="text" placeholder="Type to search">
-            </div>
-            <nav>
-            
-                <ul class="list">
-            
-                    <li class="title">
-                        <a href="../index.html">js44d documentation</a>
-                    </li>
-            
-                    <li class="divider"></li>
-            
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
-                        <ul class="links">
-                                <li class="link">
-                                    <a 
-                                        
-                                         href="../overview.html" 
-                                         href="../overview.html" 
-                                        >
-                                        <span class="fa fa-th"></span>Overview
-                                    </a>
-                                </li>
-                                <li class="link">
-                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
-                                </li>
-                                <li class="link">
-                                        <a href="../license.html"
-                                    >
-                                        <span class="fa fa-file-text-o"></span>LICENSE
-                                    </a>
-                                </li>
-                        </ul>
-                    </li>
-            
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="../modules.html" >
-                            <div class="menu-toggler linked" data-toggle="collapse"
-                                    data-target="#xs-modules-links"
-                            >
-                                <span class="fa fa-archive"></span>
-                                <span class="link-name">Modules</span>
-                                <span class="fa fa-angle-down"></span>
-                            </div>
-                        </a>
-                        <ul class="links collapse "
-                                id="xs-modules-links"
-                            >
-                                <li class="link">
-                                    <a href="../modules/FourDModule.html" >FourDModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/JS44DModule.html" >JS44DModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/ModalModule.html" >ModalModule</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-components-links"
-                            >
-                            <span class="fa fa-cogs"></span>
-                            <span>Components</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-components-links"
-                            >
-                                <li class="link">
-                                    <a href="../components/AdvancedQueryComponent.html" >AdvancedQueryComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/DataGrid.html" >DataGrid</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/FourDDropDown.html" >FourDDropDown</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/ListSelectorDialog.html"  data-type="entity-link" class="active" >ListSelectorDialog</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/LoginCmp.html" >LoginCmp</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/OKOnlyModal.html" >OKOnlyModal</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/QueryBand.html" >QueryBand</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/QuickFindInput.html" >QuickFindInput</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/RecordEditWindow.html" >RecordEditWindow</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/RecordList.html" >RecordList</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/Tab.html" >Tab</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/Tabs.html" >Tabs</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/WebAppContainer.html" >WebAppContainer</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/YesNoModal.html" >YesNoModal</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-directives-links"
-                            >
-                            <span class="fa fa-code"></span>
-                            <span>Directives</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-directives-links"
-                            >
-                                <li class="link">
-                                    <a href="../directives/CustomButtonBarDirective.html" >CustomButtonBarDirective</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../directives/QueryBandDirective.html" >QueryBandDirective</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-classes-links"
-                            >
-                            <span class="fa fa-file-code-o"></span>
-                            <span>Classes</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-classes-links"
-                            >
-                                <li class="link">
-                                    <a href="../classes/Base64.html" >Base64</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/Deferred.html" >Deferred</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/FourDQuery.html" >FourDQuery</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/ICustomModal.html" >ICustomModal</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/ICustomModalComponent.html" >ICustomModalComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/MD5.html" >MD5</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/OKOnlyContent.html" >OKOnlyContent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/Utf8.html" >Utf8</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/YesNoModalContent.html" >YesNoModalContent</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-injectables-links"
-                            >
-                            <span class="fa fa-long-arrow-down"></span>
-                            <span>Injectables</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-injectables-links"
-                            >
-                                <li class="link">
-                                    <a href="../injectables/FourDCollection.html" >FourDCollection</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/FourDInterface.html" >FourDInterface</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/FourDModel.html" >FourDModel</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/Modal.html" >Modal</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/ModalConfig.html" >ModalConfig</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/ModalDialogInstance.html" >ModalDialogInstance</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-interfaces-links"
-                            >
-                            <span class="fa fa-info"></span>
-                            <span>Interfaces</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-interfaces-links"
-                            >
-                                <li class="link">
-                                    <a href="../interfaces/IFieldDescription.html" >IFieldDescription</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-pipes-links"
-                            >
-                            <span class="fa fa-plus"></span>
-                            <span>Pipes</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-pipes-links"
-                            >
-                                <li class="link">
-                                    <a href="../pipes/Base64ImageRef.html" >Base64ImageRef</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../pipes/FourDDateToString.html" >FourDDateToString</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-miscellaneous-links"
-                            >
-                            <span class="fa fa-cubes"></span>
-                            <span>Miscellaneous</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-miscellaneous-links"
-                            >
-                                <li class="link">
-                                  <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
-                    </li>
-            
-                    <li class="divider"></li>
-                    <li class="copyright">
-                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
-                            </a>
-                    </li>
-            
-                </ul>
-            
-            </nav>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
            <div class="row main">
                <div class="hidden-xs menu">
-                   <nav>
-                   
-                       <ul class="list">
-                   
-                           <li class="title">
-                               <a href="../index.html">js44d documentation</a>
-                           </li>
-                   
-                           <li class="divider"></li>
-                   
-                               <div id="book-search-input" role="search">
-                                   <input type="text" placeholder="Type to search">
-                               </div>
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
-                               <ul class="links">
-                                       <li class="link">
-                                           <a 
-                                               
-                                                href="../overview.html" 
-                                                href="../overview.html" 
-                                               >
-                                               <span class="fa fa-th"></span>Overview
-                                           </a>
-                                       </li>
-                                       <li class="link">
-                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
-                                       </li>
-                                       <li class="link">
-                                               <a href="../license.html"
-                                           >
-                                               <span class="fa fa-file-text-o"></span>LICENSE
-                                           </a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="../modules.html" >
-                                   <div class="menu-toggler linked" data-toggle="collapse"
-                                           data-target="#modules-links"
-                                   >
-                                       <span class="fa fa-archive"></span>
-                                       <span class="link-name">Modules</span>
-                                       <span class="fa fa-angle-down"></span>
-                                   </div>
-                               </a>
-                               <ul class="links collapse "
-                                       id="modules-links"
-                   >
-                                       <li class="link">
-                                           <a href="../modules/FourDModule.html" >FourDModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/JS44DModule.html" >JS44DModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/ModalModule.html" >ModalModule</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#components-links"
-                   >
-                                   <span class="fa fa-cogs"></span>
-                                   <span>Components</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="components-links"
-                   >
-                                       <li class="link">
-                                           <a href="../components/AdvancedQueryComponent.html" >AdvancedQueryComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/DataGrid.html" >DataGrid</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/FourDDropDown.html" >FourDDropDown</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/ListSelectorDialog.html"  data-type="entity-link" class="active" >ListSelectorDialog</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/LoginCmp.html" >LoginCmp</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/OKOnlyModal.html" >OKOnlyModal</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/QueryBand.html" >QueryBand</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/QuickFindInput.html" >QuickFindInput</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/RecordEditWindow.html" >RecordEditWindow</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/RecordList.html" >RecordList</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/Tab.html" >Tab</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/Tabs.html" >Tabs</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/WebAppContainer.html" >WebAppContainer</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/YesNoModal.html" >YesNoModal</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#directives-links"
-                   >
-                                   <span class="fa fa-code"></span>
-                                   <span>Directives</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="directives-links"
-                   >
-                                       <li class="link">
-                                           <a href="../directives/CustomButtonBarDirective.html" >CustomButtonBarDirective</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../directives/QueryBandDirective.html" >QueryBandDirective</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#classes-links"
-                   >
-                                   <span class="fa fa-file-code-o"></span>
-                                   <span>Classes</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="classes-links"
-                   >
-                                       <li class="link">
-                                           <a href="../classes/Base64.html" >Base64</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/Deferred.html" >Deferred</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/FourDQuery.html" >FourDQuery</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/ICustomModal.html" >ICustomModal</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/ICustomModalComponent.html" >ICustomModalComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/MD5.html" >MD5</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/OKOnlyContent.html" >OKOnlyContent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/Utf8.html" >Utf8</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/YesNoModalContent.html" >YesNoModalContent</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#injectables-links"
-                   >
-                                   <span class="fa fa-long-arrow-down"></span>
-                                   <span>Injectables</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="injectables-links"
-                   >
-                                       <li class="link">
-                                           <a href="../injectables/FourDCollection.html" >FourDCollection</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/FourDInterface.html" >FourDInterface</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/FourDModel.html" >FourDModel</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/Modal.html" >Modal</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/ModalConfig.html" >ModalConfig</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/ModalDialogInstance.html" >ModalDialogInstance</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#interfaces-links"
-                   >
-                                   <span class="fa fa-info"></span>
-                                   <span>Interfaces</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="interfaces-links"
-                   >
-                                       <li class="link">
-                                           <a href="../interfaces/IFieldDescription.html" >IFieldDescription</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#pipes-links"
-                   >
-                                   <span class="fa fa-plus"></span>
-                                   <span>Pipes</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="pipes-links"
-                   >
-                                       <li class="link">
-                                           <a href="../pipes/Base64ImageRef.html" >Base64ImageRef</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../pipes/FourDDateToString.html" >FourDDateToString</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#miscellaneous-links"
-                   >
-                                   <span class="fa fa-cubes"></span>
-                                   <span>Miscellaneous</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="miscellaneous-links"
-                   >
-                                       <li class="link">
-                                         <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
-                           </li>
-                   
-                           <li class="divider"></li>
-                           <li class="copyright">
-                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
-                                   </a>
-                           </li>
-                   
-                       </ul>
-                   
-                   </nav>
+                   <compodoc-menu mode="normal"></compodoc-menu>
                </div>
+               <!-- START CONTENT -->
                <div class="content component">
                    <div class="content-data">
 
@@ -602,17 +39,15 @@
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="active">
-        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
-    </li>
-
-    <li>
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
-
-    <li>
-        <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
-    </li>
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
 </ul>
 
 <div class="tab-content">
@@ -646,13 +81,10 @@
 
 
 
-
             <tr>
                 <td class="col-md-3">providers</td>
                 <td class="col-md-9">
-                    <code>
-                        Modal
-                    </code>
+                            <code><a href="../injectables/Modal.html" target="_self" >Modal</a></code>
                 </td>
             </tr>
 
@@ -680,14 +112,20 @@
 
 
 
+
+
+
+
+
+
         </tbody>
     </table>
 </section>
 
     <section>
-        <h3 id="index">Index</h3>
-        <table class="table table-sm table-bordered index-table">
-            <tbody>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
                 <tr>
                     <td class="col-md-4">
                         <h6><b>Properties</b></h6>
@@ -715,6 +153,7 @@
                         </ul>
                     </td>
                 </tr>
+
                 <tr>
                     <td class="col-md-4">
                         <h6><b>Methods</b></h6>
@@ -736,6 +175,7 @@
                         </ul>
                     </td>
                 </tr>
+
                 <tr>
                     <td class="col-md-4">
                         <h6><b>Inputs</b></h6>
@@ -759,678 +199,827 @@
                         </ul>
                     </td>
                 </tr>
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#height">height</a>
+                                </li>
+                                <li>
+                                    <a href="#width">width</a>
+                                </li>
+                                <li>
+                                    <a href="#title">title</a>
+                                </li>
+                                <li>
+                                    <a href="#modelContentData">modelContentData</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Accessors</b></h6>
+<code>constructor(dialog: <a href="../injectables/ModalDialogInstance.html">ModalDialogInstance</a>, modal: <a href="../injectables/Modal.html">Modal</a>)</code>
                     </td>
                 </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/dialogs/listSelectorDialog.ts:54</a></div>
+                            </td>
+                        </tr>
+
                 <tr>
                     <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#height">height</a>
-                            </li>
-                            <li>
-                                <a href="#width">width</a>
-                            </li>
-                            <li>
-                                <a href="#title">title</a>
-                            </li>
-                            <li>
-                                <a href="#modelContentData">modelContentData</a>
-                            </li>
-                        </ul>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ModalDialogInstance.html" target="_self" >ModalDialogInstance</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modal</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/Modal.html" target="_self" >Modal</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
                     </td>
                 </tr>
             </tbody>
         </table>
-    </section>
+</section>
 
     <section>
-        <h3 id="constructor">Constructor</h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>constructor(dialog: <a href="../injectables/ModalDialogInstance.html">ModalDialogInstance</a>, modal: <a href="../injectables/Modal.html">Modal</a>)</code>
-                        </td>
-                    </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/dialogs/listSelectorDialog.ts:54</a></div>
-                                </td>
-                            </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-                                <div>
-                                        <b>Parameters :</b>
-                                        <table class="params">
-                                            <thead>
-                                                <tr>
-                                                    <td>Name</td>
-                                                    <td>Type</td>
-                                                    <td>Optional</td>
-                                                    <td>Description</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr>
-                                                      <td>dialog</td>
-                                                      <td>
-                                                                <code><a href="../injectables/ModalDialogInstance.html" target="_self" >ModalDialogInstance</a></code>
-                                                      </td>
-                                                      <td>
-                                                      </td>
-                                                      <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>modal</td>
-                                                      <td>
-                                                                <code><a href="../injectables/Modal.html" target="_self" >Modal</a></code>
-                                                      </td>
-                                                      <td>
-                                                      </td>
-                                                      <td></td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-    </section>
-
-    <section>
-        <h3 id="inputs">Inputs</h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-2">
-                            <a name="buttonText"></a>
-                            <code>buttonText</code>
-                        </td>
-                        <td class="col-md-10">
-                            <p>
-                              <em>Default value: </em><code>&#x27;Select&#x27;</code>
-                            </p>
-                        </td>
-                    </tr>
-                            <tr>
-                                <td class="col-md-2" colspan="2">
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="buttonText"></a>
+                        <code>buttonText</code>
+                    </td>
+                    <td class="col-md-10">
+                        <p>
+                            <em>Default value : </em><code>&#x27;Select&#x27;</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
                                     <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/dialogs/listSelectorDialog.ts:37</a></div>
-                                </td>
-                            </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-2">
-                            <a name="itemsList"></a>
-                            <code>itemsList</code>
-                        </td>
-                        <td class="col-md-10">
-                              <p>
-                                <em>Type:</em>    <code>string[]</code>
-
-                              </p>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="itemsList"></a>
+                        <code>itemsList</code>
+                    </td>
+                    <td class="col-md-10">
                             <p>
-                              <em>Default value: </em><code>[]</code>
+                            <em>Type :</em>    <code>string[]</code>
+
                             </p>
-                        </td>
-                    </tr>
-                            <tr>
-                                <td class="col-md-2" colspan="2">
+                        <p>
+                            <em>Default value : </em><code>[]</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
                                     <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/dialogs/listSelectorDialog.ts:35</a></div>
-                                </td>
-                            </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-2">
-                            <a name="message"></a>
-                            <code>message</code>
-                        </td>
-                        <td class="col-md-10">
-                            <p>
-                              <em>Default value: </em><code>&#x27;&#x27;</code>
-                            </p>
-                        </td>
-                    </tr>
-                            <tr>
-                                <td class="col-md-2" colspan="2">
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="message"></a>
+                        <code>message</code>
+                    </td>
+                    <td class="col-md-10">
+                        <p>
+                            <em>Default value : </em><code>&#x27;&#x27;</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
                                     <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/dialogs/listSelectorDialog.ts:38</a></div>
-                                </td>
-                            </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-2">
-                            <a name="tipsList"></a>
-                            <code>tipsList</code>
-                        </td>
-                        <td class="col-md-10">
-                              <p>
-                                <em>Type:</em>    <code>string[]</code>
-
-                              </p>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="tipsList"></a>
+                        <code>tipsList</code>
+                    </td>
+                    <td class="col-md-10">
                             <p>
-                              <em>Default value: </em><code>[]</code>
+                            <em>Type :</em>    <code>string[]</code>
+
                             </p>
-                        </td>
-                    </tr>
-                            <tr>
-                                <td class="col-md-2" colspan="2">
+                        <p>
+                            <em>Default value : </em><code>[]</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
                                     <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/dialogs/listSelectorDialog.ts:36</a></div>
-                                </td>
-                            </tr>
-                </tbody>
-            </table>
-    </section>
-
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
 
 
 
     <section>
-        
-            <h3 id="methods">
-                Methods
-            </h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="changeSelection"></a>
-                            <span class="name">
-                                <b>
-                                changeSelection
-                                </b>
-                                <a href="#changeSelection"><span class="fa fa-link"></span></a>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-    <code>changeSelection(ev: )</code>
-                        </td>
-                    </tr>
     
-    
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/dialogs/listSelectorDialog.ts:70</a></div>
-                                </td>
-                            </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    
-                                <div class="io-description">
-                                        <b>Parameters :</b>
-                                        <table class="params">
-                                            <thead>
-                                                <tr>
-                                                    <td>Name</td>
-                                                    <td>Type</td>
-                                                    <td>Optional</td>
-                                                    <td>Description</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr>
-                                                      <td>ev</td>
-                                                      <td>
-                                                      </td>
-                                                      <td>
-                                                      </td>
-                                                      <td></td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                </div>
-                                <div>
-                                </div>
-                                <div class="io-description">
-                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-    
-                                </div>
-                                    <div class="io-description">
-                                        
-                                    </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="ok"></a>
-                            <span class="name">
-                                <b>
-                                ok
-                                </b>
-                                <a href="#ok"><span class="fa fa-link"></span></a>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-    <code>ok($event: )</code>
-                        </td>
-                    </tr>
-    
-    
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/dialogs/listSelectorDialog.ts:74</a></div>
-                                </td>
-                            </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    
-                                <div class="io-description">
-                                        <b>Parameters :</b>
-                                        <table class="params">
-                                            <thead>
-                                                <tr>
-                                                    <td>Name</td>
-                                                    <td>Type</td>
-                                                    <td>Optional</td>
-                                                    <td>Description</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr>
-                                                      <td>$event</td>
-                                                      <td>
-                                                      </td>
-                                                      <td>
-                                                      </td>
-                                                      <td></td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                </div>
-                                <div>
-                                </div>
-                                <div class="io-description">
-                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-    
-                                </div>
-                                    <div class="io-description">
-                                        
-                                    </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="show"></a>
-                            <span class="name">
-                                <b>
-                                    <span class="modifier">Public</span>
-                                show
-                                </b>
-                                <a href="#show"><span class="fa fa-link"></span></a>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <span class="modifier-icon fa fa-reset"></span>
-                            <code>show(list: string[], tips?: string[], message?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, buttonLabel?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                        </td>
-                    </tr>
-    
-    
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/dialogs/listSelectorDialog.ts:64</a></div>
-                                </td>
-                            </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-description"><p>Show Me - show the list selector dialog and return a Promise</p>
-    </div>
-    
-                                <div class="io-description">
-                                        <b>Parameters :</b>
-                                        <table class="params">
-                                            <thead>
-                                                <tr>
-                                                    <td>Name</td>
-                                                    <td>Type</td>
-                                                    <td>Optional</td>
-                                                    <td>Description</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr>
-                                                      <td>list</td>
-                                                      <td>
-                                                              <code>string[]</code>
-                                                      </td>
-                                                      <td>
-                                                      </td>
-                                                      <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>tips</td>
-                                                      <td>
-                                                              <code>string[]</code>
-                                                      </td>
-                                                      <td>
-                                                          true
-                                                      </td>
-                                                      <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>message</td>
-                                                      <td>
-                                                              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                                      </td>
-                                                      <td>
-                                                          true
-                                                      </td>
-                                                      <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>buttonLabel</td>
-                                                      <td>
-                                                              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                                      </td>
-                                                      <td>
-                                                          true
-                                                      </td>
-                                                      <td></td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                </div>
-                                <div>
-                                </div>
-                                <div class="io-description">
-                                    <b>Returns : </b>    <code>Promise&lt;number&gt;</code>
-    
-                                </div>
-                                    <div class="io-description">
-                                        
-                                    </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-    </section>
-
-    <section>
-        
-            <h3 id="inputs">
-                Properties
-            </h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="config"></a>
-                            <span class="name">
-                                <b>
-                                    <span class="modifier">Private</span>
-                                config
-                                </b>
-                                <a href="#config"><span class="fa fa-link"></span></a>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <span class="modifier-icon fa fa-reset"></span><code>config:     <code><a href="../injectables/ModalConfig.html" target="_self" >ModalConfig</a></code>
-    </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Type : </i>    <code><a href="../injectables/ModalConfig.html" target="_self" >ModalConfig</a></code>
-    
-                            </td>
-                        </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/dialogs/listSelectorDialog.ts:52</a></div>
-                                </td>
-                            </tr>
-    
-    
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="dialog"></a>
-                            <span class="name">
-                                <b>
-                                    <span class="modifier">Public</span>
-                                dialog
-                                </b>
-                                <a href="#dialog"><span class="fa fa-link"></span></a>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <span class="modifier-icon fa fa-reset"></span><code>dialog:     <code><a href="../injectables/ModalDialogInstance.html" target="_self" >ModalDialogInstance</a></code>
-    </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Type : </i>    <code><a href="../injectables/ModalDialogInstance.html" target="_self" >ModalDialogInstance</a></code>
-    
-                            </td>
-                        </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/dialogs/listSelectorDialog.ts:57</a></div>
-                                </td>
-                            </tr>
-    
-    
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="dialogConfig"></a>
-                            <span class="name">
-                                <b>
-                                    <span class="modifier">Static</span>
-                                dialogConfig
-                                </b>
-                                <a href="#dialogConfig"><span class="fa fa-link"></span></a>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <span class="modifier-icon fa fa-reset"></span><code>dialogConfig:     <code><a href="../injectables/ModalConfig.html" target="_self" >ModalConfig</a></code>
-    </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Type : </i>    <code><a href="../injectables/ModalConfig.html" target="_self" >ModalConfig</a></code>
-    
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Default value : </i><code>&lt;ModalConfig&gt;{
-            size: &#x27;sm&#x27;,
-            selfCentered: true,
-            isResizable: true,
-            isModal: true,
-            isBlocking: true,
-            title: &#x27;Select...&#x27;,
-            width: 400, height: 350
-        }</code>
-                            </td>
-                        </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/dialogs/listSelectorDialog.ts:25</a></div>
-                                </td>
-                            </tr>
-    
-    
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="selectedIndex"></a>
-                            <span class="name">
-                                <b>
-                                    <span class="modifier">Private</span>
-                                selectedIndex
-                                </b>
-                                <a href="#selectedIndex"><span class="fa fa-link"></span></a>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <span class="modifier-icon fa fa-reset"></span><code>selectedIndex:     <code></code>
-    </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Default value : </i><code>-1</code>
-                            </td>
-                        </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/dialogs/listSelectorDialog.ts:54</a></div>
-                                </td>
-                            </tr>
-    
-    
-                </tbody>
-            </table>
-    </section>
-
-    <section>
-        <h3 id="accessors">
-            Accessors
+        <h3 id="methods">
+            Methods
         </h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="changeSelection"></a>
+                        <span class="name">
+                            <b>
+                            changeSelection
+                            </b>
+                            <a href="#changeSelection"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>changeSelection(ev)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/dialogs/listSelectorDialog.ts:70</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>ev</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ok"></a>
+                        <span class="name">
+                            <b>
+                            ok
+                            </b>
+                            <a href="#ok"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ok($event)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/dialogs/listSelectorDialog.ts:74</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>$event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="show"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            show
+                            </b>
+                            <a href="#show"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>show(list: string[], tips?: string[], message?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, buttonLabel?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/dialogs/listSelectorDialog.ts:64</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Show Me - show the list selector dialog and return a Promise</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>list</td>
+                                                        <td>
+                                                                    <code>string[]</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>tips</td>
+                                                        <td>
+                                                                    <code>string[]</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>message</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>buttonLabel</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;number&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="config"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            config
+                            </b>
+                            <a href="#config"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>config:     <code><a href="../injectables/ModalConfig.html" target="_self" >ModalConfig</a></code>
+</code>
+                    </td>
+                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <a name="height"></a>
-                            <span class="name"><b>height</b><a href="#height"><span class="fa fa-link"></span></a></span>
+                            <i>Type : </i>    <code><a href="../injectables/ModalConfig.html" target="_self" >ModalConfig</a></code>
+
                         </td>
                     </tr>
-    
-    
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/dialogs/listSelectorDialog.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dialog"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dialog
+                            </b>
+                            <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>dialog:     <code><a href="../injectables/ModalDialogInstance.html" target="_self" >ModalDialogInstance</a></code>
+</code>
+                    </td>
+                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <span class="accessor"><b>set</b><code>height(v: )</code></span>
+                            <i>Type : </i>    <code><a href="../injectables/ModalDialogInstance.html" target="_self" >ModalDialogInstance</a></code>
+
                         </td>
                     </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/dialogs/listSelectorDialog.ts:40</a></div>
-                                    </td>
-                                </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/dialogs/listSelectorDialog.ts:57</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dialogConfig"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            dialogConfig
+                            </b>
+                            <a href="#dialogConfig"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>dialogConfig:     <code><a href="../injectables/ModalConfig.html" target="_self" >ModalConfig</a></code>
+</code>
+                    </td>
+                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <a name="width"></a>
-                            <span class="name"><b>width</b><a href="#width"><span class="fa fa-link"></span></a></span>
+                            <i>Type : </i>    <code><a href="../injectables/ModalConfig.html" target="_self" >ModalConfig</a></code>
+
                         </td>
                     </tr>
-    
-    
                     <tr>
                         <td class="col-md-4">
-                            <span class="accessor"><b>set</b><code>width(v: )</code></span>
+                            <i>Default value : </i><code>&lt;ModalConfig&gt;{
+        size: &#x27;sm&#x27;,
+        selfCentered: true,
+        isResizable: true,
+        isModal: true,
+        isBlocking: true,
+        title: &#x27;Select...&#x27;,
+        width: 400, height: 350
+    }</code>
                         </td>
                     </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/dialogs/listSelectorDialog.ts:41</a></div>
-                                    </td>
-                                </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/dialogs/listSelectorDialog.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedIndex"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            selectedIndex
+                            </b>
+                            <a href="#selectedIndex"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>selectedIndex:     <code></code>
+</code>
+                    </td>
+                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <a name="title"></a>
-                            <span class="name"><b>title</b><a href="#title"><span class="fa fa-link"></span></a></span>
+                            <i>Default value : </i><code>-1</code>
                         </td>
                     </tr>
-    
-    
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/dialogs/listSelectorDialog.ts:54</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="height"></a>
+                        <span class="name"><b>height</b><a href="#height"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>height(v)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/dialogs/listSelectorDialog.ts:40</a></div>
+                                </td>
+                            </tr>
                     <tr>
                         <td class="col-md-4">
-                            <span class="accessor"><b>set</b><code>title(v: )</code></span>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>v</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
                         </td>
                     </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/dialogs/listSelectorDialog.ts:42</a></div>
-                                    </td>
-                                </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="width"></a>
+                        <span class="name"><b>width</b><a href="#width"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>width(v)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/dialogs/listSelectorDialog.ts:41</a></div>
+                                </td>
+                            </tr>
                     <tr>
                         <td class="col-md-4">
-                            <a name="modelContentData"></a>
-                            <span class="name"><b>modelContentData</b><a href="#modelContentData"><span class="fa fa-link"></span></a></span>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>v</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
                         </td>
                     </tr>
-    
-    
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="title"></a>
+                        <span class="name"><b>title</b><a href="#title"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>title(v)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/dialogs/listSelectorDialog.ts:42</a></div>
+                                </td>
+                            </tr>
                     <tr>
                         <td class="col-md-4">
-                            <span class="accessor"><b>set</b><code>modelContentData(v: )</code></span>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>v</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
                         </td>
                     </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/dialogs/listSelectorDialog.ts:45</a></div>
-                                    </td>
-                                </tr>
-                </tbody>
-            </table>
-    </section>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="modelContentData"></a>
+                        <span class="name"><b>modelContentData</b><a href="#modelContentData"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>modelContentData(v)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/dialogs/listSelectorDialog.ts:45</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>v</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+</section>
 </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="c-source">
-        <pre class="line-numbers"><code class="language-typescript">import { Component, ContentChild, ElementRef, ViewContainerRef, OnInit, Input } from &#x27;@angular/core&#x27;;
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ContentChild, ElementRef, ViewContainerRef, OnInit, Input } from &#x27;@angular/core&#x27;;
 
 import { Modal } from &#x27;../angular2-modal/providers/Modal&#x27;;
 import { ModalDialogInstance } from &#x27;../angular2-modal/models/ModalDialogInstance&#x27;;
@@ -1514,7 +1103,8 @@ export class ListSelectorDialog implements ICustomModalComponent {
     </div>
 
 
-    <div class="tab-pane fade" id="c-tree">
+
+    <div class="tab-pane fade " id="c-tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
@@ -1531,6 +1121,8 @@ export class ListSelectorDialog implements ICustomModalComponent {
             </div>
         </div>
     </div>
+
+    
 </div>
 
 <script src="../js/libs/vis.min.js"></script>
@@ -1538,7 +1130,7 @@ export class ListSelectorDialog implements ICustomModalComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div style="display:flex;flex-direction:column;margin:10px;height:calc(100% - 30px);">    <select size="20" class="largeFieldEntry" style="height:90%;padding:5px;margin-bottom:10px;" (change)="changeSelection($event)" (dblclick)="ok($event)">        <option *ngFor=\'let item of itemsList; let i=index\' value="{{item}}" title="{{tipsList[i]}}" class="selectorItem">{{item}}</option>    </select>    <div >        <label [hidden]="message == \'\'">{{message}}</label>        <button class="regularButton mat-raised-button mat-primary" style="width:70px;float:right;margin-right:5px;" (click)="ok($event)">{{buttonText}}</button>    </div></div></div>'
-    var COMPONENTS = [{'name': 'AdvancedQueryComponent', 'selector': 'advanced-query'},{'name': 'DataGrid', 'selector': 'datagrid'},{'name': 'FourDDropDown', 'selector': 'fourd-dropdown'},{'name': 'ListSelectorDialog', 'selector': 'list-selector'},{'name': 'LoginCmp', 'selector': 'log-in'},{'name': 'OKOnlyModal', 'selector': 'modal-content'},{'name': 'QueryBand', 'selector': 'query-band'},{'name': 'QuickFindInput', 'selector': 'quickfind-input'},{'name': 'RecordEditWindow', 'selector': 'record-edit-window'},{'name': 'RecordList', 'selector': 'record-list'},{'name': 'Tab', 'selector': 'tab'},{'name': 'Tabs', 'selector': 'tabs'},{'name': 'WebAppContainer', 'selector': 'web-application'},{'name': 'YesNoModal', 'selector': 'modal-content'}];
+    var COMPONENTS = [{'name': 'AdvancedQueryComponent', 'selector': 'advanced-query'},{'name': 'DataGrid', 'selector': 'datagrid'},{'name': 'FourDDropDown', 'selector': 'fourd-dropdown'},{'name': 'FourDRegistryInput', 'selector': 'fourd-registry-input'},{'name': 'ListSelectorDialog', 'selector': 'list-selector'},{'name': 'LoginCmp', 'selector': 'log-in'},{'name': 'OKOnlyModal', 'selector': 'modal-content'},{'name': 'QueryBand', 'selector': 'query-band'},{'name': 'QuickFindInput', 'selector': 'quickfind-input'},{'name': 'RecordEditWindow', 'selector': 'record-edit-window'},{'name': 'RecordList', 'selector': 'record-list'},{'name': 'Tab', 'selector': 'tab'},{'name': 'Tabs', 'selector': 'tabs'},{'name': 'WebAppContainer', 'selector': 'web-application'},{'name': 'YesNoModal', 'selector': 'modal-content'}];
     var DIRECTIVES = [{'name': 'CustomButtonBarDirective', 'selector': 'custombuttonbar'},{'name': 'QueryBandDirective', 'selector': 'queryband'}];
     var ACTUAL_COMPONENT = {'name': 'ListSelectorDialog'};
 </script>
@@ -1553,9 +1145,13 @@ export class ListSelectorDialog implements ICustomModalComponent {
 
 
 
+
+
+
+
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -1563,8 +1159,21 @@ export class ListSelectorDialog implements ICustomModalComponent {
     </div>
 </div>
 </div>
+               <!-- END CONTENT -->
            </div>
        </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ListSelectorDialog.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 
@@ -1575,17 +1184,17 @@ export class ListSelectorDialog implements ICustomModalComponent {
 
        <script src="../js/compodoc.js"></script>
 
-       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
-
-       <script src="../js/search/search.js"></script>
-       <script src="../js/search/lunr.min.js"></script>
-       <script src="../js/search/search-lunr.js"></script>
-
        <script src="../js/tabs.js"></script>
        <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
        <script src="../js/libs/prism.js"></script>
        <script src="../js/sourceCode.js"></script>
-       <script src="../js/search/search_index.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
 
     </body>
 </html>

@@ -8,588 +8,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-	    <link rel="stylesheet" href="./styles/style.css">
+	      <link rel="stylesheet" href="./styles/style.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
             <a href="./" class="navbar-brand">js44d documentation</a>
-            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-            <div id="book-search-input" role="search">
-                <input type="text" placeholder="Type to search">
-            </div>
-            <nav>
-            
-                <ul class="list">
-            
-                    <li class="title">
-                        <a href="./index.html">js44d documentation</a>
-                    </li>
-            
-                    <li class="divider"></li>
-            
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="./index.html"><span class="fa fa-home"></span>Getting started</a>
-                        <ul class="links">
-                                <li class="link">
-                                    <a 
-                                        
-                                         href="./overview.html" 
-                                         href="./overview.html" 
-                                        >
-                                        <span class="fa fa-th"></span>Overview
-                                    </a>
-                                </li>
-                                <li class="link">
-                                  <a href="./index.html"  class="active" ><span class="fa fa-file-text-o"></span>README</a>
-                                </li>
-                                <li class="link">
-                                        <a href="./license.html"
-                                    >
-                                        <span class="fa fa-file-text-o"></span>LICENSE
-                                    </a>
-                                </li>
-                        </ul>
-                    </li>
-            
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="./modules.html" >
-                            <div class="menu-toggler linked" data-toggle="collapse"
-                                    data-target="#xs-modules-links"
-                            >
-                                <span class="fa fa-archive"></span>
-                                <span class="link-name">Modules</span>
-                                <span class="fa fa-angle-down"></span>
-                            </div>
-                        </a>
-                        <ul class="links collapse "
-                                id="xs-modules-links"
-                            >
-                                <li class="link">
-                                    <a href="./modules/FourDModule.html" >FourDModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./modules/JS44DModule.html" >JS44DModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./modules/ModalModule.html" >ModalModule</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-components-links"
-                            >
-                            <span class="fa fa-cogs"></span>
-                            <span>Components</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-components-links"
-                            >
-                                <li class="link">
-                                    <a href="./components/AdvancedQueryComponent.html" >AdvancedQueryComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./components/DataGrid.html" >DataGrid</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./components/FourDDropDown.html" >FourDDropDown</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./components/ListSelectorDialog.html" >ListSelectorDialog</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./components/LoginCmp.html" >LoginCmp</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./components/OKOnlyModal.html" >OKOnlyModal</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./components/QueryBand.html" >QueryBand</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./components/QuickFindInput.html" >QuickFindInput</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./components/RecordEditWindow.html" >RecordEditWindow</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./components/RecordList.html" >RecordList</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./components/Tab.html" >Tab</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./components/Tabs.html" >Tabs</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./components/WebAppContainer.html" >WebAppContainer</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./components/YesNoModal.html" >YesNoModal</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-directives-links"
-                            >
-                            <span class="fa fa-code"></span>
-                            <span>Directives</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-directives-links"
-                            >
-                                <li class="link">
-                                    <a href="./directives/CustomButtonBarDirective.html" >CustomButtonBarDirective</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./directives/QueryBandDirective.html" >QueryBandDirective</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-classes-links"
-                            >
-                            <span class="fa fa-file-code-o"></span>
-                            <span>Classes</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-classes-links"
-                            >
-                                <li class="link">
-                                    <a href="./classes/Base64.html" >Base64</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./classes/Deferred.html" >Deferred</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./classes/FourDQuery.html" >FourDQuery</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./classes/ICustomModal.html" >ICustomModal</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./classes/ICustomModalComponent.html" >ICustomModalComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./classes/MD5.html" >MD5</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./classes/OKOnlyContent.html" >OKOnlyContent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./classes/Utf8.html" >Utf8</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./classes/YesNoModalContent.html" >YesNoModalContent</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-injectables-links"
-                            >
-                            <span class="fa fa-long-arrow-down"></span>
-                            <span>Injectables</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-injectables-links"
-                            >
-                                <li class="link">
-                                    <a href="./injectables/FourDCollection.html" >FourDCollection</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./injectables/FourDInterface.html" >FourDInterface</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./injectables/FourDModel.html" >FourDModel</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./injectables/Modal.html" >Modal</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./injectables/ModalConfig.html" >ModalConfig</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./injectables/ModalDialogInstance.html" >ModalDialogInstance</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-interfaces-links"
-                            >
-                            <span class="fa fa-info"></span>
-                            <span>Interfaces</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-interfaces-links"
-                            >
-                                <li class="link">
-                                    <a href="./interfaces/IFieldDescription.html" >IFieldDescription</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-pipes-links"
-                            >
-                            <span class="fa fa-plus"></span>
-                            <span>Pipes</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-pipes-links"
-                            >
-                                <li class="link">
-                                    <a href="./pipes/Base64ImageRef.html" >Base64ImageRef</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./pipes/FourDDateToString.html" >FourDDateToString</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-miscellaneous-links"
-                            >
-                            <span class="fa fa-cubes"></span>
-                            <span>Miscellaneous</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-miscellaneous-links"
-                            >
-                                <li class="link">
-                                  <a href="./miscellaneous/variables.html" data-type="entity-link" >Variables</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="./coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
-                    </li>
-            
-                    <li class="divider"></li>
-                    <li class="copyright">
-                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                                        <img src=".//images/compodoc-vectorise.svg" class="img-responsive">
-                            </a>
-                    </li>
-            
-                </ul>
-            
-            </nav>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
            <div class="row main">
                <div class="hidden-xs menu">
-                   <nav>
-                   
-                       <ul class="list">
-                   
-                           <li class="title">
-                               <a href="./index.html">js44d documentation</a>
-                           </li>
-                   
-                           <li class="divider"></li>
-                   
-                               <div id="book-search-input" role="search">
-                                   <input type="text" placeholder="Type to search">
-                               </div>
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="./index.html"><span class="fa fa-home"></span>Getting started</a>
-                               <ul class="links">
-                                       <li class="link">
-                                           <a 
-                                               
-                                                href="./overview.html" 
-                                                href="./overview.html" 
-                                               >
-                                               <span class="fa fa-th"></span>Overview
-                                           </a>
-                                       </li>
-                                       <li class="link">
-                                         <a href="./index.html"  class="active" ><span class="fa fa-file-text-o"></span>README</a>
-                                       </li>
-                                       <li class="link">
-                                               <a href="./license.html"
-                                           >
-                                               <span class="fa fa-file-text-o"></span>LICENSE
-                                           </a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="./modules.html" >
-                                   <div class="menu-toggler linked" data-toggle="collapse"
-                                           data-target="#modules-links"
-                                   >
-                                       <span class="fa fa-archive"></span>
-                                       <span class="link-name">Modules</span>
-                                       <span class="fa fa-angle-down"></span>
-                                   </div>
-                               </a>
-                               <ul class="links collapse "
-                                       id="modules-links"
-                   >
-                                       <li class="link">
-                                           <a href="./modules/FourDModule.html" >FourDModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./modules/JS44DModule.html" >JS44DModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./modules/ModalModule.html" >ModalModule</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#components-links"
-                   >
-                                   <span class="fa fa-cogs"></span>
-                                   <span>Components</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="components-links"
-                   >
-                                       <li class="link">
-                                           <a href="./components/AdvancedQueryComponent.html" >AdvancedQueryComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./components/DataGrid.html" >DataGrid</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./components/FourDDropDown.html" >FourDDropDown</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./components/ListSelectorDialog.html" >ListSelectorDialog</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./components/LoginCmp.html" >LoginCmp</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./components/OKOnlyModal.html" >OKOnlyModal</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./components/QueryBand.html" >QueryBand</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./components/QuickFindInput.html" >QuickFindInput</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./components/RecordEditWindow.html" >RecordEditWindow</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./components/RecordList.html" >RecordList</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./components/Tab.html" >Tab</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./components/Tabs.html" >Tabs</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./components/WebAppContainer.html" >WebAppContainer</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./components/YesNoModal.html" >YesNoModal</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#directives-links"
-                   >
-                                   <span class="fa fa-code"></span>
-                                   <span>Directives</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="directives-links"
-                   >
-                                       <li class="link">
-                                           <a href="./directives/CustomButtonBarDirective.html" >CustomButtonBarDirective</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./directives/QueryBandDirective.html" >QueryBandDirective</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#classes-links"
-                   >
-                                   <span class="fa fa-file-code-o"></span>
-                                   <span>Classes</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="classes-links"
-                   >
-                                       <li class="link">
-                                           <a href="./classes/Base64.html" >Base64</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./classes/Deferred.html" >Deferred</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./classes/FourDQuery.html" >FourDQuery</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./classes/ICustomModal.html" >ICustomModal</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./classes/ICustomModalComponent.html" >ICustomModalComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./classes/MD5.html" >MD5</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./classes/OKOnlyContent.html" >OKOnlyContent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./classes/Utf8.html" >Utf8</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./classes/YesNoModalContent.html" >YesNoModalContent</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#injectables-links"
-                   >
-                                   <span class="fa fa-long-arrow-down"></span>
-                                   <span>Injectables</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="injectables-links"
-                   >
-                                       <li class="link">
-                                           <a href="./injectables/FourDCollection.html" >FourDCollection</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./injectables/FourDInterface.html" >FourDInterface</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./injectables/FourDModel.html" >FourDModel</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./injectables/Modal.html" >Modal</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./injectables/ModalConfig.html" >ModalConfig</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./injectables/ModalDialogInstance.html" >ModalDialogInstance</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#interfaces-links"
-                   >
-                                   <span class="fa fa-info"></span>
-                                   <span>Interfaces</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="interfaces-links"
-                   >
-                                       <li class="link">
-                                           <a href="./interfaces/IFieldDescription.html" >IFieldDescription</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#pipes-links"
-                   >
-                                   <span class="fa fa-plus"></span>
-                                   <span>Pipes</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="pipes-links"
-                   >
-                                       <li class="link">
-                                           <a href="./pipes/Base64ImageRef.html" >Base64ImageRef</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./pipes/FourDDateToString.html" >FourDDateToString</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#miscellaneous-links"
-                   >
-                                   <span class="fa fa-cubes"></span>
-                                   <span>Miscellaneous</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="miscellaneous-links"
-                   >
-                                       <li class="link">
-                                         <a href="./miscellaneous/variables.html" data-type="entity-link" >Variables</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="./coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
-                           </li>
-                   
-                           <li class="divider"></li>
-                           <li class="copyright">
-                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                                               <img src=".//images/compodoc-vectorise.svg" class="img-responsive">
-                                   </a>
-                           </li>
-                   
-                       </ul>
-                   
-                   </nav>
+                   <compodoc-menu mode="normal"></compodoc-menu>
                </div>
+               <!-- START CONTENT -->
                <div class="content getting-started">
                    <div class="content-data">
 
@@ -606,14 +43,14 @@
 <p>There is a step by step procedure to get started with the <strong>4D RESTApi</strong> component and this library at this <a href="https://github.com/fourctv/JS44D/wiki/Let&#39;s-Get-Started">wiki page.</a> That page will instruct you on how to get going on the 4D and Angular sides.</p>
 <h2 id="installation">Installation</h2>
 <p>Install <code>js44d</code> library using <code>npm</code>, as:</p>
-<pre class="line-numbers"><code class="language-none">npm install js44d --save</code></pre><h2 id="usage">Usage</h2>
+<div><pre class="line-numbers"><code class="language-none">npm install js44d --save</code></pre></div><h2 id="usage">Usage</h2>
 <p>The library can be divided into three sets of components: 4D Service classes, UI widgets and a Modal Dialog Service class. The 4D Service Classes provide the interface to a 4D backend. The UI widgets are not essential, but do provide some useful UI Components that use the Services Classes. The Modal Dialog provides funcionality to open multiple floating Dialog windows, similar to Windows MDI funcionality.</p>
 <p>Each of the three sets are declared in a separate <strong>NgModule</strong>: <em>FourDModule</em>, <em>JS44DModule</em> and <em>ModalModule</em>.</p>
 <p>You reference the 4D Interface Service Classes as:</p>
-<pre class="line-numbers"><code class="language-none">import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;</code></pre><p>They need to be included in your main <strong>NgModule</strong> declaration, by importing the <em>FourDModule</em>.</p>
+<div><pre class="line-numbers"><code class="language-none">import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;</code></pre></div><p>They need to be included in your main <strong>NgModule</strong> declaration, by importing the <em>FourDModule</em>.</p>
 <p>As for UI components/widgets and the Modal dialog service, you reference/import them as:</p>
-<pre class="line-numbers"><code class="language-none">import { ..widget.. } from &#39;js44d&#39;;</code></pre><p>You need to import the modules in your <strong>NgModule</strong> declaration, where you use them, as in:</p>
-<pre class="line-numbers"><code class="language-none">...
+<div><pre class="line-numbers"><code class="language-none">import { ..widget.. } from &#39;js44d&#39;;</code></pre></div><p>You need to import the modules in your <strong>NgModule</strong> declaration, where you use them, as in:</p>
+<div><pre class="line-numbers"><code class="language-none">...
 import { FourDModule, JS44DModule, ModalModule } from &#39;js44d&#39;;
 ...
 &#64;NgModule({
@@ -622,10 +59,11 @@ import { FourDModule, JS44DModule, ModalModule } from &#39;js44d&#39;;
     FourDModule, JS44DModule, ModalModule
   ]
   ],
-  exports: [FourDModule, JS44DModule, ModalModule],</code></pre><p>If you plan on using any of the UI widgets, then you need to grab a copy of the <a href="https://github.com/fourctv/JS44D/tree/master/assets">assets folder</a> contents and drop all that in your own <strong>assets</strong> directory. You need to also add the following line to your <code>styles.scss</code> file:</p>
-<pre class="line-numbers"><code class="language-none">&#64;import &#39;./assets/main&#39;;</code></pre><p>And you can edit <code>src/assets/main.scss</code> at will, to add you own styles or modify the existing styles that are used by JS44D UI Widgets.</p>
+  exports: [FourDModule, JS44DModule, ModalModule],
+</code></pre></div><p>If you plan on using any of the UI widgets, then you need to grab a copy of the <a href="https://github.com/fourctv/JS44D/tree/master/assets">assets folder</a> contents and drop all that in your own <strong>assets</strong> directory. You need to also add the following line to your <code>styles.scss</code> file:</p>
+<div><pre class="line-numbers"><code class="language-none">&#64;import &#39;./assets/main&#39;;</code></pre></div><p>And you can edit <code>src/assets/main.scss</code> at will, to add you own styles or modify the existing styles that are used by JS44D UI Widgets.</p>
 <p>A quick note, the UI components/widgets are <strong>WEB ONLY</strong>, they do not work under Nativescript, so for {N} you can only use the 4D Service Classes. For NativeScript your module declaration should look something like this:</p>
-<pre class="line-numbers"><code class="language-none">...
+<div><pre class="line-numbers"><code class="language-none">...
 import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
 ...
 
@@ -635,7 +73,7 @@ import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
         ...,
         FourDInterface, FourDModel, FourDCollection
     ],
-...</code></pre><h2 id="4d-interface-service-classes">4D Interface Service Classes</h2>
+...</code></pre></div><h2 id="4d-interface-service-classes">4D Interface Service Classes</h2>
 <p>The library provides a set of service classes for accessing a 4D Database backend that has the <strong>4D RESTApi</strong> Component installed.</p>
 <h3 id="fourdinterface">FourDInterface</h3>
 <p>This is the base service class that implements most of the calls to <strong>4D RESTApi</strong>.</p>
@@ -691,8 +129,8 @@ import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
 <h3 id="4d-list-dropdown-control">4D List DropDown Control</h3>
 <p>This is an HTML <strong>select</strong> drop down whose items are obtained directly from a 4D Choice List. One of the parameters to this widget is the choice list name.</p>
 <p>Example:</p>
-<pre class="line-numbers"><code class="language-none">  &lt;fourd-dropdown class=&quot;fieldEntry&quot; style=&quot;width:180px;height:20px;&quot; listName=&quot;Status&quot; [(selectedValue)]=&quot;selectStatus&quot;
-                (change)=&quot;selectStatus = $event.target.value&quot;&gt;&lt;/fourd-dropdown&gt;</code></pre><h2 id="additional-widgets-services">Additional Widgets/Services</h2>
+<div><pre class="line-numbers"><code class="language-none">  &lt;fourd-dropdown class=&quot;fieldEntry&quot; style=&quot;width:180px;height:20px;&quot; listName=&quot;Status&quot; [(selectedValue)]=&quot;selectStatus&quot;
+                (change)=&quot;selectStatus = $event.target.value&quot;&gt;&lt;/fourd-dropdown&gt;</code></pre></div><h2 id="additional-widgets-services">Additional Widgets/Services</h2>
 <p>Some additional widgets/services are also part of the library, but those do not interact with 4D backends and do not depend on the <strong>4D RESTApi</strong>.</p>
 <h3 id="mdi-dialog-service">MDI Dialog Service</h3>
 <p>A set of service classes that provide functionality to show multiple floating dialog windows, which can be modal or not.</p>
@@ -707,13 +145,12 @@ import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
 <table class="table table-bordered compodoc-table">
 <thead>
 <tr>
-<th style="text-align:center"><a href="https://github.com/fourctv"><img alt="Julio Carneiro" src="https://avatars1.githubusercontent.com/u/15777910?v=3&s=117" width="117"></a></th>
+<th align="center"><a href="https://github.com/fourctv"><img alt="Julio Carneiro" src="https://avatars1.githubusercontent.com/u/15777910?v=3&s=117" width="117"></a></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><a href="https://github.com/fourctv">Julio Carneiro</a></td>
-<td></td>
+<td align="center"><a href="https://github.com/fourctv">Julio Carneiro</a></td>
 </tr>
 </tbody>
 </table>
@@ -731,9 +168,13 @@ import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
 
 
 
+
+
+
+
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -741,8 +182,21 @@ import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
     </div>
 </div>
 </div>
+               <!-- END CONTENT -->
            </div>
        </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
 
        <script src="./js/libs/bootstrap-native.js"></script>
 
@@ -753,17 +207,17 @@ import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
 
        <script src="./js/compodoc.js"></script>
 
-       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 0;</script>
-
-       <script src="./js/search/search.js"></script>
-       <script src="./js/search/lunr.min.js"></script>
-       <script src="./js/search/search-lunr.js"></script>
-
        <script src="./js/tabs.js"></script>
        <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
        <script src="./js/libs/prism.js"></script>
        <script src="./js/sourceCode.js"></script>
-       <script src="./js/search/search_index.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
 
     </body>
 </html>
