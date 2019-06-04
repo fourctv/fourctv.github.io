@@ -471,7 +471,7 @@ export class Tabs {
 @Injectable()
 export class Tab {
   @Input() title: string;
-  @Input() active: Boolean &#x3D; this.active || false;
+  @Input() active: Boolean &#x3D; false;
 
   constructor(tabs: Tabs) {
 

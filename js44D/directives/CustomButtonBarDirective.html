@@ -97,7 +97,7 @@ export class QueryBandDirective {
     /**
      * Get access to the embedded custom query band
      */
-    @ContentChild(&#x27;customQueryBand&#x27;) theCustomQuery: any;
+    @ContentChild(&#x27;customQueryBand&#x27;, { static: false }) theCustomQuery: any;
 
 }
 @Directive({
@@ -268,7 +268,7 @@ export class QueryBand {
     /**
      * Get access to the embedded custom query band
      */
-    @ContentChild(QueryBandDirective) theQueryBand: any;
+    @ContentChild(QueryBandDirective, { static: false }) theQueryBand: any;
 
     constructor(private elementRef: ElementRef) {
     }

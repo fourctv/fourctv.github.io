@@ -2348,7 +2348,7 @@ only meaningful if using a dataClass</p>
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @ViewChild(&#x27;theGrid&#x27;)<br />
+                                @ViewChild(&#x27;theGrid&#x27;, {static: false})<br />
                             </code>
                         </td>
                     </tr>
@@ -2963,7 +2963,7 @@ export class DataGrid implements AfterViewInit {
 
     constructor(@Inject(HttpClient) private http: HttpClient, @Inject(FourDInterface) private fourD: FourDInterface) { }
 
-    @ViewChild(&#x27;theGrid&#x27;) public theGrid: any;
+    @ViewChild(&#x27;theGrid&#x27;, {static: false}) public theGrid: any;
 
     //
     // Declare data provider properties
