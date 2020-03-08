@@ -42,71 +42,71 @@
 <p>Detailed documentation for each service/component in this library can be found on the <a href="https://github.com/fourctv/JS44D/wiki">wiki here</a>. Following is a quick run down of the library contents.</p>
 <p>There is a step by step procedure to get started with the <strong>4D RESTApi</strong> component and this library at this <a href="https://github.com/fourctv/JS44D/wiki/Let&#39;s-Get-Started">wiki page.</a> That page will instruct you on how to get going on the 4D and Angular sides.</p>
 <h2 id="installation">Installation</h2>
-<p>Install <code>js44d</code> library using <code>npm</code>, as:
-<code>npm install js44d --save</code></p>
-<h2 id="usage">Usage</h2>
+<p>Install <code>js44d</code> library using <code>npm</code>, as:</p>
+<div><pre class="line-numbers"><code class="language-none">npm install js44d --save</code></pre></div><h2 id="usage">Usage</h2>
 <p>The library can be divided into three sets of components: 4D Service classes, UI widgets and a Modal Dialog Service class. The 4D Service Classes provide the interface to a 4D backend. The UI widgets are not essential, but do provide some useful UI Components that use the Services Classes. The Modal Dialog provides funcionality to open multiple floating Dialog windows, similar to Windows MDI funcionality.</p>
 <p>Each of the three sets are declared in a separate <strong>NgModule</strong>: <em>FourDModule</em>, <em>JS44DModule</em> and <em>ModalModule</em>.</p>
-<p>You reference the 4D Interface Service Classes as:
-<code>import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;</code>
-They need to be included in your main <strong>NgModule</strong> declaration, by importing the <em>FourDModule</em>.</p>
-<p>As for UI components/widgets and the Modal dialog service, you reference/import them as:
-<code>import { ..widget.. } from &#39;js44d&#39;;</code></p>
-<p>You need to import the modules in your <strong>NgModule</strong> declaration, where you use them, as in:
-```
-...
+<p>You reference the 4D Interface Service Classes as:</p>
+<div><pre class="line-numbers"><code class="language-none">import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;</code></pre></div><p>They need to be included in your main <strong>NgModule</strong> declaration, by importing the <em>FourDModule</em>.</p>
+<p>As for UI components/widgets and the Modal dialog service, you reference/import them as:</p>
+<div><pre class="line-numbers"><code class="language-none">import { ..widget.. } from &#39;js44d&#39;;</code></pre></div><p>You need to import the modules in your <strong>NgModule</strong> declaration, where you use them, as in:</p>
+<div><pre class="line-numbers"><code class="language-none">...
 import { FourDModule, JS44DModule, ModalModule } from &#39;js44d&#39;;
 ...
-@NgModule({
+&#64;NgModule({
   imports: [
     ...,
     FourDModule, JS44DModule, ModalModule
   ]
   ],
-  exports: [FourDModule, JS44DModule, ModalModule],</p>
-<p>```</p>
-<p>If you plan on using any of the UI widgets, then you need to grab a copy of the <a href="https://github.com/fourctv/JS44D/tree/master/assets">assets folder</a> contents and drop all that in your own <strong>assets</strong> directory. You need to also add the following line to your <code>styles.scss</code> file:</p>
-<p><code>@import &#39;./assets/main&#39;;</code></p>
-<p>And you can edit <code>src/assets/main.scss</code> at will, to add you own styles or modify the existing styles that are used by JS44D UI Widgets.</p>
-<p>A quick note, the UI components/widgets are <strong>WEB ONLY</strong>, they do not work under Nativescript, so for {N} you can only use the 4D Service Classes. For NativeScript your module declaration should look something like this:
-```
-...
+  exports: [FourDModule, JS44DModule, ModalModule],
+</code></pre></div><p>If you plan on using any of the UI widgets, then you need to grab a copy of the <a href="https://github.com/fourctv/JS44D/tree/master/assets">assets folder</a> contents and drop all that in your own <strong>assets</strong> directory. You need to also add the following line to your <code>styles.scss</code> file:</p>
+<div><pre class="line-numbers"><code class="language-none">&#64;import &#39;./assets/main&#39;;</code></pre></div><p>And you can edit <code>src/assets/main.scss</code> at will, to add you own styles or modify the existing styles that are used by JS44D UI Widgets.</p>
+<p>A quick note, the UI components/widgets are <strong>WEB ONLY</strong>, they do not work under Nativescript, so for {N} you can only use the 4D Service Classes. For NativeScript your module declaration should look something like this:</p>
+<div><pre class="line-numbers"><code class="language-none">...
 import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
-...</p>
-<p>@NgModule({
+...
+
+&#64;NgModule({
     ...
     providers: [
         ...,
         FourDInterface, FourDModel, FourDCollection
     ],
-...
-```</p>
-<h2 id="4d-interface-service-classes">4D Interface Service Classes</h2>
+...</code></pre></div><h2 id="4d-interface-service-classes">4D Interface Service Classes</h2>
 <p>The library provides a set of service classes for accessing a 4D Database backend that has the <strong>4D RESTApi</strong> Component installed.</p>
 <h3 id="fourdinterface">FourDInterface</h3>
 <p>This is the base service class that implements most of the calls to <strong>4D RESTApi</strong>.</p>
-<p>The two key functions made available by this class are:
-- <strong>call4DRESTMethod</strong>: a wrapper function to enable calling any <strong>4D RESTApi</strong> entry point; it automatically adds a <em>Session Key</em> and a <em>hash</em> tokens to each HTTP POST request sent to 4D, which are required by the <strong>4D RESTApi</strong> Component; this function is used by all other services and components to send requests to 4D.
-- <strong>signin</strong>: a function that will send a <strong>REST_Authenticate</strong> sign in request to 4D and process 4D&#39;s response.</p>
-<p>This class also provides some static variables:
-- <strong>currentUser</strong>: the name of the currectly signed in user
-- <strong>authentication</strong>: the authentication response object, returned by the <strong>REST_Authenticate</strong> call (<a href="https://github.com/fourctv/FourDRESTApi/wiki/REST_Authenticate">see</a>)
-- <strong>sessionKey</strong>: the current session token, that must be present in all requests to 4D
-- etc..</p>
+<p>The two key functions made available by this class are:</p>
+<ul>
+<li><strong>call4DRESTMethod</strong>: a wrapper function to enable calling any <strong>4D RESTApi</strong> entry point; it automatically adds a <em>Session Key</em> and a <em>hash</em> tokens to each HTTP POST request sent to 4D, which are required by the <strong>4D RESTApi</strong> Component; this function is used by all other services and components to send requests to 4D.</li>
+<li><strong>signin</strong>: a function that will send a <strong>REST_Authenticate</strong> sign in request to 4D and process 4D&#39;s response.</li>
+</ul>
+<p>This class also provides some static variables:</p>
+<ul>
+<li><strong>currentUser</strong>: the name of the currectly signed in user</li>
+<li><strong>authentication</strong>: the authentication response object, returned by the <strong>REST_Authenticate</strong> call (<a href="https://github.com/fourctv/FourDRESTApi/wiki/REST_Authenticate">see</a>)</li>
+<li><strong>sessionKey</strong>: the current session token, that must be present in all requests to 4D</li>
+<li>etc..</li>
+</ul>
 <h3 id="fourdmodel">FourDModel</h3>
 <p>This is a service class that provides CRUD functionality, acting as a Data Model base class. It provides the ability to retrieve, create, update or delete records from any 4D table.</p>
 <p>This class builds upon the Data Model functionality, as described in the <a href="https://github.com/fourctv/JS44D/wiki/Data-Modelling">Data Model wiki page</a>. </p>
 <p>All 4D table&#39;s Data Models extend the <strong>FourDModel</strong> class, describing each of the table&#39;s fields and providing getter/setter for each field.</p>
-<p>Instances of the <strong>FourDModel</strong> class, and its extensions, represent a record in the database. This service provides basic CRUD functions to access those records:
-- <strong>getRecord</strong>: retrieves a single record from the database
-- <strong>insertRecord</strong>: adds a new record to the database
-- <strong>updateRecord</strong>: updates a record in the database
-- <strong>deleteRecord</strong>: deletes a record from the database</p>
+<p>Instances of the <strong>FourDModel</strong> class, and its extensions, represent a record in the database. This service provides basic CRUD functions to access those records:</p>
+<ul>
+<li><strong>getRecord</strong>: retrieves a single record from the database</li>
+<li><strong>insertRecord</strong>: adds a new record to the database</li>
+<li><strong>updateRecord</strong>: updates a record in the database</li>
+<li><strong>deleteRecord</strong>: deletes a record from the database</li>
+</ul>
 <p>Additional functions are described in the <strong><a href="https://github.com/fourctv/JS44D/wiki/FourDModel-Class">FourDModel</a></strong> wiki page.</p>
 <h3 id="fourdcollection">FourDCollection</h3>
 <p>A service class that represents a collection of 4D records. It is basically an Array of <strong>FourDModel</strong> derived instances.</p>
-<p>This class provides a function to retrieve a set of records from a 4D Database:
-- <strong>getRecords</strong>: will take a <a href="https://github.com/fourctv/FourDRESTApi/wiki/The-JS44D-Query-String">Query String</a> and send a <strong><a href="https://github.com/fourctv/FourDRESTApi/wiki/REST_GetRecords">REST_GetRecords</a></strong> request to 4D to retrieve a collection of 4D records. Record data comes as an Array of Data Model (<em>FourDModel</em>) instances.</p>
+<p>This class provides a function to retrieve a set of records from a 4D Database:</p>
+<ul>
+<li><strong>getRecords</strong>: will take a <a href="https://github.com/fourctv/FourDRESTApi/wiki/The-JS44D-Query-String">Query String</a> and send a <strong><a href="https://github.com/fourctv/FourDRESTApi/wiki/REST_GetRecords">REST_GetRecords</a></strong> request to 4D to retrieve a collection of 4D records. Record data comes as an Array of Data Model (<em>FourDModel</em>) instances.</li>
+</ul>
 <h2 id="ui-widgets">UI Widgets</h2>
 <p>The following UI widgets and components, which also interact with a 4D backend, are available for use in Angular apps. Detailed documentation for each widget is found on the <a href="https://github.com/fourctv/JS44D/wiki">wiki pages</a>.</p>
 <h3 id="login-component">Login Component</h3>
@@ -128,10 +128,9 @@ import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
 <p>This is a Web App wrapper component, that ensures that the application component runs authenticated. If upon app initialization, it is not yet authenticated to a 4D backend, this component will display a <strong>Login</strong> dialog to get user credentials and authenticate the user.</p>
 <h3 id="4d-list-dropdown-control">4D List DropDown Control</h3>
 <p>This is an HTML <strong>select</strong> drop down whose items are obtained directly from a 4D Choice List. One of the parameters to this widget is the choice list name.</p>
-<p>Example:
-<code>&lt;fourd-dropdown class=&quot;fieldEntry&quot; style=&quot;width:180px;height:20px;&quot; listName=&quot;Status&quot; [(selectedValue)]=&quot;selectStatus&quot;
-                (change)=&quot;selectStatus = $event.target.value&quot;&gt;&lt;/fourd-dropdown&gt;</code></p>
-<h2 id="additional-widgetsservices">Additional Widgets/Services</h2>
+<p>Example:</p>
+<div><pre class="line-numbers"><code class="language-none">  &lt;fourd-dropdown class=&quot;fieldEntry&quot; style=&quot;width:180px;height:20px;&quot; listName=&quot;Status&quot; [(selectedValue)]=&quot;selectStatus&quot;
+                (change)=&quot;selectStatus = $event.target.value&quot;&gt;&lt;/fourd-dropdown&gt;</code></pre></div><h2 id="additional-widgetsservices">Additional Widgets/Services</h2>
 <p>Some additional widgets/services are also part of the library, but those do not interact with 4D backends and do not depend on the <strong>4D RESTApi</strong>.</p>
 <h3 id="mdi-dialog-service">MDI Dialog Service</h3>
 <p>A set of service classes that provide functionality to show multiple floating dialog windows, which can be modal or not.</p>
@@ -143,9 +142,18 @@ import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
 <p>A simple horizontal tab component, that provides functionality to allow user to tab among multiple forms.</p>
 <p><img src="https://i.gyazo.com/28da0be86dec85749ef72e3438d2711d.gif" alt="" class="img-responsive"></p>
 <h1 id="contributors">Contributors</h1>
-<p><a href="https://github.com/fourctv"><img alt="Julio Carneiro" src="https://avatars1.githubusercontent.com/u/15777910?v=3&s=117" width="117"></a> |
-:---: |
-<a href="https://github.com/fourctv">Julio Carneiro</a> |</p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th align="center"><a href="https://github.com/fourctv"><img alt="Julio Carneiro" src="https://avatars1.githubusercontent.com/u/15777910?v=3&s=117" width="117"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="https://github.com/fourctv">Julio Carneiro</a></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -160,6 +168,7 @@ import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
 
 
 
+                   
 
 
 
@@ -182,6 +191,7 @@ import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
             var COMPODOC_CURRENT_PAGE_DEPTH = 0;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
             var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="./js/libs/custom-elements.min.js"></script>

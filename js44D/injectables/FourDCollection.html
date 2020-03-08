@@ -131,6 +131,14 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#bulkDelete">bulkDelete</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#bulkUpdate">bulkUpdate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#getColumnListJSON">getColumnListJSON</a>
                             </li>
                             <li>
@@ -187,6 +195,157 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="bulkDelete"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            bulkDelete
+                        </b>
+                        <a href="#bulkDelete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>bulkDelete(query: <a href="../classes/FourDQuery.html">FourDQuery</a>, filter: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="166"
+                            class="link-to-prism">src/js44D/JSFourDCollection.ts:166</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Delete a selection of records based on a supplied query+filter</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>query</td>
+                                    <td>
+                                                <code><a href="../classes/FourDQuery.html" target="_self" >FourDQuery</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>the FourDQuery object that defines the query to be used for retrieving from 4D</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>filter</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                    <td>
+                                        <p>optional, FourDQuery to further filter records to he retrieved</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;number&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>returns a Promise for the database operation, whose result is the 3 of records deleted</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="bulkUpdate"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            bulkUpdate
+                        </b>
+                        <a href="#bulkUpdate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>bulkUpdate()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="195"
+                            class="link-to-prism">src/js44D/JSFourDCollection.ts:195</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Update a selection of records on a FourDCollection</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>returns a Promise for the database operation, blank means all records have been updated</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -800,7 +959,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">src/js44D/JSFourDCollection.ts:160</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="235" class="link-to-prism">src/js44D/JSFourDCollection.ts:235</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -970,13 +1129,88 @@ export class FourDCollection {
 
                     resolve(&lt;any&gt;this.models);
                 },
-                error &#x3D;&gt; {
-                    console.log(&#x27;error:&#x27; + error);
-                    reject(error);
-                });
+                    error &#x3D;&gt; {
+                        console.log(&#x27;error:&#x27; + error);
+                        reject(error);
+                    });
         });
 
     }
+
+
+    /**
+     * Delete a selection of records based on a supplied query+filter
+     * 
+     *  @param query the FourDQuery object that defines the query to be used for retrieving from 4D
+     *  @param filter optional, FourDQuery to further filter records to he retrieved
+     *
+     * @returns returns a Promise for the database operation, whose result is the 3 of records deleted
+     */
+    public bulkDelete(query: FourDQuery, filter: string &#x3D; null): Promise&lt;number&gt; {
+        const modelDef &#x3D; &lt;any&gt;(this.model);
+        const newModel: FourDModel &#x3D; &lt;any&gt;(new modelDef());
+        let body: any &#x3D; { TableName: newModel.tableName };
+        body.QueryString &#x3D; JSON.stringify(query);
+        if (filter) { body.FilterOptions &#x3D; filter; }
+
+        return new Promise((resolve, reject) &#x3D;&gt; {
+            // const me &#x3D; this;
+            this.fourD.call4DRESTMethod(&#x27;REST_BulkDelete&#x27;, body)
+                .subscribe(resultJSON &#x3D;&gt; {
+                    if (resultJSON &amp;&amp; resultJSON.valid) {
+                        resolve(resultJSON.deleted);
+                    } else reject(resultJSON.message)
+
+                },
+                    error &#x3D;&gt; {
+                        console.log(&#x27;error:&#x27; + error);
+                        reject(error);
+                    });
+        });
+
+    }
+
+    /**
+    * Update a selection of records on a FourDCollection
+    *
+    * @returns returns a Promise for the database operation, blank means all records have been updated
+    */
+    public bulkUpdate(): Promise&lt;string&gt; {
+        let recordList &#x3D; [];
+        //
+        // build list of records to update, with the modified fields data
+        //
+        for (const record of (this.models as Array&lt;FourDModel&gt;)) {
+            if (record.recordIsDirty()) {
+                recordList.push({ table: record.tableName, recnum: record.recordNumber, fields: Base64.encode(Utf8.utf8encode(record.recordToJSON(&#x27;update&#x27;, false)))});
+            }
+        }
+
+        if (recordList.length &gt; 0) { // do we have any record to update?
+
+            return new Promise((resolve, reject) &#x3D;&gt; {
+                // const me &#x3D; this;
+                this.fourD.call4DRESTMethod(&#x27;REST_BulkUpdate&#x27;, { recordList: Base64.encode(Utf8.utf8encode(JSON.stringify(recordList)))})
+                    .subscribe(resultJSON &#x3D;&gt; {
+                        if (resultJSON &amp;&amp; resultJSON.valid) {
+                            resolve(&#x27;&#x27;);
+                        } else reject(resultJSON.message)
+
+                    },
+                        error &#x3D;&gt; {
+                            console.log(&#x27;error:&#x27; + error);
+                            reject(error);
+                        });
+            });
+        
+        } else {
+            return new Promise((resolve, reject) &#x3D;&gt; {
+                resolve(&#x27;No records have been modified!&#x27;);
+            });
+        }
+
+    }
+
 
     /**
      * returns the length of the Collection, or the # of records loaded in
@@ -999,6 +1233,7 @@ export class FourDCollection {
 
 
 
+                   
 
 
 
@@ -1021,6 +1256,7 @@ export class FourDCollection {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
             var COMPODOC_CURRENT_PAGE_URL = 'FourDCollection.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

@@ -665,8 +665,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="234"
-                            class="link-to-prism">src/containers/advancedQuery.ts:234</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="235"
+                            class="link-to-prism">src/containers/advancedQuery.ts:235</a></div>
                 </td>
             </tr>
 
@@ -704,8 +704,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="226"
-                            class="link-to-prism">src/containers/advancedQuery.ts:226</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="227"
+                            class="link-to-prism">src/containers/advancedQuery.ts:227</a></div>
                 </td>
             </tr>
 
@@ -857,8 +857,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="241"
-                            class="link-to-prism">src/containers/advancedQuery.ts:241</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="242"
+                            class="link-to-prism">src/containers/advancedQuery.ts:242</a></div>
                 </td>
             </tr>
 
@@ -1379,7 +1379,8 @@ export class AdvancedQueryComponent implements ICustomModalComponent, AfterViewI
             if (element.field.name !&#x3D;&#x3D; &#x27;&#x27; &amp;&amp; element.comparator !&#x3D;&#x3D; &#x27;&#x27;) {
                 const theField: any &#x3D; element.field;
                 if (element.comparator &#x3D;&#x3D;&#x3D; &#x27;!&#x3D;&#x27;) { element.comparator &#x3D; &#x27;#&#x27;; }
-                queryItems.push(theField.longname + &#x27;;&#x27; + element.comparator + &#x27;;&#x27; + element.value + &#x27;;&#x27; + element.connector);
+                const theValue &#x3D; (theField.type &#x3D;&#x3D;&#x3D; &#x27;Date&#x27;)?element.value.replace(/-/g,&#x27;&#x27;):element.value;
+                queryItems.push(theField.longname + &#x27;;&#x27; + element.comparator + &#x27;;&#x27; + theValue + &#x27;;&#x27; + element.connector);
             }
         });
         this.dialog.close({ query: queryItems, queryFields: this.queryFieldList });
@@ -1537,6 +1538,7 @@ export class AdvancedQueryComponent implements ICustomModalComponent, AfterViewI
 
 
 
+                   
 
 
 
@@ -1559,6 +1561,7 @@ export class AdvancedQueryComponent implements ICustomModalComponent, AfterViewI
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
             var COMPODOC_CURRENT_PAGE_URL = 'AdvancedQueryComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

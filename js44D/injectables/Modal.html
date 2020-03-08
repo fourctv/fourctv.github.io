@@ -468,8 +468,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="143"
-                            class="link-to-prism">src/angular2-modal/providers/Modal.ts:143</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="144"
+                            class="link-to-prism">src/angular2-modal/providers/Modal.ts:144</a></div>
                 </td>
             </tr>
 
@@ -988,6 +988,7 @@ export class Modal {
 
         if (theDialogInstance.contentRef.instance.beforeDismiss) theDialogInstance.contentRef.instance.beforeDismiss();
         theDialogInstance.kendoDialog.destroy();
+        theDialogInstance.contentRef.destroy();
     }
 
     /**
@@ -1016,6 +1017,7 @@ export class Modal {
 
 
 
+                   
 
 
 
@@ -1038,6 +1040,7 @@ export class Modal {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
             var COMPODOC_CURRENT_PAGE_URL = 'Modal.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
