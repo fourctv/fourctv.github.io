@@ -1098,8 +1098,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="481"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:481</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="483"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:483</a></div>
                 </td>
             </tr>
 
@@ -1139,8 +1139,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="491"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:491</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="493"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:493</a></div>
                 </td>
             </tr>
 
@@ -1211,8 +1211,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="542"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:542</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="544"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:544</a></div>
                 </td>
             </tr>
 
@@ -1252,8 +1252,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="545"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:545</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="547"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:547</a></div>
                 </td>
             </tr>
 
@@ -1490,8 +1490,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="511"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:511</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="513"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:513</a></div>
                 </td>
             </tr>
 
@@ -1667,8 +1667,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="457"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:457</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="459"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:459</a></div>
                 </td>
             </tr>
 
@@ -1749,8 +1749,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="411"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:411</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="413"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:413</a></div>
                 </td>
             </tr>
 
@@ -1790,8 +1790,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="439"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:439</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="441"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:441</a></div>
                 </td>
             </tr>
 
@@ -1923,8 +1923,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="521"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:521</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="523"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:523</a></div>
                 </td>
             </tr>
 
@@ -2059,8 +2059,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="531"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:531</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="533"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:533</a></div>
                 </td>
             </tr>
 
@@ -3266,12 +3266,14 @@ export class DataGrid implements AfterViewInit {
                     }
                 }
             }
-            this.gridObject.select(&#x27;tr:eq(&#x27;+(index-1)+&#x27;)&#x27;);
-            if (scrollTo) {
-                const scrollContentOffset &#x3D; this.gridObject.element.find(&quot;tbody&quot;).offset().top;
-                const selectContentOffset &#x3D; this.gridObject.select().offset().top;
-                const distance &#x3D; selectContentOffset - scrollContentOffset;
-                this.gridObject.element.find(&quot;.k-grid-content&quot;).animate({ scrollTop: distance }, 0);
+            if (index &gt; 0) {
+                this.gridObject.select(&#x27;tr:eq(&#x27;+(index-1)+&#x27;)&#x27;);
+                if (scrollTo) {
+                    const scrollContentOffset &#x3D; this.gridObject.element.find(&quot;tbody&quot;).offset().top;
+                    const selectContentOffset &#x3D; this.gridObject.select().offset().top;
+                    const distance &#x3D; selectContentOffset - scrollContentOffset;
+                    this.gridObject.element.find(&quot;.k-grid-content&quot;).animate({ scrollTop: distance }, 0);
+                }
             }
         }
     }

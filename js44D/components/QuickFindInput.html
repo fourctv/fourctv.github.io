@@ -86,7 +86,7 @@
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;quickFind&quot; [(ngModel)]&#x3D;&quot;value&quot;/&gt;</code></pre></td>
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;quickFind&quot; [formControl]&#x3D;&quot;quickFind&quot;/&gt;</code></pre></td>
             </tr>
 
 
@@ -105,21 +105,6 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#runQuickFinder">runQuickFinder</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
 
                 <tr>
@@ -133,13 +118,24 @@
                             <li>
                                 <a href="#quickFind">quickFind</a>
                             </li>
-                            <li>
-                                <a href="#value">value</a>
-                            </li>
                         </ul>
                     </td>
                 </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#runQuickFinder">runQuickFinder</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
@@ -194,77 +190,41 @@
                         </tr>
             </tbody>
         </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="value"></a>
-                        <b>value</b>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&#x27;&#x27;</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/controls/quickFindInput.ts:17</a></div>
-                            </td>
-                        </tr>
-            </tbody>
-        </table>
 </section>
-
-
-
-
     <section>
-    
-        <h3 id="inputs">
-            Properties
-        </h3>
+    <h3 id="outputs">Outputs</h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
                         <a name="runQuickFinder"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            runQuickFinder</b>
-                            <a href="#runQuickFinder"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <b>runQuickFinder</b>
                     </td>
                 </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>EventEmitter&lt;any&gt;</code>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;any&gt;</code>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>new EventEmitter()</code>
-                        </td>
-                    </tr>
+                    </td>
+                </tr>
                         <tr>
-                            <td class="col-md-4">
+                            <td class="col-md-2" colspan="2">
                                     <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/controls/quickFindInput.ts:18</a></div>
                             </td>
                         </tr>
-
-
             </tbody>
         </table>
 </section>
+
+
+
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {debounceTime, distinctUntilChanged} from &#x27;rxjs/operators&#x27;;
-import { Component, EventEmitter, Input } from &#x27;@angular/core&#x27;;
+import { Component, EventEmitter, Input, Output } from &#x27;@angular/core&#x27;;
 import { FormControl } from &#x27;@angular/forms&#x27;;
 
 
@@ -272,17 +232,17 @@ import { FormControl } from &#x27;@angular/forms&#x27;;
 
 @Component({
     selector: &#x27;quickfind-input&#x27;,
-    template: &#x60;&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;quickFind&quot; [(ngModel)]&#x3D;&quot;value&quot;/&gt;&#x60;
+    template: &#x60;&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;quickFind&quot; [formControl]&#x3D;&quot;quickFind&quot;/&gt;&#x60;
 })
 
 export class QuickFindInput {
 
     @Input() public quickFind &#x3D; new FormControl();
-    @Input() public value &#x3D; &#x27;&#x27;;
-    public runQuickFinder: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+
+    @Output() public runQuickFinder: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
 
     constructor() {
-        this.quickFind.valueChanges.pipe(distinctUntilChanged(),debounceTime(1500),).subscribe(query &#x3D;&gt; {
+        this.quickFind.valueChanges.pipe(distinctUntilChanged(),debounceTime(1500)).subscribe(query &#x3D;&gt; {
             this.runQuickFinder.emit(query);
         });
     }
@@ -318,7 +278,7 @@ export class QuickFindInput {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><input type="text" name="quickFind" [(ngModel)]="value"/></div>'
+        var COMPONENT_TEMPLATE = '<div><input type="text" name="quickFind" [formControl]="quickFind"/></div>'
     var COMPONENTS = [{'name': 'AdvancedQueryComponent', 'selector': 'advanced-query'},{'name': 'DataGrid', 'selector': 'datagrid'},{'name': 'FourDDropDown', 'selector': 'fourd-dropdown'},{'name': 'FourDRegistryInput', 'selector': 'fourd-registry-input'},{'name': 'ListSelectorDialog', 'selector': 'list-selector'},{'name': 'LoginCmp', 'selector': 'log-in'},{'name': 'OKOnlyModal', 'selector': 'modal-content'},{'name': 'QueryBand', 'selector': 'query-band'},{'name': 'QuickFindInput', 'selector': 'quickfind-input'},{'name': 'RecordEditWindow', 'selector': 'record-edit-window'},{'name': 'RecordList', 'selector': 'record-list'},{'name': 'Tab', 'selector': 'tab'},{'name': 'Tabs', 'selector': 'tabs'},{'name': 'WebAppContainer', 'selector': 'web-application'},{'name': 'YesNoModal', 'selector': 'modal-content'}];
     var DIRECTIVES = [{'name': 'CustomButtonBarDirective', 'selector': 'custombuttonbar'},{'name': 'QueryBandDirective', 'selector': 'queryband'}];
     var ACTUAL_COMPONENT = {'name': 'QuickFindInput'};

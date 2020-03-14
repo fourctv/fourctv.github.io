@@ -162,7 +162,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="685" class="link-to-prism">src/js44D/JSFourDInterface.ts:685</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="716" class="link-to-prism">src/js44D/JSFourDInterface.ts:716</a></div>
                             </td>
                         </tr>
 
@@ -196,7 +196,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="683" class="link-to-prism">src/js44D/JSFourDInterface.ts:683</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="714" class="link-to-prism">src/js44D/JSFourDInterface.ts:714</a></div>
                             </td>
                         </tr>
 
@@ -230,7 +230,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="687" class="link-to-prism">src/js44D/JSFourDInterface.ts:687</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="718" class="link-to-prism">src/js44D/JSFourDInterface.ts:718</a></div>
                             </td>
                         </tr>
 
@@ -264,7 +264,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="693" class="link-to-prism">src/js44D/JSFourDInterface.ts:693</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="724" class="link-to-prism">src/js44D/JSFourDInterface.ts:724</a></div>
                             </td>
                         </tr>
 
@@ -298,7 +298,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="691" class="link-to-prism">src/js44D/JSFourDInterface.ts:691</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="722" class="link-to-prism">src/js44D/JSFourDInterface.ts:722</a></div>
                             </td>
                         </tr>
 
@@ -332,7 +332,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="689" class="link-to-prism">src/js44D/JSFourDInterface.ts:689</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="720" class="link-to-prism">src/js44D/JSFourDInterface.ts:720</a></div>
                             </td>
                         </tr>
 
@@ -366,7 +366,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="677" class="link-to-prism">src/js44D/JSFourDInterface.ts:677</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="708" class="link-to-prism">src/js44D/JSFourDInterface.ts:708</a></div>
                             </td>
                         </tr>
 
@@ -400,7 +400,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="679" class="link-to-prism">src/js44D/JSFourDInterface.ts:679</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="710" class="link-to-prism">src/js44D/JSFourDInterface.ts:710</a></div>
                             </td>
                         </tr>
 
@@ -434,7 +434,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="681" class="link-to-prism">src/js44D/JSFourDInterface.ts:681</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="712" class="link-to-prism">src/js44D/JSFourDInterface.ts:712</a></div>
                             </td>
                         </tr>
 
@@ -668,6 +668,37 @@ export class FourDInterface {
                 );
 
         });
+    }
+
+
+    /**
+     * Get Record count based on a supplied query+filter
+     * 
+     *  @param tableName the table to get the resulting record count
+     *  @param query the FourDQuery object that defines the query to be used for determining
+     *  @param filter optional, FourDQuery to further filter records
+     *
+     * @returns returns a Promise for the database operation, whose result is the # of records selected
+     */
+    public getRecordCount(tableName:string, query: FourDQuery, filter: string &#x3D; null): Promise&lt;number&gt; {
+        let body: any &#x3D; { TableName: tableName, QueryString: JSON.stringify(query)};
+        if (filter) { body.FilterOptions &#x3D; filter; }
+
+        return new Promise((resolve, reject) &#x3D;&gt; {
+            // const me &#x3D; this;
+            this.call4DRESTMethod(&#x27;REST_CountRecords&#x27;, body)
+                .subscribe(resultJSON &#x3D;&gt; {
+                    if (resultJSON &amp;&amp; resultJSON.valid) {
+                        resolve(resultJSON.seleted);
+                    } else reject(resultJSON.message)
+
+                },
+                    error &#x3D;&gt; {
+                        console.log(&#x27;error:&#x27; + error);
+                        reject(error);
+                    });
+        });
+
     }
 
     /**
