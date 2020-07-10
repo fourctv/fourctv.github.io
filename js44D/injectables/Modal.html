@@ -468,8 +468,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="144"
-                            class="link-to-prism">src/angular2-modal/providers/Modal.ts:144</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="143"
+                            class="link-to-prism">src/angular2-modal/providers/Modal.ts:143</a></div>
                 </td>
             </tr>
 
@@ -939,7 +939,7 @@ export class Modal {
         config &#x3D; (config) ? ModalConfig.makeValid(config, _config) : _config;
 
         const dialogComponentFactory &#x3D; this.componentFactoryResolver.resolveComponentFactory(componentType);
-        const dialogComponentRef &#x3D; viewRef.createComponent(dialogComponentFactory, 0);
+        const dialogComponentRef &#x3D; viewRef.createComponent(dialogComponentFactory);
         const dialogInstance &#x3D; dialogComponentRef.instance.dialog &#x3D; new ModalDialogInstance();
         dialogComponentRef.instance.modelContentData &#x3D; parameters;
 
@@ -995,7 +995,6 @@ export class Modal {
      * Opens a modal window blocking the whole screen.
      * @param componentType The angular Component to render as modal.
      * @param parameters parameters to be passed to the dialog instance.
-    * @param config A Modal Configuration object.
      * @param allowMultiple indicates if multiple version of the same dialog are allowed.
      * @param dialogID a dialog identification token to control multiple occurrences.
      * @returns Promise&lt;ModalDialogInstance&gt;

@@ -160,6 +160,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#clearCurrentSelection">clearCurrentSelection</a>
+                            </li>
+                            <li>
                                 <a href="#dblClickRow">dblClickRow</a>
                             </li>
                             <li>
@@ -287,6 +290,9 @@
                                 <a href="#selectionMode">selectionMode</a>
                             </li>
                             <li>
+                                <a href="#setRowClass">setRowClass</a>
+                            </li>
+                            <li>
                                 <a href="#sortable">sortable</a>
                             </li>
                             <li>
@@ -366,7 +372,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="254" class="link-to-prism">src/dataGrid/dataGrid.ts:254</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="265" class="link-to-prism">src/dataGrid/dataGrid.ts:265</a></div>
                             </td>
                         </tr>
 
@@ -723,7 +729,7 @@ only meaningful if using a dataClass</p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>{display: this.pageableMessage}</code>
+                        <i>Default value : </i><code>{ display: this.pageableMessage }</code>
                     </td>
                 </tr>
                         <tr>
@@ -867,6 +873,36 @@ only meaningful if using a dataClass</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="setRowClass"></a>
+                        <b>setRowClass</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="134" class="link-to-prism">src/dataGrid/dataGrid.ts:134</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Callback function to determine the css class to aply to a row
+this functions gets called for each row data, after datagrid row data is set
+it must return a string that represents a css class
+the function must take 2 arguments:</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="sortable"></a>
                         <b>sortable</b>
                     </td>
@@ -934,7 +970,7 @@ only meaningful if using a dataClass</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="128" class="link-to-prism">src/dataGrid/dataGrid.ts:128</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="139" class="link-to-prism">src/dataGrid/dataGrid.ts:139</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -955,7 +991,7 @@ only meaningful if using a dataClass</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">src/dataGrid/dataGrid.ts:131</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="142" class="link-to-prism">src/dataGrid/dataGrid.ts:142</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -976,7 +1012,7 @@ only meaningful if using a dataClass</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">src/dataGrid/dataGrid.ts:130</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="141" class="link-to-prism">src/dataGrid/dataGrid.ts:141</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -997,7 +1033,7 @@ only meaningful if using a dataClass</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">src/dataGrid/dataGrid.ts:129</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="140" class="link-to-prism">src/dataGrid/dataGrid.ts:140</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1010,6 +1046,47 @@ only meaningful if using a dataClass</p>
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clearCurrentSelection"></a>
+                    <span class="name">
+                        <b>
+                            clearCurrentSelection
+                        </b>
+                        <a href="#clearCurrentSelection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clearCurrentSelection()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="444"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:444</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>clear current grid selection</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -1032,8 +1109,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="351"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:351</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="362"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:362</a></div>
                 </td>
             </tr>
 
@@ -1098,8 +1175,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="483"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:483</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="528"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:528</a></div>
                 </td>
             </tr>
 
@@ -1139,8 +1216,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="493"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:493</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="538"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:538</a></div>
                 </td>
             </tr>
 
@@ -1211,8 +1288,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="544"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:544</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="589"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:589</a></div>
                 </td>
             </tr>
 
@@ -1252,8 +1329,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="547"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:547</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="592"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:592</a></div>
                 </td>
             </tr>
 
@@ -1291,8 +1368,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="305"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:305</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="316"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:316</a></div>
                 </td>
             </tr>
 
@@ -1410,8 +1487,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="291"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:291</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="302"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:302</a></div>
                 </td>
             </tr>
 
@@ -1451,8 +1528,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="363"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:363</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="374"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:374</a></div>
                 </td>
             </tr>
 
@@ -1490,8 +1567,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="513"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:513</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="558"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:558</a></div>
                 </td>
             </tr>
 
@@ -1562,8 +1639,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="367"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:367</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="378"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:378</a></div>
                 </td>
             </tr>
 
@@ -1601,8 +1678,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="338"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:338</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="349"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:349</a></div>
                 </td>
             </tr>
 
@@ -1667,8 +1744,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="459"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:459</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="504"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:504</a></div>
                 </td>
             </tr>
 
@@ -1708,8 +1785,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="374"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:374</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="401"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:401</a></div>
                 </td>
             </tr>
 
@@ -1720,7 +1797,7 @@ only meaningful if using a dataClass</p>
 </div>
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank" >Object</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                 </td>
@@ -1749,8 +1826,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="413"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:413</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="458"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:458</a></div>
                 </td>
             </tr>
 
@@ -1790,8 +1867,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="441"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:441</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="486"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:486</a></div>
                 </td>
             </tr>
 
@@ -1831,8 +1908,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="387"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:387</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="414"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:414</a></div>
                 </td>
             </tr>
 
@@ -1923,8 +2000,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="523"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:523</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="568"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:568</a></div>
                 </td>
             </tr>
 
@@ -1989,8 +2066,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="327"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:327</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="338"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:338</a></div>
                 </td>
             </tr>
 
@@ -2059,8 +2136,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="533"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:533</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="578"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:578</a></div>
                 </td>
             </tr>
 
@@ -2134,8 +2211,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="319"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:319</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="330"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:330</a></div>
                 </td>
             </tr>
 
@@ -2204,8 +2281,8 @@ only meaningful if using a dataClass</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="334"
-                            class="link-to-prism">src/dataGrid/dataGrid.ts:334</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="345"
+                            class="link-to-prism">src/dataGrid/dataGrid.ts:345</a></div>
                 </td>
             </tr>
 
@@ -2284,7 +2361,7 @@ only meaningful if using a dataClass</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="136" class="link-to-prism">src/dataGrid/dataGrid.ts:136</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="147" class="link-to-prism">src/dataGrid/dataGrid.ts:147</a></div>
                             </td>
                         </tr>
 
@@ -2312,7 +2389,7 @@ only meaningful if using a dataClass</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="141" class="link-to-prism">src/dataGrid/dataGrid.ts:141</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="152" class="link-to-prism">src/dataGrid/dataGrid.ts:152</a></div>
                             </td>
                         </tr>
 
@@ -2341,8 +2418,8 @@ only meaningful if using a dataClass</p>
                 const modelDef &#x3D; &lt;any&gt;(this.model);
                 const newModel: FourDModel &#x3D; &lt;any&gt;(new modelDef());
 
-                const start &#x3D; (options.data.pageSize &amp;&amp; options.data.pageSize &gt; 0 &amp;&amp; this.useLazyLoading) ? options.data.skip : 0;
-                const numrecs &#x3D; (options.data.pageSize &amp;&amp; options.data.pageSize &gt; 0 &amp;&amp; this.useLazyLoading) ? options.data.pageSize : -1;
+                const start &#x3D; (options.data.pageSize &amp;&amp; options.data.pageSize &gt; 0 &amp;&amp; (this.useLazyLoading || this.pageable)) ? options.data.skip : 0;
+                const numrecs &#x3D; (options.data.pageSize &amp;&amp; options.data.pageSize &gt; 0 &amp;&amp; (this.useLazyLoading || this.pageable)) ? options.data.pageSize : -1;
                 // now build filter if anything set on the grid
                 const filter &#x3D; [];
                 if (options.data.filter) {
@@ -2442,7 +2519,7 @@ only meaningful if using a dataClass</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="151" class="link-to-prism">src/dataGrid/dataGrid.ts:151</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="162" class="link-to-prism">src/dataGrid/dataGrid.ts:162</a></div>
                             </td>
                         </tr>
 
@@ -2470,7 +2547,7 @@ only meaningful if using a dataClass</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">src/dataGrid/dataGrid.ts:146</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="157" class="link-to-prism">src/dataGrid/dataGrid.ts:157</a></div>
                             </td>
                         </tr>
 
@@ -2507,7 +2584,7 @@ only meaningful if using a dataClass</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="258" class="link-to-prism">src/dataGrid/dataGrid.ts:258</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="269" class="link-to-prism">src/dataGrid/dataGrid.ts:269</a></div>
                             </td>
                         </tr>
 
@@ -2604,7 +2681,7 @@ only meaningful if using a dataClass</p>
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="263" class="link-to-prism">src/dataGrid/dataGrid.ts:263</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="274" class="link-to-prism">src/dataGrid/dataGrid.ts:274</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -2659,7 +2736,7 @@ only meaningful if using a dataClass</p>
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="264" class="link-to-prism">src/dataGrid/dataGrid.ts:264</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="275" class="link-to-prism">src/dataGrid/dataGrid.ts:275</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -2718,7 +2795,7 @@ only meaningful if using a dataClass</p>
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="265" class="link-to-prism">src/dataGrid/dataGrid.ts:265</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="276" class="link-to-prism">src/dataGrid/dataGrid.ts:276</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -2776,7 +2853,7 @@ only meaningful if using a dataClass</p>
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="270" class="link-to-prism">src/dataGrid/dataGrid.ts:270</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="281" class="link-to-prism">src/dataGrid/dataGrid.ts:281</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -2798,7 +2875,7 @@ only meaningful if using a dataClass</p>
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="280" class="link-to-prism">src/dataGrid/dataGrid.ts:280</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="291" class="link-to-prism">src/dataGrid/dataGrid.ts:291</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -2852,7 +2929,7 @@ only meaningful if using a dataClass</p>
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="285" class="link-to-prism">src/dataGrid/dataGrid.ts:285</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="296" class="link-to-prism">src/dataGrid/dataGrid.ts:296</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -2947,7 +3024,7 @@ export class DataGrid implements AfterViewInit {
      * enable the paging bar (default true)
      */
     @Input() public pageable &#x3D; true;
-    
+
     /**
      * enable refresh button on the paging bar (default true)
      */
@@ -2967,7 +3044,7 @@ export class DataGrid implements AfterViewInit {
      * defines message pattern to display on the paging toolbar
      */
     @Input() public pageableMessage &#x3D; &#x27;{0} - {1} of {2} items&#x27;;
-    @Input() public pageableMessageCustom &#x3D; {display: this.pageableMessage};
+    @Input() public pageableMessageCustom &#x3D; { display: this.pageableMessage };
 
     /**    
     * the associated data model for the records to be retrieved
@@ -2992,6 +3069,17 @@ export class DataGrid implements AfterViewInit {
      * if using lazyloading, define the max # of records to retrieve from 4D
      */
     @Input() public pageSize &#x3D; 50;
+
+    /**
+     * Callback function to determine the css class to aply to a row
+     * this functions gets called for each row data, after datagrid row data is set
+     * it must return a string that represents a css class
+     * the function must take 2 arguments:
+     * @rowData: is the row data toc test and validate
+     * @element: is the HTML element, which can be use to set/change attributes
+     * 
+     */
+    @Input() public setRowClass: (rowData: any, element:any) &#x3D;&gt; string;
 
     //
     // events emitted by the DataGrid
@@ -3026,8 +3114,8 @@ export class DataGrid implements AfterViewInit {
                 const modelDef &#x3D; &lt;any&gt;(this.model);
                 const newModel: FourDModel &#x3D; &lt;any&gt;(new modelDef());
 
-                const start &#x3D; (options.data.pageSize &amp;&amp; options.data.pageSize &gt; 0 &amp;&amp; this.useLazyLoading) ? options.data.skip : 0;
-                const numrecs &#x3D; (options.data.pageSize &amp;&amp; options.data.pageSize &gt; 0 &amp;&amp; this.useLazyLoading) ? options.data.pageSize : -1;
+                const start &#x3D; (options.data.pageSize &amp;&amp; options.data.pageSize &gt; 0 &amp;&amp; (this.useLazyLoading || this.pageable)) ? options.data.skip : 0;
+                const numrecs &#x3D; (options.data.pageSize &amp;&amp; options.data.pageSize &gt; 0 &amp;&amp; (this.useLazyLoading || this.pageable)) ? options.data.pageSize : -1;
                 // now build filter if anything set on the grid
                 const filter &#x3D; [];
                 if (options.data.filter) {
@@ -3126,7 +3214,7 @@ export class DataGrid implements AfterViewInit {
 
     constructor(@Inject(HttpClient) private http: HttpClient, @Inject(FourDInterface) private fourD: FourDInterface) { }
 
-    @ViewChild(&#x27;theGrid&#x27;, {static: false}) public theGrid: any;
+    @ViewChild(&#x27;theGrid&#x27;, { static: false }) public theGrid: any;
 
     //
     // Declare data provider properties
@@ -3153,7 +3241,7 @@ export class DataGrid implements AfterViewInit {
     /**
      * record count on the current selection
      */
-    get recordCount(): number { return (this.dataProvider) ? this.dataProvider.totalRecordCount :( (this.gridObject.dataSource)?this.gridObject.dataSource.data().length:0); }
+    get recordCount(): number { return (this.dataProvider) ? this.dataProvider.totalRecordCount : ((this.gridObject.dataSource) ? this.gridObject.dataSource.data().length : 0); }
 
 
     /**
@@ -3187,7 +3275,7 @@ export class DataGrid implements AfterViewInit {
         }
     }
 
-    setModel(newModel:FourDModel) {
+    setModel(newModel: FourDModel) {
         this.model &#x3D; newModel;
         if (!this.dataProvider) {
             this.dataProvider &#x3D; new FourDCollection(); // this is the data model used to bring in records
@@ -3237,12 +3325,28 @@ export class DataGrid implements AfterViewInit {
 
     resize() {
         if (this.gridObject) this.gridObject.resize();
+        //
+        // if a row class callback function is set, call it for each row
+        //
+        if (this.setRowClass) {
+            setTimeout(() &#x3D;&gt; {
+                this.gridObject.dataSource.data().forEach(row &#x3D;&gt; {
+                    const element &#x3D; $(&#x27;tr[data-uid&#x3D;&quot;&#x27; + row[&#x27;uid&#x27;] + &#x27;&quot;] &#x27;);
+                    if (element) {
+                        const newClass &#x3D; this.setRowClass(row, element);
+                        if (newClass &amp;&amp; newClass !&#x3D; &#x27;&#x27;) { // do we have a css class to assign?
+                            element.addClass(newClass);
+                        }
+                    }
+                });
+            }, 1);
+        }
     }
 
     /**
      * return currently selected grid row
      */
-    selectedRow(): Object {
+    selectedRow(): any {
         if (this.gridObject &amp;&amp; this.gridObject.table) {
             if (this.gridObject.select()) {
                 return this.gridObject.dataItem(this.gridObject.select());
@@ -3257,7 +3361,7 @@ export class DataGrid implements AfterViewInit {
      */
     selectThisRow(index, scrollTo &#x3D; true) {
         if (index &lt;&#x3D; this.recordCount) {
-            if (this.selectionMode.includes(&#x27;single&#x27;) ) { // if selection mode is single row, then clear currently selected row
+            if (this.selectionMode.includes(&#x27;single&#x27;)) { // if selection mode is single row, then clear currently selected row
                 const cur &#x3D; this.gridObject.select();
                 if (cur.length &gt; 0) {
                     let row &#x3D; $(cur[0]);
@@ -3267,15 +3371,33 @@ export class DataGrid implements AfterViewInit {
                 }
             }
             if (index &gt; 0) {
-                this.gridObject.select(&#x27;tr:eq(&#x27;+(index-1)+&#x27;)&#x27;);
+                this.gridObject.select(&#x27;tr:eq(&#x27; + (index - 1) + &#x27;)&#x27;);
                 if (scrollTo) {
                     const scrollContentOffset &#x3D; this.gridObject.element.find(&quot;tbody&quot;).offset().top;
                     const selectContentOffset &#x3D; this.gridObject.select().offset().top;
                     const distance &#x3D; selectContentOffset - scrollContentOffset;
                     this.gridObject.element.find(&quot;.k-grid-content&quot;).animate({ scrollTop: distance }, 0);
                 }
+                if (this.dataProvider) {
+                    const item &#x3D; this.gridObject.dataItem(this.gridObject.select());
+                    this.dataProvider.currentRecord &#x3D; this.findRecordForThisItem(item);
+                }
             }
         }
+    }
+
+    /**
+     * clear current grid selection
+     */
+    clearCurrentSelection():void {
+        const cur &#x3D; this.gridObject.select();
+        if (cur.length &gt; 0) {
+            let row &#x3D; $(cur[0]);
+            if (row.hasClass(&quot;k-state-selected&quot;)) {
+                row.removeClass(&quot;k-state-selected&quot;); // this is a trick to unselect a row!! weird!!
+            }
+        }
+        this.currentRecord &#x3D; null;
     }
 
     /**
@@ -3294,7 +3416,7 @@ export class DataGrid implements AfterViewInit {
                     (&lt;any&gt;this.gridObject).dataItems().forEach((element, index) &#x3D;&gt; {
                         if (element[this._model.primaryKey_] &#x3D;&#x3D;&#x3D; item[this._model.primaryKey_]) { ret &#x3D; index; }
                     });
-                } else { 
+                } else {
                     const rows &#x3D; this.gridObject.select();
                     if (rows.length &gt; 0) {
                         ret &#x3D; rows[0][&#x27;rowIndex&#x27;];
@@ -3316,11 +3438,11 @@ export class DataGrid implements AfterViewInit {
             for (let index &#x3D; 0; index &lt; rows.length; index++) {
                 selectedRecords.push(rows[index][&#x27;rowIndex&#x27;]);
             };
-    
+
             return selectedRecords;
-           
+
         } else {
-            return [];            
+            return [];
         }
     }
 
@@ -3335,13 +3457,13 @@ export class DataGrid implements AfterViewInit {
                 for (let index &#x3D; 0; index &lt; rows.length; index++) {
                     let rowIndex &#x3D; rows[index][&#x27;rowIndex&#x27;];
                     selectedRecs.push(this.dataProvider.models[rowIndex]);
-                    };
+                };
             } else {
                 for (let index &#x3D; 0; index &lt; rows.length; index++) {
                     selectedRecs.push(this.gridObject.dataItem(rows[index]));
-                    };
+                };
             }
-    
+
             return selectedRecs;
         } else {
             return [];
@@ -3396,7 +3518,7 @@ export class DataGrid implements AfterViewInit {
         $(this.theGrid.nativeElement).empty();
         // $(this.theGrid.nativeElement).remove();
 
-        this.dataProvider.columns &#x3D; this.columns;
+        if (this.dataProvider) this.dataProvider.columns &#x3D; this.columns;
         this.columns &#x3D; columns;
         this.initializeGrid();
     }
@@ -3422,21 +3544,23 @@ export class DataGrid implements AfterViewInit {
             this.dataProvider.columns &#x3D; this.columns;
         }
 
+        if (this.pageable) this.useLazyLoading &#x3D; false; // need to do this to avoid confusion and cause awkward grid behaviour
+
         $(this.theGrid.nativeElement).kendoGrid(&lt;any&gt;{
             dataSource: (this.dataProvider) ? this.dataSource : null,
             excel: { allPages: true, filterable: true },
             change: ($event) &#x3D;&gt; { this.rowClicked($event); },
             autoBind: false,
-            pageable: (this.pageable)?{
+            pageable: (this.pageable) ? {
                 refresh: this.pageableRefresh,
                 pageSize: this.pageSize,
                 pageSizes: this.pageableSizes,
                 buttonCount: this.pageableButtonCount,
                 messages: this.pageableMessageCustom
-            }:false,
-            // scrollable: { virtual: this.useLazyLoading },
+            } : false,
+            scrollable: { virtual: this.useLazyLoading },
             resizable: true,
-            selectable: (this.selectable)?this.selectionMode:false,
+            selectable: (this.selectable) ? this.selectionMode : false,
             editable: this.editable,
             filterable: this.filterable,
             sortable: this.sortable,

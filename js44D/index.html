@@ -81,6 +81,7 @@ import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
 <ul>
 <li><strong>call4DRESTMethod</strong>: a wrapper function to enable calling any <strong>4D RESTApi</strong> entry point; it automatically adds a <em>Session Key</em> and a <em>hash</em> tokens to each HTTP POST request sent to 4D, which are required by the <strong>4D RESTApi</strong> Component; this function is used by all other services and components to send requests to 4D.</li>
 <li><strong>signin</strong>: a function that will send a <strong>REST_Authenticate</strong> sign in request to 4D and process 4D&#39;s response.</li>
+<li><strong>getRecordCount</strong>: a function that will send a <strong>REST_CountRecords</strong> request to 4D to obtain the count of records that match a given query.</li>
 </ul>
 <p>This class also provides some static variables:</p>
 <ul>
@@ -106,6 +107,8 @@ import { FourDInterface, FourDModel, FourDCollection } from &#39;js44d&#39;;
 <p>This class provides a function to retrieve a set of records from a 4D Database:</p>
 <ul>
 <li><strong>getRecords</strong>: will take a <a href="https://github.com/fourctv/FourDRESTApi/wiki/The-JS44D-Query-String">Query String</a> and send a <strong><a href="https://github.com/fourctv/FourDRESTApi/wiki/REST_GetRecords">REST_GetRecords</a></strong> request to 4D to retrieve a collection of 4D records. Record data comes as an Array of Data Model (<em>FourDModel</em>) instances.</li>
+<li><strong>bulkDelete</strong>: a function that will send a <strong>REST_BulkDelete</strong> request to 4D to delete a set of records that match a given query.</li>
+<li><strong>bulkUpdate</strong>: a function that will send a <strong>REST_BulkUpdate</strong> request to 4D to update any record in the collection that has been updated.</li>
 </ul>
 <h2 id="ui-widgets">UI Widgets</h2>
 <p>The following UI widgets and components, which also interact with a 4D backend, are available for use in Angular apps. Detailed documentation for each widget is found on the <a href="https://github.com/fourctv/JS44D/wiki">wiki pages</a>.</p>

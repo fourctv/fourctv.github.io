@@ -787,9 +787,9 @@ export class FourDModel {
     // current record number
     private _recnum &#x3D; -3;
     // keeps all attributes for the current model
-    private _attributes: Object &#x3D; {};
+    private _attributes: any &#x3D; {};
     // keep a list of modified fields, to optimize Updates, only modified data is set to 4D
-    private _modified: Object &#x3D; {};
+    private _modified: any &#x3D; {};
 
 
     /** 
@@ -915,7 +915,7 @@ export class FourDModel {
      *
      */
     recordToJSON(mode: string, noAudit: boolean): string {
-        const recordData: Object &#x3D; { table: this.tableName, recnum: this.recordNumber };
+        const recordData: any &#x3D; { table: this.tableName, recnum: this.recordNumber };
         // set callback methods
         if (this.fourdSaveCallbackMethod_) {
             recordData[&#x27;saveCallback&#x27;] &#x3D; this.fourdSaveCallbackMethod_; // set save callback method if set
@@ -1132,7 +1132,7 @@ export class FourDModel {
                 .subscribe(resultJSON &#x3D;&gt; {
                     if (resultJSON.returnCode &#x3D;&#x3D;&#x3D; &#x27;OK&#x27;) {
                         // insert record went OK, retrieve calculated return code &amp; record ID
-                        me.recordNumber &#x3D; resultJSON[&#x27;_recnum&#x27;];
+                        me.recordNumber &#x3D; resultJSON[&#x27;recordNum&#x27;];
                         if (me.primaryKey_ &amp;&amp; me.primaryKey_ !&#x3D;&#x3D; &#x27;&#x27;) { me[me.primaryKey_] &#x3D; resultJSON[&#x27;recordID&#x27;]; }
                         me.clearRecordDirtyFlag(); // clean up modified fields
                         resolve(&lt;any&gt;me);
@@ -1233,7 +1233,7 @@ export class FourDModel {
      *
      *  @param recordData json object whose properties will be used to populate the Data Model
      */
-    public populateModelData(recordData: Object) {
+    public populateModelData(recordData: any) {
         if (recordData.hasOwnProperty(&#x27;_recnum&#x27;)) { this.recordNumber &#x3D; recordData[&#x27;_recnum&#x27;]; }
         for (const field in recordData) {
             if (field !&#x3D;&#x3D; &#x27;_recnum&#x27; &amp;&amp; this.getFieldProperties(field)) {
@@ -1251,7 +1251,7 @@ export class FourDModel {
 
     }
 
-    public extractModelData(): Object {
+    public extractModelData(): any {
         let data &#x3D; { _recnum: this._recnum };
         for (const field of this.fields) {
             data[field.name] &#x3D; this[field.name];
@@ -1369,13 +1369,13 @@ export class FourDModel {
      * @returns JSON string representing all fields in the Data Model
      */
     public getColumnListJSON(): string {
-        const colList: Array&lt;Object&gt; &#x3D; [];
+        const colList: Array&lt;any&gt; &#x3D; [];
         const fields: Array&lt;IFieldDescription&gt; &#x3D; this.fields;
         for (const col of fields) {
             if (col.formula) {
                 colList.push({ name: col.name, formula: col.formula });
             } else if (col.subTable) {
-                const subFields: Array&lt;Object&gt; &#x3D; [];
+                const subFields: Array&lt;any&gt; &#x3D; [];
                 for (const sub of col.subTable.fields) {
                     if (sub.formula) { // add support for formulas in subfields
                         subFields.push({ name: sub.name, formula: sub.formula });

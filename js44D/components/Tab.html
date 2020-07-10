@@ -146,7 +146,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/containers/tabs.ts:52</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/containers/tabs.ts:64</a></div>
                             </td>
                         </tr>
 
@@ -207,7 +207,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/containers/tabs.ts:52</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/containers/tabs.ts:64</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -228,7 +228,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/containers/tabs.ts:51</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/containers/tabs.ts:63</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -243,7 +243,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Injectable, Input } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Injectable, Input, Output, EventEmitter } from &#x27;@angular/core&#x27;;
 
 
 @Component({
@@ -260,26 +260,38 @@
 @Injectable()
 export class Tabs {
 
+  @Output() public change: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+
   tabs: Tab[] &#x3D; [];
 
-  selectTab(event, tab) {
+  public selectTab(event, tab) {
     event.preventDefault();
 
     this.selectThisTab(tab);
 
   }
 
-  selectThisTab(tab) {
+  public selectThisTab(tab) {
     this.tabs.forEach((tabItem) &#x3D;&gt; tabItem.active &#x3D; false);
     tab.active &#x3D; true;
+
+    this.change.emit();
   }
 
 
-  addTab(tab: Tab) {
+  public addTab(tab: Tab) {
     if (this.tabs.length &#x3D;&#x3D;&#x3D; 0) {
       tab.active &#x3D; true;
     }
     this.tabs.push(tab);
+  }
+
+  public get selectedIndex():number {
+    let selected &#x3D; -1;
+    for (let index &#x3D; 0; index &lt; this.tabs.length; index++) {
+      if (this.tabs[index].active) selected &#x3D; index;
+    }
+    return selected;
   }
 }
 

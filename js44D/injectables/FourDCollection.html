@@ -145,6 +145,10 @@
                                     <span class="modifier">Public</span>
                                 <a href="#getRecords">getRecords</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toArray">toArray</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -605,6 +609,49 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toArray"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            toArray
+                        </b>
+                        <a href="#toArray"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>toArray()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="242"
+                            class="link-to-prism">src/js44D/JSFourDCollection.ts:242</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Convert Collection Data Models into a &#39;simple&#39; array</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Array&lt;any&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
             <section>
     
@@ -1036,7 +1083,7 @@ export class FourDCollection {
      */
     public getColumnListJSON(columns: Array&lt;any&gt;): string {
         if (!columns) { columns &#x3D; this.columns; }
-        const colList: Array&lt;Object&gt; &#x3D; [];
+        const colList: Array&lt;any&gt; &#x3D; [];
         const modelDef &#x3D; &lt;any&gt;(this.model);
         let theModel: FourDModel &#x3D; &lt;any&gt;(new modelDef());
         let fld: any;
@@ -1219,7 +1266,16 @@ export class FourDCollection {
         return this.models.length;
     }
 
-
+    /**
+     * Convert Collection Data Models into a &#x27;simple&#x27; array
+     */
+    public toArray(): Array&lt;any&gt; {
+        let ret &#x3D; [];
+        this.models.forEach((element:FourDModel) &#x3D;&gt; {
+            ret.push(element.extractModelData());
+        });
+        return ret;
+    }
 }
 
 </code></pre>

@@ -830,8 +830,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="344"
-                            class="link-to-prism">src/containers/recordList.ts:344</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="346"
+                            class="link-to-prism">src/containers/recordList.ts:346</a></div>
                 </td>
             </tr>
 
@@ -1507,6 +1507,8 @@ export class RecordList implements AfterContentInit {
         let savedSearches: Array&lt;any&gt;;
         let savedSets: Array&lt;any&gt;;
         let selectedRecords &#x3D; [];
+        let setList &#x3D; [];
+        let searchList &#x3D; [];
 
         switch (action) {
             case &#x27;selectHighlited&#x27;:
@@ -1557,7 +1559,7 @@ export class RecordList implements AfterContentInit {
 
             case &#x27;reuseSearch&#x27;:
                 savedSearches &#x3D; JSON.parse(localStorage.getItem(tableName + &#x27;_savedSearches&#x27;)) || [];
-                let searchList &#x3D; [];
+                searchList &#x3D; [];
                 savedSearches.forEach(element &#x3D;&gt; {
                     searchList.push(element.name);
                 });
@@ -1573,7 +1575,7 @@ export class RecordList implements AfterContentInit {
 
             case &#x27;restoreSet&#x27;:
                 savedSets &#x3D; JSON.parse(localStorage.getItem(tableName + &#x27;_savedSets&#x27;)) || [];
-                let setList &#x3D; [];
+                setList &#x3D; [];
                 savedSets.forEach(element &#x3D;&gt; {
                     setList.push(element.name);
                 });

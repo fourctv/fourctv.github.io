@@ -1411,7 +1411,7 @@ export let convertObjectToURL &#x3D; function (obj: any) {
 /**
  * Calculates hash code from URL string or POST form data
  */
-export let calculateHash &#x3D; function (formData: Object) {
+export let calculateHash &#x3D; function (formData: any) {
     let value &#x3D; &#x27;&#x27;;
     for (const key in formData) {
         if (formData.hasOwnProperty(key)) {
@@ -1613,7 +1613,7 @@ export class FourDInterface {
             this.call4DRESTMethod(&#x27;REST_CountRecords&#x27;, body)
                 .subscribe(resultJSON &#x3D;&gt; {
                     if (resultJSON &amp;&amp; resultJSON.valid) {
-                        resolve(resultJSON.seleted);
+                        resolve(resultJSON.selected);
                     } else reject(resultJSON.message)
 
                 },
